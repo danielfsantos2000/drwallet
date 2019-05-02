@@ -1,0 +1,12 @@
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\DRWallet.exe.config
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\DRWallet.exe
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\DRWallet.pdb
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.csprojAssemblyReference.cache
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Properties.Resources.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.csproj.GenerateResource.cache
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.csproj.CoreCompileInputs.cache
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.exe
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.pdb
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Main.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Login.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Register.resources

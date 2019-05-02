@@ -1,2 +1,3 @@
-test
-test2
+c# events and delegates
+https://www.youtube.com/watch?v=G5R4C8BLEOc
+https://www.google.com/search?rlz=1C1GCEU_pt-PTPT847PT847&ei=wBfLXP6vGoinUouvm7AG&q=c%23+events+and+delegates&oq=c%23+evenrs&gs_l=psy-ab.1.1.0i13l10.1330920.1333966..1336469...0.0..0.150.840.8j1....3..0....1..gws-wiz.......35i39i19j35i39j0i131j0j0i67j0i203.bFu2RgIU5JY

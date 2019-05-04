@@ -15,11 +15,14 @@ namespace DRWallet
         public Main()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            loginPage.GotoPage += this.showRegisterPage;
         }
 
-        public void activateRegister()
+        public void showRegisterPage(object source, EventArgs e)
         {
-            registerControl.Show();
+            registerPage.Show();
         }
     }
 }

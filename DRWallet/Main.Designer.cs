@@ -29,38 +29,39 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.loginControl = new DRWallet.Login();
-            this.registerControl = new DRWallet.Register();
+            this.loginPage = new DRWallet.Login();
+            this.registerPage = new DRWallet.Register();
             this.SuspendLayout();
             // 
-            // loginControl
+            // loginPage
             // 
-            this.loginControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
-            this.loginControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.loginControl.Location = new System.Drawing.Point(0, 0);
-            this.loginControl.Name = "loginControl";
-            this.loginControl.Size = new System.Drawing.Size(784, 561);
-            this.loginControl.TabIndex = 1;
+            this.loginPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.loginPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.loginPage.Location = new System.Drawing.Point(0, 0);
+            this.loginPage.Name = "loginPage";
+            this.loginPage.Size = new System.Drawing.Size(784, 561);
+            this.loginPage.TabIndex = 4;
             // 
-            // registerControl
+            // registerPage
             // 
-            this.registerControl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
-            this.registerControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.registerControl.Location = new System.Drawing.Point(0, 0);
-            this.registerControl.Name = "registerControl";
-            this.registerControl.Size = new System.Drawing.Size(784, 561);
-            this.registerControl.TabIndex = 2;
-            this.registerControl.Visible = false;
+            this.registerPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.registerPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.registerPage.Location = new System.Drawing.Point(0, 0);
+            this.registerPage.Name = "registerPage";
+            this.registerPage.Size = new System.Drawing.Size(784, 561);
+            this.registerPage.TabIndex = 5;
+            this.registerPage.Visible = false;
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
-            this.Controls.Add(this.loginControl);
-            this.Controls.Add(this.registerControl);
+            this.Controls.Add(this.loginPage);
+            this.Controls.Add(this.registerPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "DR Wallet";
             this.ResumeLayout(false);
@@ -69,7 +70,7 @@
 
         #endregion
 
-        private Login loginControl;
-        private Register registerControl;
+        private Login loginPage;
+        private Register registerPage;
     }
 }

@@ -20,7 +20,20 @@ namespace DRWallet
         private void RegGotoButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            
+            OnRegButtonClicked();
+        }
+
+
+        //Event
+        public delegate void GotoPageEventHandler(object source, EventArgs args);
+        public event GotoPageEventHandler GotoPage;
+
+        protected virtual void OnRegButtonClicked()
+        {
+            if (GotoPage != null)
+            {
+                GotoPage(this, EventArgs.Empty);
+            }
         }
     }
 }

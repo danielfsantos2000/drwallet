@@ -16,5 +16,17 @@ namespace DRWallet
         {
             InitializeComponent();
         }
+
+        //Event
+        public delegate void GotoPageEventHandler(object source, EventArgs args);
+        public event GotoPageEventHandler GotoPage;
+
+        protected virtual void OnButtonClicked()
+        {
+            if (GotoPage != null)
+            {
+                GotoPage(this, EventArgs.Empty);
+            }
+        }
     }
 }

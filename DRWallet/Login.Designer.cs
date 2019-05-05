@@ -28,23 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.logoImage = new System.Windows.Forms.PictureBox();
             this.logUserBox = new System.Windows.Forms.TextBox();
             this.logPassBox = new System.Windows.Forms.TextBox();
             this.logLoginButton = new System.Windows.Forms.Button();
             this.regGotoButton = new System.Windows.Forms.Button();
+            this.logoImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // logoImage
-            // 
-            this.logoImage.BackgroundImage = global::DRWallet.Properties.Resources.Icon_PNG_Prancheta_1;
-            this.logoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logoImage.Location = new System.Drawing.Point(272, 12);
-            this.logoImage.Name = "logoImage";
-            this.logoImage.Size = new System.Drawing.Size(256, 256);
-            this.logoImage.TabIndex = 0;
-            this.logoImage.TabStop = false;
             // 
             // logUserBox
             // 
@@ -71,6 +61,7 @@
             this.logLoginButton.TabIndex = 3;
             this.logLoginButton.Text = "Login";
             this.logLoginButton.UseVisualStyleBackColor = true;
+            this.logLoginButton.Click += new System.EventHandler(this.LogLoginButton_Click);
             // 
             // regGotoButton
             // 
@@ -81,6 +72,16 @@
             this.regGotoButton.Text = "Register";
             this.regGotoButton.UseVisualStyleBackColor = true;
             this.regGotoButton.Click += new System.EventHandler(this.RegGotoButton_Click);
+            // 
+            // logoImage
+            // 
+            this.logoImage.BackgroundImage = global::DRWallet.Properties.Resources.Icon_PNG_Prancheta_1;
+            this.logoImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logoImage.Location = new System.Drawing.Point(272, 12);
+            this.logoImage.Name = "logoImage";
+            this.logoImage.Size = new System.Drawing.Size(256, 256);
+            this.logoImage.TabIndex = 0;
+            this.logoImage.TabStop = false;
             // 
             // Login
             // 

@@ -27,3 +27,4 @@ C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.NavBar.resources
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Account.resources
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Addresses.resources
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Movements.resources
+C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Settings.resources

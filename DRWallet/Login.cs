@@ -23,8 +23,13 @@ namespace DRWallet
             OnRegButtonClicked();
         }
 
+        private void LogLoginButton_Click(object sender, EventArgs e)
+        {
 
-        //Event
+        }
+
+
+        //Events
         public delegate void GotoPageEventHandler(object source, EventArgs args);
         public event GotoPageEventHandler GotoPage;
 

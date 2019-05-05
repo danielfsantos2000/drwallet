@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DRWallet
 {
@@ -17,15 +18,46 @@ namespace DRWallet
             InitializeComponent();
         }
 
-        //Event
-        public delegate void GotoPageEventHandler(object source, EventArgs args);
-        public event GotoPageEventHandler GotoPage;
-
-        protected virtual void OnButtonClicked()
+        private void LogRegisterBox_Click(object sender, EventArgs e)
         {
-            if (GotoPage != null)
+            if (regFNameBox.Text != "" && regLNameBox.Text != "" && regUserBox.Text != "" && regEmailBox.Text != "" && regPassBox.Text != "" && regConfPassBox.Text != "")
             {
-                GotoPage(this, EventArgs.Empty);
+                if (isEmailValid(regEmailBox.Text))
+                {
+                    if (regPassBox.Text == regConfPassBox.Text)
+                    {
+
+                    } else {
+                        regErrorLab.Location = new Point(234, 290);
+                        regErrorLab.Text = "Passwords doesn't match!";
+                        regErrorLab.Visible = true;
+                    }
+                } else {
+                    regErrorLab.Location = new Point(186, 290);
+                    regErrorLab.Text = "Email doesn't have a valid format!";
+                    regErrorLab.Visible = true;
+                }
+            } else {
+                regErrorLab.Location = new Point(240, 290);
+                regErrorLab.Text = "You need to fill all fields!";
+                regErrorLab.Visible = true;
+            }
+        }
+
+
+
+
+        //Verify
+        public bool isEmailValid(string emailaddress)
+        {
+            try
+            {
+                System.Net.Mail.MailAddress m = new System.Net.Mail.MailAddress(emailaddress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
             }
         }
     }

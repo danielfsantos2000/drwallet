@@ -33,29 +33,30 @@
             this.logLoginButton = new System.Windows.Forms.Button();
             this.regGotoButton = new System.Windows.Forms.Button();
             this.logoImage = new System.Windows.Forms.PictureBox();
+            this.logUsernameLab = new System.Windows.Forms.Label();
+            this.logPassLab = new System.Windows.Forms.Label();
+            this.logErrorLab = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).BeginInit();
             this.SuspendLayout();
             // 
             // logUserBox
             // 
-            this.logUserBox.Location = new System.Drawing.Point(272, 354);
+            this.logUserBox.Location = new System.Drawing.Point(230, 354);
             this.logUserBox.Name = "logUserBox";
             this.logUserBox.Size = new System.Drawing.Size(100, 20);
             this.logUserBox.TabIndex = 1;
-            this.logUserBox.Text = "Username";
             // 
             // logPassBox
             // 
-            this.logPassBox.Location = new System.Drawing.Point(428, 354);
+            this.logPassBox.Location = new System.Drawing.Point(477, 354);
             this.logPassBox.Name = "logPassBox";
             this.logPassBox.PasswordChar = '*';
             this.logPassBox.Size = new System.Drawing.Size(100, 20);
             this.logPassBox.TabIndex = 2;
-            this.logPassBox.Text = "Password";
             // 
             // logLoginButton
             // 
-            this.logLoginButton.Location = new System.Drawing.Point(297, 380);
+            this.logLoginButton.Location = new System.Drawing.Point(255, 380);
             this.logLoginButton.Name = "logLoginButton";
             this.logLoginButton.Size = new System.Drawing.Size(75, 23);
             this.logLoginButton.TabIndex = 3;
@@ -65,7 +66,7 @@
             // 
             // regGotoButton
             // 
-            this.regGotoButton.Location = new System.Drawing.Point(428, 380);
+            this.regGotoButton.Location = new System.Drawing.Point(477, 380);
             this.regGotoButton.Name = "regGotoButton";
             this.regGotoButton.Size = new System.Drawing.Size(75, 23);
             this.regGotoButton.TabIndex = 4;
@@ -83,11 +84,44 @@
             this.logoImage.TabIndex = 0;
             this.logoImage.TabStop = false;
             // 
+            // logUsernameLab
+            // 
+            this.logUsernameLab.AutoSize = true;
+            this.logUsernameLab.Location = new System.Drawing.Point(166, 357);
+            this.logUsernameLab.Name = "logUsernameLab";
+            this.logUsernameLab.Size = new System.Drawing.Size(58, 13);
+            this.logUsernameLab.TabIndex = 12;
+            this.logUsernameLab.Text = "Username:";
+            // 
+            // logPassLab
+            // 
+            this.logPassLab.AutoSize = true;
+            this.logPassLab.Location = new System.Drawing.Point(415, 357);
+            this.logPassLab.Name = "logPassLab";
+            this.logPassLab.Size = new System.Drawing.Size(56, 13);
+            this.logPassLab.TabIndex = 13;
+            this.logPassLab.Text = "Password:";
+            // 
+            // logErrorLab
+            // 
+            this.logErrorLab.AutoSize = true;
+            this.logErrorLab.Font = new System.Drawing.Font("Gill Sans MT", 22.25F);
+            this.logErrorLab.Location = new System.Drawing.Point(358, 287);
+            this.logErrorLab.Name = "logErrorLab";
+            this.logErrorLab.Size = new System.Drawing.Size(86, 42);
+            this.logErrorLab.TabIndex = 14;
+            this.logErrorLab.Text = "Error";
+            this.logErrorLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logErrorLab.Visible = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.Controls.Add(this.logErrorLab);
+            this.Controls.Add(this.logPassLab);
+            this.Controls.Add(this.logUsernameLab);
             this.Controls.Add(this.regGotoButton);
             this.Controls.Add(this.logLoginButton);
             this.Controls.Add(this.logPassBox);
@@ -108,5 +142,8 @@
         private System.Windows.Forms.TextBox logPassBox;
         private System.Windows.Forms.Button logLoginButton;
         private System.Windows.Forms.Button regGotoButton;
+        private System.Windows.Forms.Label logUsernameLab;
+        private System.Windows.Forms.Label logPassLab;
+        private System.Windows.Forms.Label logErrorLab;
     }
 }

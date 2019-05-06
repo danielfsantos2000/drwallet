@@ -25,7 +25,14 @@ namespace DRWallet
 
         private void LogLoginButton_Click(object sender, EventArgs e)
         {
+            if (logUserBox.Text != "" && logPassBox.Text != "")
+            {
 
+            } else {
+                logErrorLab.Location = new Point(240, 290);
+                logErrorLab.Text = "You need to fill all fields!";
+                logErrorLab.Visible = true;
+            }
         }
 
 

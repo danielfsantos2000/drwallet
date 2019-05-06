@@ -28,3 +28,15 @@ C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Account.resources
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Addresses.resources
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Movements.resources
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.Settings.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\Google.Protobuf.dll
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\MySql.Data.dll
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\Google.Protobuf.xml
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\bin\Debug\MySql.Data.xml
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Account.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Addresses.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Dashboard.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Movements.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.NavBar.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Settings.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.csproj.CopyComplete

@@ -40,3 +40,9 @@ C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Movements.resource
 C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.NavBar.resources
 C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Settings.resources
 C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.csproj.CopyComplete
+C:\Users\danie\Documents\Project\DRWallet\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\danie\Documents\Project\DRWallet\bin\Debug\Google.Protobuf.dll
+C:\Users\danie\Documents\Project\DRWallet\bin\Debug\MySql.Data.dll
+C:\Users\danie\Documents\Project\DRWallet\bin\Debug\Google.Protobuf.xml
+C:\Users\danie\Documents\Project\DRWallet\bin\Debug\MySql.Data.xml
+C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.csproj.CopyComplete

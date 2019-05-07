@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.loginPage = new DRWallet.Login();
             this.registerPage = new DRWallet.Register();
+            this.dashboardPage = new DRWallet.Dashboard();
             this.SuspendLayout();
             // 
             // loginPage
@@ -52,6 +53,15 @@
             this.registerPage.TabIndex = 5;
             this.registerPage.Visible = false;
             // 
+            // dashboardPage
+            // 
+            this.dashboardPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.dashboardPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dashboardPage.Location = new System.Drawing.Point(0, 0);
+            this.dashboardPage.Name = "dashboardPage";
+            this.dashboardPage.Size = new System.Drawing.Size(784, 561);
+            this.dashboardPage.TabIndex = 7;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -59,6 +69,7 @@
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.loginPage);
             this.Controls.Add(this.registerPage);
+            this.Controls.Add(this.dashboardPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
@@ -72,5 +83,6 @@
 
         private Login loginPage;
         private Register registerPage;
+        private Dashboard dashboardPage;
     }
 }

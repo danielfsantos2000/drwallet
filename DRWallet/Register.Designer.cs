@@ -117,8 +117,9 @@
             this.logBackButton.Name = "logBackButton";
             this.logBackButton.Size = new System.Drawing.Size(75, 23);
             this.logBackButton.TabIndex = 9;
-            this.logBackButton.Text = "Cancel";
+            this.logBackButton.Text = "Go Back";
             this.logBackButton.UseVisualStyleBackColor = true;
+            this.logBackButton.Click += new System.EventHandler(this.LogBackButton_Click);
             // 
             // regErrorLab
             // 
@@ -144,7 +145,7 @@
             // regLNameLab
             // 
             this.regLNameLab.AutoSize = true;
-            this.regLNameLab.Location = new System.Drawing.Point(389, 357);
+            this.regLNameLab.Location = new System.Drawing.Point(395, 357);
             this.regLNameLab.Name = "regLNameLab";
             this.regLNameLab.Size = new System.Drawing.Size(61, 13);
             this.regLNameLab.TabIndex = 12;
@@ -162,7 +163,7 @@
             // regEmailLab
             // 
             this.regEmailLab.AutoSize = true;
-            this.regEmailLab.Location = new System.Drawing.Point(415, 413);
+            this.regEmailLab.Location = new System.Drawing.Point(421, 413);
             this.regEmailLab.Name = "regEmailLab";
             this.regEmailLab.Size = new System.Drawing.Size(35, 13);
             this.regEmailLab.TabIndex = 14;
@@ -182,9 +183,9 @@
             this.regConfPassLab.AutoSize = true;
             this.regConfPassLab.Location = new System.Drawing.Point(362, 465);
             this.regConfPassLab.Name = "regConfPassLab";
-            this.regConfPassLab.Size = new System.Drawing.Size(91, 13);
+            this.regConfPassLab.Size = new System.Drawing.Size(94, 13);
             this.regConfPassLab.TabIndex = 16;
-            this.regConfPassLab.Text = "ConfirmPassword:";
+            this.regConfPassLab.Text = "Confirm Password:";
             // 
             // Register
             // 

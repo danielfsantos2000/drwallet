@@ -30,7 +30,6 @@
         {
             this.dashUsernameLab = new System.Windows.Forms.Label();
             this.dashBalanceLab = new System.Windows.Forms.Label();
-            this.dashNavBar = new DRWallet.NavBar();
             this.dashSendButton = new System.Windows.Forms.Button();
             this.dashReceiveButton = new System.Windows.Forms.Button();
             this.dashDRCoinLab = new System.Windows.Forms.Label();
@@ -39,12 +38,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dashHistoryInfoLab = new System.Windows.Forms.Label();
             this.dashHistoryGrid = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.Icon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.accountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oAccountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dashNavBar = new DRWallet.NavBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashHistoryGrid)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,15 +69,6 @@
             this.dashBalanceLab.Size = new System.Drawing.Size(265, 48);
             this.dashBalanceLab.TabIndex = 2;
             this.dashBalanceLab.Text = "Balance: 0,00 DR";
-            // 
-            // dashNavBar
-            // 
-            this.dashNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.dashNavBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dashNavBar.Location = new System.Drawing.Point(0, 0);
-            this.dashNavBar.Name = "dashNavBar";
-            this.dashNavBar.Size = new System.Drawing.Size(150, 600);
-            this.dashNavBar.TabIndex = 0;
             // 
             // dashSendButton
             // 
@@ -111,7 +102,7 @@
             // 
             this.dashValueLab.AutoSize = true;
             this.dashValueLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F);
-            this.dashValueLab.Location = new System.Drawing.Point(564, 215);
+            this.dashValueLab.Location = new System.Drawing.Point(554, 214);
             this.dashValueLab.Name = "dashValueLab";
             this.dashValueLab.Size = new System.Drawing.Size(103, 48);
             this.dashValueLab.TabIndex = 6;
@@ -165,20 +156,14 @@
             this.dashHistoryGrid.Location = new System.Drawing.Point(0, 0);
             this.dashHistoryGrid.Name = "dashHistoryGrid";
             this.dashHistoryGrid.ReadOnly = true;
+            this.dashHistoryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dashHistoryGrid.RowHeadersVisible = false;
             this.dashHistoryGrid.ShowCellErrors = false;
             this.dashHistoryGrid.ShowCellToolTips = false;
             this.dashHistoryGrid.ShowEditingIcon = false;
             this.dashHistoryGrid.ShowRowErrors = false;
             this.dashHistoryGrid.Size = new System.Drawing.Size(615, 229);
             this.dashHistoryGrid.TabIndex = 9;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dashHistoryGrid);
-            this.panel2.Location = new System.Drawing.Point(156, 325);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 229);
-            this.panel2.TabIndex = 10;
             // 
             // Icon
             // 
@@ -209,6 +194,23 @@
             this.date.HeaderText = "Date";
             this.date.Name = "date";
             this.date.ReadOnly = true;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.dashHistoryGrid);
+            this.panel2.Location = new System.Drawing.Point(156, 325);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(615, 229);
+            this.panel2.TabIndex = 10;
+            // 
+            // dashNavBar
+            // 
+            this.dashNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.dashNavBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dashNavBar.Location = new System.Drawing.Point(0, 0);
+            this.dashNavBar.Name = "dashNavBar";
+            this.dashNavBar.Size = new System.Drawing.Size(150, 600);
+            this.dashNavBar.TabIndex = 0;
             // 
             // Dashboard
             // 

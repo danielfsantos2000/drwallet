@@ -61,6 +61,11 @@ namespace DRWallet
                                         regErrorLab.Location = new Point(250, 290);
                                         regErrorLab.Text = "Successfully registered!";
                                         regErrorLab.Visible = true;
+                                        OnButtonClicked();
+                                    } else {
+                                        regErrorLab.Location = new Point(260, 290);
+                                        regErrorLab.Text = "Something went wrong!";
+                                        regErrorLab.Visible = true;
                                     }
                                 } else {
                                     regErrorLab.Location = new Point(250, 290);
@@ -102,6 +107,12 @@ namespace DRWallet
         }
 
 
+        private void LogBackButton_Click(object sender, EventArgs e)
+        {
+            OnButtonClicked();
+        }
+
+
 
 
         //Verify
@@ -123,5 +134,26 @@ namespace DRWallet
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
+
+
+        //Events
+        public delegate void GotoPageEventHandler(object source, EventArgs args);
+        public event GotoPageEventHandler GotoPage;
+
+        protected virtual void OnButtonClicked()
+        {
+            if (GotoPage != null)
+            {
+                this.Hide();
+                regErrorLab.Visible = false;
+                regFNameBox.Text = "";
+                regLNameBox.Text = "";
+                regUserBox.Text = "";
+                regEmailBox.Text = "";
+                regPassBox.Text = "";
+                regConfPassBox.Text = "";
+                GotoPage(this, EventArgs.Empty);
+            }
+        }
     }
 }

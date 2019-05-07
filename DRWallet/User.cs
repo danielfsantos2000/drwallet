@@ -6,32 +6,28 @@ using System.Threading.Tasks;
 
 namespace DRWallet
 {
-    class User
+    public static class User
     {
 
-        public User(int id, string user, string fname, string lname, string email) {
-            puID = id;
-            puUser = user;
-            puFName = fname;
-            puLName = lname;
-            puEmail = email;
-        }
+        private static int puID;
+        private static string puUser;
+        private static string puFName;
+        private static string puLName;
+        private static string puEmail;
 
-        private int puID;
-        private string puUser;
-        private string puFName;
-        private string puLName;
-        private string puEmail;
-
-        public int uID
+        public static int uID
         {
             get
             {
                 return puID;
             }
+            set
+            {
+                puID = value;
+            }
         }
 
-        public string uUser {
+        public static string uUser {
             get
             {
                 return puUser;
@@ -42,7 +38,7 @@ namespace DRWallet
             }
         }
 
-        public string uFName {
+        public static string uFName {
             get
             {
                 return puFName;
@@ -53,7 +49,7 @@ namespace DRWallet
             }
         }
 
-        public string uLName
+        public static string uLName
         {
             get
             {
@@ -65,7 +61,7 @@ namespace DRWallet
             }
         }
 
-        public string uEmail
+        public static string uEmail
         {
             get
             {

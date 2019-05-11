@@ -55,8 +55,8 @@ namespace DRWallet
                                     cmdInsert.Parameters.Add("@fname", MySqlDbType.String).Value = regFNameBox.Text;
                                     cmdInsert.Parameters.Add("@lname", MySqlDbType.String).Value = regLNameBox.Text;
                                     cmdInsert.Parameters.Add("@email", MySqlDbType.String).Value = regEmailBox.Text;
-                                    int recAfectados = cmdInsert.ExecuteNonQuery();
-                                    if (recAfectados == 1)
+                                    int numbers = cmdInsert.ExecuteNonQuery();
+                                    if (numbers == 1)
                                     {
                                         regErrorLab.Location = new Point(250, 290);
                                         regErrorLab.Text = "Successfully registered!";

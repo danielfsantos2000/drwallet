@@ -28,6 +28,8 @@ namespace DRWallet
             try
             {
                 db.Open();
+
+                //Get Value
                 MySqlCommand cmds1 = new MySqlCommand();
                 cmds1.Connection = db;
                 cmds1.CommandText = "SELECT * FROM value ORDER BY valdate DESC LIMIT 1";
@@ -40,10 +42,30 @@ namespace DRWallet
                         dashValueLab.Text = $"{dashValueLab.Text}€";
                     }
                 }
+                drs1.Close();
+
+                // Get History
+                MySqlCommand cmds2 = new MySqlCommand();
+                cmds2.Connection = db;
+                cmds2.CommandText = "SELECT * FROM movements WHERE movaddsender=@id || movaddreceiver=@id ORDER BY movdate DESC LIMIT 10";
+                cmds2.Parameters.Add("@id", MySqlDbType.String).Value = "1";
+                MySqlDataReader drs2 = cmds2.ExecuteReader();
+                if (drs2.HasRows)
+                {
+                    DataSet ds = new DataSet();
+                    DataTable dataTable = new DataTable("history");
+
+                    ds.Tables.Add(dataTable);
+
+                    ds.Load(drs2, LoadOption.PreserveChanges, ds.Tables["history"]);
+
+                    dashHistoryGrid.DataSource = ds.Tables["history"];
+                }
+                drs2.Close();
             }
             catch (Exception ex)
             {
-                dashValueLab.Text = "ERROR!";
+                dashValueLab.Text = ex.Message;
             }
             finally
             {

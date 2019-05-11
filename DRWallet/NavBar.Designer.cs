@@ -61,6 +61,7 @@
             this.navDashboardButton.TabIndex = 1;
             this.navDashboardButton.Text = "Dashboard";
             this.navDashboardButton.UseVisualStyleBackColor = false;
+            this.navDashboardButton.Click += new System.EventHandler(this.NavDashboardButton_Click);
             // 
             // navMovementsButton
             // 
@@ -77,6 +78,7 @@
             this.navMovementsButton.TabIndex = 2;
             this.navMovementsButton.Text = "Movements";
             this.navMovementsButton.UseVisualStyleBackColor = false;
+            this.navMovementsButton.Click += new System.EventHandler(this.NavMovementsButton_Click);
             // 
             // navAddressesButton
             // 
@@ -92,6 +94,7 @@
             this.navAddressesButton.TabIndex = 3;
             this.navAddressesButton.Text = "Addresses";
             this.navAddressesButton.UseVisualStyleBackColor = false;
+            this.navAddressesButton.Click += new System.EventHandler(this.NavAddressesButton_Click);
             // 
             // navAccountButton
             // 
@@ -107,6 +110,7 @@
             this.navAccountButton.TabIndex = 4;
             this.navAccountButton.Text = "Account";
             this.navAccountButton.UseVisualStyleBackColor = false;
+            this.navAccountButton.Click += new System.EventHandler(this.NavAccountButton_Click);
             // 
             // navSettingsButton
             // 
@@ -122,6 +126,7 @@
             this.navSettingsButton.TabIndex = 5;
             this.navSettingsButton.Text = "Settings";
             this.navSettingsButton.UseVisualStyleBackColor = false;
+            this.navSettingsButton.Click += new System.EventHandler(this.NavSettingsButton_Click);
             // 
             // NavBar
             // 

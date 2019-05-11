@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.accNavBar = new DRWallet.NavBar();
+            this.setNavBar = new DRWallet.NavBar();
             this.setSetLab = new System.Windows.Forms.Label();
             this.setLangLab = new System.Windows.Forms.Label();
             this.setLangCBox = new System.Windows.Forms.ComboBox();
@@ -37,14 +37,14 @@
             this.accSaveBox = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // accNavBar
+            // setNavBar
             // 
-            this.accNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.accNavBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accNavBar.Location = new System.Drawing.Point(0, 0);
-            this.accNavBar.Name = "accNavBar";
-            this.accNavBar.Size = new System.Drawing.Size(150, 600);
-            this.accNavBar.TabIndex = 0;
+            this.setNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.setNavBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.setNavBar.Location = new System.Drawing.Point(0, 0);
+            this.setNavBar.Name = "setNavBar";
+            this.setNavBar.Size = new System.Drawing.Size(150, 600);
+            this.setNavBar.TabIndex = 0;
             // 
             // setSetLab
             // 
@@ -126,7 +126,7 @@
             this.Controls.Add(this.setLangCBox);
             this.Controls.Add(this.setLangLab);
             this.Controls.Add(this.setSetLab);
-            this.Controls.Add(this.accNavBar);
+            this.Controls.Add(this.setNavBar);
             this.Name = "Settings";
             this.Size = new System.Drawing.Size(800, 600);
             this.ResumeLayout(false);
@@ -136,7 +136,7 @@
 
         #endregion
 
-        private NavBar accNavBar;
+        private NavBar setNavBar;
         private System.Windows.Forms.Label setSetLab;
         private System.Windows.Forms.Label setLangLab;
         private System.Windows.Forms.ComboBox setLangCBox;

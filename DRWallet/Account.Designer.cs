@@ -140,6 +140,7 @@
             this.accSaveBox.TabIndex = 21;
             this.accSaveBox.Text = "Save Changes";
             this.accSaveBox.UseVisualStyleBackColor = true;
+            this.accSaveBox.Click += new System.EventHandler(this.AccSaveBox_Click);
             // 
             // Account
             // 

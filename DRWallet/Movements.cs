@@ -16,5 +16,11 @@ namespace DRWallet
         {
             InitializeComponent();
         }
+
+        public void movementsUpdate()
+        {
+            NavBar.nmPage = 2;
+            movNavBar.NavbarUpdate();
+        }
     }
 }

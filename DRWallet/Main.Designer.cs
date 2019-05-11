@@ -32,6 +32,10 @@
             this.loginPage = new DRWallet.Login();
             this.registerPage = new DRWallet.Register();
             this.dashboardPage = new DRWallet.Dashboard();
+            this.movementsPage = new DRWallet.Movements();
+            this.accountPage = new DRWallet.Account();
+            this.addressesPage = new DRWallet.Addresses();
+            this.settingsPage = new DRWallet.Settings();
             this.SuspendLayout();
             // 
             // loginPage
@@ -61,6 +65,47 @@
             this.dashboardPage.Name = "dashboardPage";
             this.dashboardPage.Size = new System.Drawing.Size(784, 561);
             this.dashboardPage.TabIndex = 7;
+            this.dashboardPage.Visible = false;
+            // 
+            // movementsPage
+            // 
+            this.movementsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.movementsPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.movementsPage.Location = new System.Drawing.Point(0, 0);
+            this.movementsPage.Name = "movementsPage";
+            this.movementsPage.Size = new System.Drawing.Size(784, 561);
+            this.movementsPage.TabIndex = 9;
+            this.movementsPage.Visible = false;
+            // 
+            // accountPage
+            // 
+            this.accountPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.accountPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.accountPage.Location = new System.Drawing.Point(0, 0);
+            this.accountPage.Name = "accountPage";
+            this.accountPage.Size = new System.Drawing.Size(784, 561);
+            this.accountPage.TabIndex = 10;
+            this.accountPage.Visible = false;
+            // 
+            // addressesPage
+            // 
+            this.addressesPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.addressesPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.addressesPage.Location = new System.Drawing.Point(0, 0);
+            this.addressesPage.Name = "addressesPage";
+            this.addressesPage.Size = new System.Drawing.Size(784, 561);
+            this.addressesPage.TabIndex = 11;
+            this.addressesPage.Visible = false;
+            // 
+            // settingsPage
+            // 
+            this.settingsPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.settingsPage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.settingsPage.Location = new System.Drawing.Point(0, 0);
+            this.settingsPage.Name = "settingsPage";
+            this.settingsPage.Size = new System.Drawing.Size(784, 561);
+            this.settingsPage.TabIndex = 12;
+            this.settingsPage.Visible = false;
             // 
             // Main
             // 
@@ -70,6 +115,10 @@
             this.Controls.Add(this.loginPage);
             this.Controls.Add(this.registerPage);
             this.Controls.Add(this.dashboardPage);
+            this.Controls.Add(this.movementsPage);
+            this.Controls.Add(this.accountPage);
+            this.Controls.Add(this.addressesPage);
+            this.Controls.Add(this.settingsPage);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
@@ -84,5 +133,9 @@
         private Login loginPage;
         private Register registerPage;
         private Dashboard dashboardPage;
+        private Movements movementsPage;
+        private Account accountPage;
+        private Addresses addressesPage;
+        private Settings settingsPage;
     }
 }

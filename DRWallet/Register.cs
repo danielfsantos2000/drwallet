@@ -61,7 +61,11 @@ namespace DRWallet
                                         regErrorLab.Location = new Point(250, 290);
                                         regErrorLab.Text = "Successfully registered!";
                                         regErrorLab.Visible = true;
+
+                                        Logs.AddRegisterLog(regUserBox.Text);
+
                                         OnButtonClicked();
+
                                     } else {
                                         regErrorLab.Location = new Point(260, 290);
                                         regErrorLab.Text = "Something went wrong!";

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace DRWallet
 {
@@ -70,6 +71,22 @@ namespace DRWallet
             set
             {
                 puEmail = value;
+            }
+        }
+
+        public static void updateInfo()
+        {
+            try
+            {
+
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+
             }
         }
     }

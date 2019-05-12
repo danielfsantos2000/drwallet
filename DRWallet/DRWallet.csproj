@@ -101,6 +101,7 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Logs.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

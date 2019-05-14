@@ -46,3 +46,4 @@ C:\Users\danie\Documents\Project\DRWallet\bin\Debug\MySql.Data.dll
 C:\Users\danie\Documents\Project\DRWallet\bin\Debug\Google.Protobuf.xml
 C:\Users\danie\Documents\Project\DRWallet\bin\Debug\MySql.Data.xml
 C:\Users\danie\Documents\Project\DRWallet\obj\Debug\DRWallet.csproj.CopyComplete
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.ChangePassword.resources

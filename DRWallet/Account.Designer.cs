@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.accNavBar = new DRWallet.NavBar();
             this.accAccLab = new System.Windows.Forms.Label();
             this.accFNameLab = new System.Windows.Forms.Label();
             this.accFNameBox = new System.Windows.Forms.TextBox();
@@ -38,16 +37,9 @@
             this.accEmailBox = new System.Windows.Forms.TextBox();
             this.assPasswordButton = new System.Windows.Forms.Button();
             this.accSaveBox = new System.Windows.Forms.Button();
+            this.accErrorLab = new System.Windows.Forms.Label();
+            this.accNavBar = new DRWallet.NavBar();
             this.SuspendLayout();
-            // 
-            // accNavBar
-            // 
-            this.accNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.accNavBar.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accNavBar.Location = new System.Drawing.Point(0, 0);
-            this.accNavBar.Name = "accNavBar";
-            this.accNavBar.Size = new System.Drawing.Size(150, 600);
-            this.accNavBar.TabIndex = 0;
             // 
             // accAccLab
             // 
@@ -131,6 +123,7 @@
             this.assPasswordButton.TabIndex = 20;
             this.assPasswordButton.Text = "Change Password";
             this.assPasswordButton.UseVisualStyleBackColor = true;
+            this.assPasswordButton.Click += new System.EventHandler(this.AssPasswordButton_Click);
             // 
             // accSaveBox
             // 
@@ -142,11 +135,33 @@
             this.accSaveBox.UseVisualStyleBackColor = true;
             this.accSaveBox.Click += new System.EventHandler(this.AccSaveBox_Click);
             // 
+            // accErrorLab
+            // 
+            this.accErrorLab.AutoSize = true;
+            this.accErrorLab.Font = new System.Drawing.Font("Gill Sans MT", 22.25F);
+            this.accErrorLab.Location = new System.Drawing.Point(415, 450);
+            this.accErrorLab.Name = "accErrorLab";
+            this.accErrorLab.Size = new System.Drawing.Size(86, 42);
+            this.accErrorLab.TabIndex = 22;
+            this.accErrorLab.Text = "Error";
+            this.accErrorLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.accErrorLab.Visible = false;
+            // 
+            // accNavBar
+            // 
+            this.accNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.accNavBar.Dock = System.Windows.Forms.DockStyle.Left;
+            this.accNavBar.Location = new System.Drawing.Point(0, 0);
+            this.accNavBar.Name = "accNavBar";
+            this.accNavBar.Size = new System.Drawing.Size(150, 600);
+            this.accNavBar.TabIndex = 0;
+            // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.Controls.Add(this.accErrorLab);
             this.Controls.Add(this.accSaveBox);
             this.Controls.Add(this.assPasswordButton);
             this.Controls.Add(this.accEmailBox);
@@ -176,5 +191,6 @@
         private System.Windows.Forms.TextBox accEmailBox;
         private System.Windows.Forms.Button assPasswordButton;
         private System.Windows.Forms.Button accSaveBox;
+        private System.Windows.Forms.Label accErrorLab;
     }
 }

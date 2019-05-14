@@ -1,0 +1,29 @@
+//Login
+- Design
+
+//Register
+- Design
+
+//Dashboard
+- Send
+- Receive
+- History
+- Design
+
+//Movements
+- List Movements
+- Design
+
+//Addresses
+- List Addresses
+- Create Adresses
+- Remove Addresses
+- Design
+
+//Account
+- Design
+
+//Settings
+- Language
+- Theme
+- Design

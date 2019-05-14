@@ -45,6 +45,7 @@
             this.logUserBox.Name = "logUserBox";
             this.logUserBox.Size = new System.Drawing.Size(100, 20);
             this.logUserBox.TabIndex = 1;
+            this.logUserBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyReg);
             // 
             // logPassBox
             // 
@@ -53,6 +54,7 @@
             this.logPassBox.PasswordChar = '*';
             this.logPassBox.Size = new System.Drawing.Size(100, 20);
             this.logPassBox.TabIndex = 2;
+            this.logPassBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyReg);
             // 
             // logLoginButton
             // 
@@ -129,6 +131,7 @@
             this.Controls.Add(this.logoImage);
             this.Name = "Login";
             this.Size = new System.Drawing.Size(800, 600);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.KeyReg);
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

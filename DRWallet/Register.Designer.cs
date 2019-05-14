@@ -63,6 +63,7 @@
             this.regFNameBox.Name = "regFNameBox";
             this.regFNameBox.Size = new System.Drawing.Size(100, 20);
             this.regFNameBox.TabIndex = 2;
+            this.regFNameBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             // 
             // regLNameBox
             // 
@@ -70,6 +71,7 @@
             this.regLNameBox.Name = "regLNameBox";
             this.regLNameBox.Size = new System.Drawing.Size(100, 20);
             this.regLNameBox.TabIndex = 3;
+            this.regLNameBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             // 
             // regUserBox
             // 
@@ -77,6 +79,7 @@
             this.regUserBox.Name = "regUserBox";
             this.regUserBox.Size = new System.Drawing.Size(100, 20);
             this.regUserBox.TabIndex = 4;
+            this.regUserBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             // 
             // regEmailBox
             // 
@@ -84,6 +87,7 @@
             this.regEmailBox.Name = "regEmailBox";
             this.regEmailBox.Size = new System.Drawing.Size(100, 20);
             this.regEmailBox.TabIndex = 5;
+            this.regEmailBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             // 
             // regPassBox
             // 
@@ -92,6 +96,7 @@
             this.regPassBox.PasswordChar = '*';
             this.regPassBox.Size = new System.Drawing.Size(100, 20);
             this.regPassBox.TabIndex = 6;
+            this.regPassBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             // 
             // regConfPassBox
             // 
@@ -100,6 +105,7 @@
             this.regConfPassBox.PasswordChar = '*';
             this.regConfPassBox.Size = new System.Drawing.Size(100, 20);
             this.regConfPassBox.TabIndex = 7;
+            this.regConfPassBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             // 
             // logRegisterBox
             // 
@@ -210,6 +216,7 @@
             this.Controls.Add(this.logoImage);
             this.Name = "Register";
             this.Size = new System.Drawing.Size(800, 600);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Register_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.logoImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -25,6 +25,13 @@ namespace DRWallet
 
         private void LogLoginButton_Click(object sender, EventArgs e)
         {
+            loginProcess();
+        }
+
+
+
+        private void loginProcess()
+        {
             if (logUserBox.Text != "" && logPassBox.Text != "")
             {
                 try
@@ -46,6 +53,37 @@ namespace DRWallet
                             User.uEmail = drs1["useremail"].ToString();
                             User.uFName = drs1["userfname"].ToString();
                             User.uLName = drs1["userlname"].ToString();
+
+                            drs1.Close();
+
+                            MySqlCommand cmds2 = new MySqlCommand();
+                            cmds2.Connection = db;
+                            cmds2.CommandText = "SELECT * FROM settings WHERE setowner=@sowner";
+                            cmds2.Parameters.Add("@sowner", MySqlDbType.String).Value = User.uID;
+                            MySqlDataReader drs2 = cmds2.ExecuteReader();
+                            if (drs2.HasRows)
+                            {
+                                while (drs2.Read())
+                                {
+                                    int.TryParse(drs2["setlanguage"].ToString(), out int lang);
+                                    User.uLanguage = lang;
+                                    int.TryParse(drs2["settheme"].ToString(), out int theme);
+                                    User.uTheme = theme;
+                                }
+                                drs2.Close();
+                            }
+                            else
+                            {
+                                drs2.Close();
+                                MySqlCommand cmdInsert = new MySqlCommand();
+                                cmdInsert.Connection = db;
+                                cmdInsert.CommandText = "INSERT INTO settings (setowner,setlanguage,settheme) VALUES (@uid,1,1)";
+                                cmdInsert.Parameters.Add("@uid", MySqlDbType.String).Value = User.uID;
+                                int numbers = cmdInsert.ExecuteNonQuery();
+                                User.uLanguage = 1;
+                                User.uTheme = 1;
+                            }
+
                             OnLogButtonClicked();
                         }
                         drs1.Close();
@@ -57,7 +95,7 @@ namespace DRWallet
                         logErrorLab.Visible = true;
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     logErrorLab.Location = new Point(0, 290);
                     logErrorLab.Text = $"Error: {ex}";
@@ -67,7 +105,9 @@ namespace DRWallet
                 {
                     db.Close();
                 }
-            } else {
+            }
+            else
+            {
                 logErrorLab.Location = new Point(240, 290);
                 logErrorLab.Text = "You need to fill all fields!";
                 logErrorLab.Visible = true;
@@ -110,5 +150,13 @@ namespace DRWallet
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
+
+        private void KeyReg(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                loginProcess();
+            }
+        }
     }
 }

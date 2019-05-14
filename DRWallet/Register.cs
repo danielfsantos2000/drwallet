@@ -20,6 +20,19 @@ namespace DRWallet
 
         private void LogRegisterBox_Click(object sender, EventArgs e)
         {
+            registProcess();
+        }
+
+        private void Register_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                registProcess();
+            }
+        }
+
+        private void registProcess()
+        {
             if (regFNameBox.Text != "" && regLNameBox.Text != "" && regUserBox.Text != "" && regEmailBox.Text != "" && regPassBox.Text != "" && regConfPassBox.Text != "")
             {
                 if (isEmailValid(regEmailBox.Text))
@@ -66,17 +79,23 @@ namespace DRWallet
 
                                         OnButtonClicked();
 
-                                    } else {
+                                    }
+                                    else
+                                    {
                                         regErrorLab.Location = new Point(260, 290);
                                         regErrorLab.Text = "Something went wrong!";
                                         regErrorLab.Visible = true;
                                     }
-                                } else {
+                                }
+                                else
+                                {
                                     regErrorLab.Location = new Point(250, 290);
                                     regErrorLab.Text = "Email already in use!";
                                     regErrorLab.Visible = true;
                                 }
-                            } else {
+                            }
+                            else
+                            {
                                 regErrorLab.Location = new Point(242, 290);
                                 regErrorLab.Text = "Username already in use!";
                                 regErrorLab.Visible = true;
@@ -93,17 +112,23 @@ namespace DRWallet
                             db.Close();
                         }
 
-                    } else {
+                    }
+                    else
+                    {
                         regErrorLab.Location = new Point(234, 290);
                         regErrorLab.Text = "Passwords doesn't match!";
                         regErrorLab.Visible = true;
                     }
-                } else {
+                }
+                else
+                {
                     regErrorLab.Location = new Point(186, 290);
                     regErrorLab.Text = "Email doesn't have a valid format!";
                     regErrorLab.Visible = true;
                 }
-            } else {
+            }
+            else
+            {
                 regErrorLab.Location = new Point(240, 290);
                 regErrorLab.Text = "You need to fill all fields!";
                 regErrorLab.Visible = true;
@@ -132,8 +157,6 @@ namespace DRWallet
                 return false;
             }
         }
-
-
 
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";

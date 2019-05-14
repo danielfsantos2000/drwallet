@@ -74,6 +74,36 @@ namespace DRWallet
             }
         }
 
+        //Settings
+        private static int puLanguage;
+        private static int puTheme;
+
+        public static int uLanguage
+        {
+            get
+            {
+                return puLanguage;
+            }
+            set
+            {
+                puLanguage = value;
+            }
+        }
+
+        public static int uTheme
+        {
+            get
+            {
+                return puTheme;
+            }
+            set
+            {
+                puTheme = value;
+            }
+        }
+
+
+        //Updater
         public static void updateInfo()
         {
             try

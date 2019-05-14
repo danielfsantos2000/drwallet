@@ -44,6 +44,14 @@ namespace DRWallet
                     cmdChange.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
                     cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                     cmdChange.ExecuteNonQuery();
+
+                    User.uFName = accFNameBox.Text;
+                    User.uLName = accLNameBox.Text;
+                    User.uEmail = accEmailBox.Text;
+
+                    accErrorLab.Text = "Successfully Changed!";
+                    accErrorLab.Location = new Point(328, 450);
+                    accErrorLab.Visible = true;
                 }
                 catch (Exception ex)
                 {
@@ -54,11 +62,23 @@ namespace DRWallet
                     db.Close();
                 }
             }
+            else
+            {
+                accErrorLab.Text = "You need to fill all fields!";
+                accErrorLab.Location = new Point(312, 450);
+                accErrorLab.Visible = true;
+            }
         }
 
 
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
+
+        private void AssPasswordButton_Click(object sender, EventArgs e)
+        {
+            ChangePassword npass = new ChangePassword();
+            npass.Show();
+        }
     }
 }

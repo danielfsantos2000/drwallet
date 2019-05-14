@@ -53,20 +53,20 @@
             // dashUsernameLab
             // 
             this.dashUsernameLab.AutoSize = true;
-            this.dashUsernameLab.Font = new System.Drawing.Font("Gill Sans MT", 58F);
+            this.dashUsernameLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 58F);
             this.dashUsernameLab.Location = new System.Drawing.Point(156, 7);
             this.dashUsernameLab.Name = "dashUsernameLab";
-            this.dashUsernameLab.Size = new System.Drawing.Size(351, 107);
+            this.dashUsernameLab.Size = new System.Drawing.Size(383, 89);
             this.dashUsernameLab.TabIndex = 1;
             this.dashUsernameLab.Text = "username";
             // 
             // dashBalanceLab
             // 
             this.dashBalanceLab.AutoSize = true;
-            this.dashBalanceLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashBalanceLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashBalanceLab.Location = new System.Drawing.Point(166, 156);
             this.dashBalanceLab.Name = "dashBalanceLab";
-            this.dashBalanceLab.Size = new System.Drawing.Size(265, 48);
+            this.dashBalanceLab.Size = new System.Drawing.Size(287, 39);
             this.dashBalanceLab.TabIndex = 2;
             this.dashBalanceLab.Text = "Balance: 0,00 DR";
             // 
@@ -91,20 +91,20 @@
             // dashDRCoinLab
             // 
             this.dashDRCoinLab.AutoSize = true;
-            this.dashDRCoinLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashDRCoinLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashDRCoinLab.Location = new System.Drawing.Point(498, 156);
             this.dashDRCoinLab.Name = "dashDRCoinLab";
-            this.dashDRCoinLab.Size = new System.Drawing.Size(244, 48);
+            this.dashDRCoinLab.Size = new System.Drawing.Size(254, 39);
             this.dashDRCoinLab.TabIndex = 5;
             this.dashDRCoinLab.Text = "DR Coin Value:";
             // 
             // dashValueLab
             // 
             this.dashValueLab.AutoSize = true;
-            this.dashValueLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F);
+            this.dashValueLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
             this.dashValueLab.Location = new System.Drawing.Point(554, 214);
             this.dashValueLab.Name = "dashValueLab";
-            this.dashValueLab.Size = new System.Drawing.Size(103, 48);
+            this.dashValueLab.Size = new System.Drawing.Size(103, 39);
             this.dashValueLab.TabIndex = 6;
             this.dashValueLab.Text = "0,00€";
             this.dashValueLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,10 +112,10 @@
             // dashHistoryLab
             // 
             this.dashHistoryLab.AutoSize = true;
-            this.dashHistoryLab.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashHistoryLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashHistoryLab.Location = new System.Drawing.Point(168, 288);
             this.dashHistoryLab.Name = "dashHistoryLab";
-            this.dashHistoryLab.Size = new System.Drawing.Size(94, 34);
+            this.dashHistoryLab.Size = new System.Drawing.Size(93, 29);
             this.dashHistoryLab.TabIndex = 7;
             this.dashHistoryLab.Text = "History:";
             // 
@@ -123,7 +123,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(17)))));
             this.panel1.Controls.Add(this.dashHistoryInfoLab);
-            this.panel1.Location = new System.Drawing.Point(156, 325);
+            this.panel1.Location = new System.Drawing.Point(171, 116);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 37);
             this.panel1.TabIndex = 8;
@@ -131,10 +131,10 @@
             // dashHistoryInfoLab
             // 
             this.dashHistoryInfoLab.AutoSize = true;
-            this.dashHistoryInfoLab.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashHistoryInfoLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashHistoryInfoLab.Location = new System.Drawing.Point(38, 5);
             this.dashHistoryInfoLab.Name = "dashHistoryInfoLab";
-            this.dashHistoryInfoLab.Size = new System.Drawing.Size(558, 27);
+            this.dashHistoryInfoLab.Size = new System.Drawing.Size(567, 24);
             this.dashHistoryInfoLab.TabIndex = 9;
             this.dashHistoryInfoLab.Text = "Your Account ID                Details               Account ID                Da" +
     "te";
@@ -190,7 +190,7 @@
             // 
             // accountID
             // 
-            this.accountID.DataPropertyName = "mov";
+            this.accountID.DataPropertyName = "movaddsender";
             this.accountID.HeaderText = "Your Account ID";
             this.accountID.Name = "accountID";
             this.accountID.ReadOnly = true;
@@ -198,18 +198,22 @@
             // 
             // details
             // 
+            this.details.DataPropertyName = "movqtd";
             this.details.HeaderText = "Details";
             this.details.Name = "details";
             this.details.ReadOnly = true;
+            this.details.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // oAccountID
             // 
+            this.oAccountID.DataPropertyName = "movaddreceiver";
             this.oAccountID.HeaderText = "Account ID";
             this.oAccountID.Name = "oAccountID";
             this.oAccountID.ReadOnly = true;
             // 
             // date
             // 
+            this.date.DataPropertyName = "movdate";
             this.date.HeaderText = "Date";
             this.date.Name = "date";
             this.date.ReadOnly = true;

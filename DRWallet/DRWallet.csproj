@@ -211,5 +211,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_send_32_0_787878_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_send_24_0_787878_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\font-awesome_4-7-0_arrow-circle-down_24_0_787878_none.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pt-PT.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

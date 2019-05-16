@@ -38,13 +38,13 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dashHistoryInfoLab = new System.Windows.Forms.Label();
             this.dashHistoryGrid = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dashNavBar = new DRWallet.NavBar();
-            this.Icon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.accountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oAccountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dashNavBar = new DRWallet.NavBar();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dashHistoryGrid)).BeginInit();
             this.panel2.SuspendLayout();
@@ -123,7 +123,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(17)))));
             this.panel1.Controls.Add(this.dashHistoryInfoLab);
-            this.panel1.Location = new System.Drawing.Point(171, 116);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 37);
             this.panel1.TabIndex = 8;
@@ -132,20 +132,21 @@
             // 
             this.dashHistoryInfoLab.AutoSize = true;
             this.dashHistoryInfoLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashHistoryInfoLab.Location = new System.Drawing.Point(38, 5);
+            this.dashHistoryInfoLab.Location = new System.Drawing.Point(39, 5);
             this.dashHistoryInfoLab.Name = "dashHistoryInfoLab";
-            this.dashHistoryInfoLab.Size = new System.Drawing.Size(567, 24);
+            this.dashHistoryInfoLab.Size = new System.Drawing.Size(537, 24);
             this.dashHistoryInfoLab.TabIndex = 9;
-            this.dashHistoryInfoLab.Text = "Your Account ID                Details               Account ID                Da" +
-    "te";
+            this.dashHistoryInfoLab.Text = "Your Account ID          Details               Account ID                Date";
             // 
             // dashHistoryGrid
             // 
             this.dashHistoryGrid.AllowUserToAddRows = false;
             this.dashHistoryGrid.AllowUserToDeleteRows = false;
+            this.dashHistoryGrid.AllowUserToResizeColumns = false;
+            this.dashHistoryGrid.AllowUserToResizeRows = false;
             this.dashHistoryGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
             this.dashHistoryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dashHistoryGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dashHistoryGrid.ColumnHeadersHeight = 37;
             this.dashHistoryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Icon,
             this.accountID,
@@ -154,10 +155,13 @@
             this.date});
             this.dashHistoryGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dashHistoryGrid.Location = new System.Drawing.Point(0, 0);
+            this.dashHistoryGrid.MultiSelect = false;
             this.dashHistoryGrid.Name = "dashHistoryGrid";
             this.dashHistoryGrid.ReadOnly = true;
             this.dashHistoryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dashHistoryGrid.RowHeadersVisible = false;
+            this.dashHistoryGrid.RowTemplate.Height = 32;
+            this.dashHistoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dashHistoryGrid.ShowCellErrors = false;
             this.dashHistoryGrid.ShowCellToolTips = false;
             this.dashHistoryGrid.ShowEditingIcon = false;
@@ -165,8 +169,50 @@
             this.dashHistoryGrid.Size = new System.Drawing.Size(615, 229);
             this.dashHistoryGrid.TabIndex = 9;
             // 
+            // Icon
+            // 
+            this.Icon.DataPropertyName = "Image";
+            this.Icon.HeaderText = "";
+            this.Icon.Name = "Icon";
+            this.Icon.ReadOnly = true;
+            this.Icon.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Icon.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // accountID
+            // 
+            this.accountID.DataPropertyName = "MyAddress";
+            this.accountID.HeaderText = "Your Account ID";
+            this.accountID.Name = "accountID";
+            this.accountID.ReadOnly = true;
+            this.accountID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // details
+            // 
+            this.details.DataPropertyName = "Details";
+            this.details.HeaderText = "Details";
+            this.details.Name = "details";
+            this.details.ReadOnly = true;
+            this.details.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // oAccountID
+            // 
+            this.oAccountID.DataPropertyName = "OtherAddress";
+            this.oAccountID.HeaderText = "Account ID";
+            this.oAccountID.Name = "oAccountID";
+            this.oAccountID.ReadOnly = true;
+            this.oAccountID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // date
+            // 
+            this.date.DataPropertyName = "Date";
+            this.date.HeaderText = "Date";
+            this.date.Name = "date";
+            this.date.ReadOnly = true;
+            this.date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.dashHistoryGrid);
             this.panel2.Location = new System.Drawing.Point(156, 325);
             this.panel2.Name = "panel2";
@@ -182,48 +228,11 @@
             this.dashNavBar.Size = new System.Drawing.Size(150, 600);
             this.dashNavBar.TabIndex = 0;
             // 
-            // Icon
-            // 
-            this.Icon.HeaderText = "";
-            this.Icon.Name = "Icon";
-            this.Icon.ReadOnly = true;
-            // 
-            // accountID
-            // 
-            this.accountID.DataPropertyName = "movaddsender";
-            this.accountID.HeaderText = "Your Account ID";
-            this.accountID.Name = "accountID";
-            this.accountID.ReadOnly = true;
-            this.accountID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // details
-            // 
-            this.details.DataPropertyName = "movqtd";
-            this.details.HeaderText = "Details";
-            this.details.Name = "details";
-            this.details.ReadOnly = true;
-            this.details.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // oAccountID
-            // 
-            this.oAccountID.DataPropertyName = "movaddreceiver";
-            this.oAccountID.HeaderText = "Account ID";
-            this.oAccountID.Name = "oAccountID";
-            this.oAccountID.ReadOnly = true;
-            // 
-            // date
-            // 
-            this.date.DataPropertyName = "movdate";
-            this.date.HeaderText = "Date";
-            this.date.Name = "date";
-            this.date.ReadOnly = true;
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dashHistoryLab);
             this.Controls.Add(this.dashValueLab);
             this.Controls.Add(this.dashDRCoinLab);
@@ -258,7 +267,7 @@
         private System.Windows.Forms.Label dashHistoryInfoLab;
         private System.Windows.Forms.DataGridView dashHistoryGrid;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Icon;
+        private System.Windows.Forms.DataGridViewImageColumn Icon;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountID;
         private System.Windows.Forms.DataGridViewTextBoxColumn details;
         private System.Windows.Forms.DataGridViewTextBoxColumn oAccountID;

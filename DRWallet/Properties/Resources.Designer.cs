@@ -61,11 +61,67 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dashboard.
+        /// </summary>
+        internal static string EN_Nav_Dashboard {
+            get {
+                return ResourceManager.GetString("EN_Nav_Dashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movements.
+        /// </summary>
+        internal static string EN_Nav_Movements {
+            get {
+                return ResourceManager.GetString("EN_Nav_Movements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Icon_PNG_Prancheta_1 {
             get {
                 object obj = ResourceManager.GetObject("Icon PNG_Prancheta 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Inicio.
+        /// </summary>
+        internal static string PT_Nav_Dashboard {
+            get {
+                return ResourceManager.GetString("PT_Nav_Dashboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movimentos.
+        /// </summary>
+        internal static string PT_Nav_Movements {
+            get {
+                return ResourceManager.GetString("PT_Nav_Movements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap receive {
+            get {
+                object obj = ResourceManager.GetObject("receive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap send {
+            get {
+                object obj = ResourceManager.GetObject("send", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

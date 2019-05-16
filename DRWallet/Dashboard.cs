@@ -48,46 +48,50 @@ namespace DRWallet
                 MySqlCommand cmds2 = new MySqlCommand();
                 cmds2.Connection = db;
                 cmds2.CommandText = "SELECT movaddsender,movqtd,movaddreceiver,movdate FROM movements WHERE movaddsender=@id || movaddreceiver=@id ORDER BY movdate DESC LIMIT 10";
-                cmds2.Parameters.Add("@id", MySqlDbType.String).Value = "1";
+                cmds2.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                 MySqlDataReader drs2 = cmds2.ExecuteReader();
                 if (drs2.HasRows)
                 {
-                    //Manual
+                    Image send;
+                    send = DRWallet.Properties.Resources.send;
+                    Image receive;
+                    receive = DRWallet.Properties.Resources.receive;
                     DataTable dt = new DataTable("History");
-                    dt.Columns.Add("Image");
+                    dt.Columns.Add("Image", typeof(Image));
                     dt.Columns.Add("MyAddress");
                     dt.Columns.Add("Details");
                     dt.Columns.Add("OtherAddress");
                     dt.Columns.Add("Date");
 
-                    DataRow dr = dt.NewRow();
+                    dashHistoryGrid.Columns[0].Width = 32;
+                    dashHistoryGrid.Columns[1].Width = 170;
+                    dashHistoryGrid.Columns[2].Width = 122;
+                    dashHistoryGrid.Columns[3].Width = 170;
+                    dashHistoryGrid.Columns[4].Width = 120;
 
-                   // while (drs2.Read())
-                    //{
+
+
+                    while (drs2.Read())
+                    {
+                        DataRow dr = dt.NewRow();
                         if (drs2["movaddsender"].ToString() == User.uID.ToString())
                         {
-                            dr["Image"] = "Send";
+                            dr["Image"] = send;
                             dr["MyAddress"] = drs2["movaddsender"].ToString();
-                            dr["Details"] = $"Sent {drs2["movqtd"].ToString()} DR";
+                            dr["Details"] = $"Sent {drs2["movqtd"].ToString()} DR to";
                             dr["OtherAddress"] = drs2["movaddreceiver"].ToString();
                             dr["Date"] = drs2["movdate"].ToString();
-                            dt.Rows.Add(dr);
                         }
-                    //}
-
-
-
-
-
-
-
-                    //Auto
-                    DataSet ds = new DataSet();
-                    //DataTable dataTable = new DataTable("history");
-
-                    //ds.Tables.Add(dt);
-
-                    //ds.Load(drs2, LoadOption.PreserveChanges, ds.Tables["history"]);
+                        else
+                        {
+                            dr["Image"] = receive;
+                            dr["MyAddress"] = drs2["movaddreceiver"].ToString();
+                            dr["Details"] = $"Received {drs2["movqtd"].ToString()} DR from";
+                            dr["OtherAddress"] = drs2["movaddsender"].ToString();
+                            dr["Date"] = drs2["movdate"].ToString();
+                        }
+                        dt.Rows.Add(dr);
+                    }
 
                     dashHistoryGrid.DataSource = dt;
                     dashHistoryGrid.Update();

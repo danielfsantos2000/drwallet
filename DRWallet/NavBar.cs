@@ -33,6 +33,16 @@ namespace DRWallet
 
         public void NavbarUpdate()
         {
+            if (User.uLanguage == 1)
+            {
+                navDashboardButton.Text = DRWallet.Properties.Resources.EN_Nav_Dashboard;
+                navMovementsButton.Text = DRWallet.Properties.Resources.EN_Nav_Movements;
+            }
+            else
+            {
+                navDashboardButton.Text = DRWallet.Properties.Resources.PT_Nav_Dashboard;
+                navMovementsButton.Text = DRWallet.Properties.Resources.PT_Nav_Movements;
+            }
             navDashboardButton.BackColor = Color.FromArgb(255, 255, 164, 76);
             navMovementsButton.BackColor = Color.FromArgb(255, 255, 164, 76);
             navAddressesButton.BackColor = Color.FromArgb(255, 255, 164, 76);

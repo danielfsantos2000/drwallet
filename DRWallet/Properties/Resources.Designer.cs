@@ -61,6 +61,24 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        internal static string EN_Nav_Account {
+            get {
+                return ResourceManager.GetString("EN_Nav_Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Addresses.
+        /// </summary>
+        internal static string EN_Nav_Addresses {
+            get {
+                return ResourceManager.GetString("EN_Nav_Addresses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dashboard.
         /// </summary>
         internal static string EN_Nav_Dashboard {
@@ -79,12 +97,75 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string EN_Nav_Settings {
+            get {
+                return ResourceManager.GetString("EN_Nav_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Settings.
+        /// </summary>
+        internal static string EN_Set_Header {
+            get {
+                return ResourceManager.GetString("EN_Set_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Language.
+        /// </summary>
+        internal static string EN_Set_Language {
+            get {
+                return ResourceManager.GetString("EN_Set_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Changes.
+        /// </summary>
+        internal static string EN_Set_SaveButton {
+            get {
+                return ResourceManager.GetString("EN_Set_SaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Theme.
+        /// </summary>
+        internal static string EN_Set_Theme {
+            get {
+                return ResourceManager.GetString("EN_Set_Theme", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Icon_PNG_Prancheta_1 {
             get {
                 object obj = ResourceManager.GetObject("Icon PNG_Prancheta 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conta.
+        /// </summary>
+        internal static string PT_Nav_Account {
+            get {
+                return ResourceManager.GetString("PT_Nav_Account", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereços.
+        /// </summary>
+        internal static string PT_Nav_Addresses {
+            get {
+                return ResourceManager.GetString("PT_Nav_Addresses", resourceCulture);
             }
         }
         
@@ -103,6 +184,51 @@ namespace DRWallet.Properties {
         internal static string PT_Nav_Movements {
             get {
                 return ResourceManager.GetString("PT_Nav_Movements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configurações.
+        /// </summary>
+        internal static string PT_Nav_Settings {
+            get {
+                return ResourceManager.GetString("PT_Nav_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Configurações.
+        /// </summary>
+        internal static string PT_Set_Header {
+            get {
+                return ResourceManager.GetString("PT_Set_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Idioma.
+        /// </summary>
+        internal static string PT_Set_Language {
+            get {
+                return ResourceManager.GetString("PT_Set_Language", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar.
+        /// </summary>
+        internal static string PT_Set_SaveButton {
+            get {
+                return ResourceManager.GetString("PT_Set_SaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tema.
+        /// </summary>
+        internal static string PT_Set_Theme {
+            get {
+                return ResourceManager.GetString("PT_Set_Theme", resourceCulture);
             }
         }
         

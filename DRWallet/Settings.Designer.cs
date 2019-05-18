@@ -31,9 +31,9 @@
             this.setSetLab = new System.Windows.Forms.Label();
             this.setLangLab = new System.Windows.Forms.Label();
             this.setLangBox = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.setThemeLab = new System.Windows.Forms.Label();
             this.setThemeBox = new System.Windows.Forms.ComboBox();
-            this.accSaveBox = new System.Windows.Forms.Button();
+            this.setSaveBox = new System.Windows.Forms.Button();
             this.setNavBar = new DRWallet.NavBar();
             this.SuspendLayout();
             // 
@@ -41,71 +41,82 @@
             // 
             this.setSetLab.AutoSize = true;
             this.setSetLab.BackColor = System.Drawing.Color.Transparent;
-            this.setSetLab.Font = new System.Drawing.Font("Gill Sans MT", 58F);
-            this.setSetLab.Location = new System.Drawing.Point(152, -8);
+            this.setSetLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F);
+            this.setSetLab.Location = new System.Drawing.Point(155, 5);
             this.setSetLab.Name = "setSetLab";
-            this.setSetLab.Size = new System.Drawing.Size(289, 107);
+            this.setSetLab.Size = new System.Drawing.Size(231, 64);
             this.setSetLab.TabIndex = 14;
             this.setSetLab.Text = "Settings";
             // 
             // setLangLab
             // 
+            this.setLangLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.setLangLab.AutoSize = true;
-            this.setLangLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.setLangLab.Location = new System.Drawing.Point(173, 151);
+            this.setLangLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setLangLab.Location = new System.Drawing.Point(279, 164);
             this.setLangLab.Name = "setLangLab";
-            this.setLangLab.Size = new System.Drawing.Size(158, 48);
+            this.setLangLab.Size = new System.Drawing.Size(179, 39);
             this.setLangLab.TabIndex = 15;
             this.setLangLab.Text = "Language:";
+            this.setLangLab.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // setLangBox
             // 
             this.setLangBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.setLangBox.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setLangBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.setLangBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setLangBox.FormattingEnabled = true;
             this.setLangBox.Items.AddRange(new object[] {
             "English",
             "Portuguese"});
-            this.setLangBox.Location = new System.Drawing.Point(337, 162);
+            this.setLangBox.Location = new System.Drawing.Point(464, 192);
             this.setLangBox.Name = "setLangBox";
-            this.setLangBox.Size = new System.Drawing.Size(142, 38);
+            this.setLangBox.Size = new System.Drawing.Size(142, 33);
             this.setLangBox.TabIndex = 16;
             this.setLangBox.Text = "Language";
             // 
-            // label1
+            // setThemeLab
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(173, 213);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 48);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "Theme:";
+            this.setThemeLab.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.setThemeLab.AutoSize = true;
+            this.setThemeLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setThemeLab.Location = new System.Drawing.Point(323, 224);
+            this.setThemeLab.Name = "setThemeLab";
+            this.setThemeLab.Size = new System.Drawing.Size(135, 39);
+            this.setThemeLab.TabIndex = 17;
+            this.setThemeLab.Text = "Theme:";
+            this.setThemeLab.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // setThemeBox
             // 
             this.setThemeBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.setThemeBox.Font = new System.Drawing.Font("Gill Sans MT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setThemeBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setThemeBox.FormattingEnabled = true;
             this.setThemeBox.Items.AddRange(new object[] {
             "DRWallet",
             "Dark",
             "Light"});
-            this.setThemeBox.Location = new System.Drawing.Point(337, 224);
+            this.setThemeBox.Location = new System.Drawing.Point(464, 250);
             this.setThemeBox.Name = "setThemeBox";
-            this.setThemeBox.Size = new System.Drawing.Size(142, 38);
+            this.setThemeBox.Size = new System.Drawing.Size(142, 33);
             this.setThemeBox.TabIndex = 18;
             this.setThemeBox.Text = "Theme";
             // 
-            // accSaveBox
+            // setSaveBox
             // 
-            this.accSaveBox.Location = new System.Drawing.Point(401, 520);
-            this.accSaveBox.Name = "accSaveBox";
-            this.accSaveBox.Size = new System.Drawing.Size(116, 23);
-            this.accSaveBox.TabIndex = 22;
-            this.accSaveBox.Text = "Save Changes";
-            this.accSaveBox.UseVisualStyleBackColor = true;
-            this.accSaveBox.Click += new System.EventHandler(this.AccSaveBox_Click);
+            this.setSaveBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
+            this.setSaveBox.FlatAppearance.BorderSize = 0;
+            this.setSaveBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
+            this.setSaveBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
+            this.setSaveBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.setSaveBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.setSaveBox.Location = new System.Drawing.Point(387, 486);
+            this.setSaveBox.Name = "setSaveBox";
+            this.setSaveBox.Size = new System.Drawing.Size(150, 50);
+            this.setSaveBox.TabIndex = 22;
+            this.setSaveBox.Text = "Save Changes";
+            this.setSaveBox.UseVisualStyleBackColor = false;
+            this.setSaveBox.Click += new System.EventHandler(this.AccSaveBox_Click);
             // 
             // setNavBar
             // 
@@ -121,9 +132,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
-            this.Controls.Add(this.accSaveBox);
+            this.Controls.Add(this.setSaveBox);
             this.Controls.Add(this.setThemeBox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.setThemeLab);
             this.Controls.Add(this.setLangBox);
             this.Controls.Add(this.setLangLab);
             this.Controls.Add(this.setSetLab);
@@ -141,8 +152,8 @@
         private System.Windows.Forms.Label setSetLab;
         private System.Windows.Forms.Label setLangLab;
         private System.Windows.Forms.ComboBox setLangBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label setThemeLab;
         private System.Windows.Forms.ComboBox setThemeBox;
-        private System.Windows.Forms.Button accSaveBox;
+        private System.Windows.Forms.Button setSaveBox;
     }
 }

@@ -54,7 +54,7 @@
             this.navDashboardButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.navDashboardButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.navDashboardButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navDashboardButton.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navDashboardButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.navDashboardButton.Location = new System.Drawing.Point(0, 155);
             this.navDashboardButton.Name = "navDashboardButton";
             this.navDashboardButton.Size = new System.Drawing.Size(150, 50);
@@ -70,7 +70,7 @@
             this.navMovementsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.navMovementsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.navMovementsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navMovementsButton.Font = new System.Drawing.Font("Gill Sans MT", 17F, System.Drawing.FontStyle.Bold);
+            this.navMovementsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.navMovementsButton.Location = new System.Drawing.Point(0, 207);
             this.navMovementsButton.Name = "navMovementsButton";
             this.navMovementsButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -87,7 +87,7 @@
             this.navAddressesButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.navAddressesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.navAddressesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navAddressesButton.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navAddressesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.navAddressesButton.Location = new System.Drawing.Point(0, 259);
             this.navAddressesButton.Name = "navAddressesButton";
             this.navAddressesButton.Size = new System.Drawing.Size(150, 50);
@@ -103,7 +103,7 @@
             this.navAccountButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.navAccountButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.navAccountButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navAccountButton.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navAccountButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.navAccountButton.Location = new System.Drawing.Point(0, 311);
             this.navAccountButton.Name = "navAccountButton";
             this.navAccountButton.Size = new System.Drawing.Size(150, 50);
@@ -119,7 +119,7 @@
             this.navSettingsButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.navSettingsButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.navSettingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.navSettingsButton.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.navSettingsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
             this.navSettingsButton.Location = new System.Drawing.Point(0, 363);
             this.navSettingsButton.Name = "navSettingsButton";
             this.navSettingsButton.Size = new System.Drawing.Size(150, 50);

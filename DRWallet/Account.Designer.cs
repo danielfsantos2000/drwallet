@@ -45,20 +45,20 @@
             // 
             this.accAccLab.AutoSize = true;
             this.accAccLab.BackColor = System.Drawing.Color.Transparent;
-            this.accAccLab.Font = new System.Drawing.Font("Gill Sans MT", 58F);
-            this.accAccLab.Location = new System.Drawing.Point(152, -8);
+            this.accAccLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 58F);
+            this.accAccLab.Location = new System.Drawing.Point(152, 2);
             this.accAccLab.Name = "accAccLab";
-            this.accAccLab.Size = new System.Drawing.Size(312, 107);
+            this.accAccLab.Size = new System.Drawing.Size(319, 89);
             this.accAccLab.TabIndex = 13;
             this.accAccLab.Text = "Account";
             // 
             // accFNameLab
             // 
             this.accFNameLab.AutoSize = true;
-            this.accFNameLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accFNameLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accFNameLab.Location = new System.Drawing.Point(173, 151);
             this.accFNameLab.Name = "accFNameLab";
-            this.accFNameLab.Size = new System.Drawing.Size(187, 48);
+            this.accFNameLab.Size = new System.Drawing.Size(198, 39);
             this.accFNameLab.TabIndex = 14;
             this.accFNameLab.Text = "First Name:";
             // 
@@ -66,7 +66,7 @@
             // 
             this.accFNameBox.BackColor = System.Drawing.SystemColors.Window;
             this.accFNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.accFNameBox.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accFNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accFNameBox.Location = new System.Drawing.Point(360, 160);
             this.accFNameBox.Name = "accFNameBox";
             this.accFNameBox.Size = new System.Drawing.Size(237, 35);
@@ -76,10 +76,10 @@
             // accLNameLab
             // 
             this.accLNameLab.AutoSize = true;
-            this.accLNameLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accLNameLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accLNameLab.Location = new System.Drawing.Point(173, 212);
             this.accLNameLab.Name = "accLNameLab";
-            this.accLNameLab.Size = new System.Drawing.Size(181, 48);
+            this.accLNameLab.Size = new System.Drawing.Size(195, 39);
             this.accLNameLab.TabIndex = 16;
             this.accLNameLab.Text = "Last Name:";
             // 
@@ -87,7 +87,7 @@
             // 
             this.accLNameBox.BackColor = System.Drawing.SystemColors.Window;
             this.accLNameBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.accLNameBox.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accLNameBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accLNameBox.Location = new System.Drawing.Point(360, 225);
             this.accLNameBox.Name = "accLNameBox";
             this.accLNameBox.Size = new System.Drawing.Size(237, 35);
@@ -97,10 +97,10 @@
             // accEmailLab
             // 
             this.accEmailLab.AutoSize = true;
-            this.accEmailLab.Font = new System.Drawing.Font("Gill Sans MT", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accEmailLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accEmailLab.Location = new System.Drawing.Point(173, 275);
             this.accEmailLab.Name = "accEmailLab";
-            this.accEmailLab.Size = new System.Drawing.Size(104, 48);
+            this.accEmailLab.Size = new System.Drawing.Size(115, 39);
             this.accEmailLab.TabIndex = 18;
             this.accEmailLab.Text = "Email:";
             // 
@@ -108,7 +108,7 @@
             // 
             this.accEmailBox.BackColor = System.Drawing.SystemColors.Window;
             this.accEmailBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.accEmailBox.Font = new System.Drawing.Font("Gill Sans MT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accEmailBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accEmailBox.Location = new System.Drawing.Point(283, 284);
             this.accEmailBox.Name = "accEmailBox";
             this.accEmailBox.Size = new System.Drawing.Size(314, 35);
@@ -138,10 +138,10 @@
             // accErrorLab
             // 
             this.accErrorLab.AutoSize = true;
-            this.accErrorLab.Font = new System.Drawing.Font("Gill Sans MT", 22.25F);
+            this.accErrorLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.25F);
             this.accErrorLab.Location = new System.Drawing.Point(415, 450);
             this.accErrorLab.Name = "accErrorLab";
-            this.accErrorLab.Size = new System.Drawing.Size(86, 42);
+            this.accErrorLab.Size = new System.Drawing.Size(82, 36);
             this.accErrorLab.TabIndex = 22;
             this.accErrorLab.Text = "Error";
             this.accErrorLab.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

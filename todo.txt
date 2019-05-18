@@ -23,7 +23,10 @@
 //Account
 - Design
 
-//Settings
-- Language
-- Theme
-- Design
+//Settings !!!DONE!!!
+
+//NavBar
+- Selected Button Color
+
+//Database
+- Fix tables

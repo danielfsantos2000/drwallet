@@ -117,21 +117,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EN_Nav_Account" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="EN_Nav_Addresses" xml:space="preserve">
+    <value>Addresses</value>
+  </data>
   <data name="EN_Nav_Dashboard" xml:space="preserve">
     <value>Dashboard</value>
   </data>
   <data name="EN_Nav_Movements" xml:space="preserve">
     <value>Movements</value>
   </data>
+  <data name="EN_Nav_Settings" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="EN_Set_Header" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="EN_Set_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="EN_Set_SaveButton" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="EN_Set_Theme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Icon PNG_Prancheta 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon PNG_Prancheta 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PT_Nav_Account" xml:space="preserve">
+    <value>Conta</value>
+  </data>
+  <data name="PT_Nav_Addresses" xml:space="preserve">
+    <value>Endereços</value>
   </data>
   <data name="PT_Nav_Dashboard" xml:space="preserve">
     <value>Inicio</value>
   </data>
   <data name="PT_Nav_Movements" xml:space="preserve">
     <value>Movimentos</value>
+  </data>
+  <data name="PT_Nav_Settings" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="PT_Set_Header" xml:space="preserve">
+    <value>Configurações</value>
+  </data>
+  <data name="PT_Set_Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="PT_Set_SaveButton" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="PT_Set_Theme" xml:space="preserve">
+    <value>Tema</value>
   </data>
   <data name="receive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\font-awesome_4-7-0_arrow-circle-down_24_0_787878_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

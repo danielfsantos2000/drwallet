@@ -37,11 +37,17 @@ namespace DRWallet
             {
                 navDashboardButton.Text = DRWallet.Properties.Resources.EN_Nav_Dashboard;
                 navMovementsButton.Text = DRWallet.Properties.Resources.EN_Nav_Movements;
+                navAddressesButton.Text = DRWallet.Properties.Resources.EN_Nav_Addresses;
+                navAccountButton.Text = DRWallet.Properties.Resources.EN_Nav_Account;
+                navSettingsButton.Text = DRWallet.Properties.Resources.EN_Nav_Settings;
             }
             else
             {
                 navDashboardButton.Text = DRWallet.Properties.Resources.PT_Nav_Dashboard;
                 navMovementsButton.Text = DRWallet.Properties.Resources.PT_Nav_Movements;
+                navAddressesButton.Text = DRWallet.Properties.Resources.PT_Nav_Addresses;
+                navAccountButton.Text = DRWallet.Properties.Resources.PT_Nav_Account;
+                navSettingsButton.Text = DRWallet.Properties.Resources.PT_Nav_Settings;
             }
             navDashboardButton.BackColor = Color.FromArgb(255, 255, 164, 76);
             navMovementsButton.BackColor = Color.FromArgb(255, 255, 164, 76);
@@ -50,11 +56,100 @@ namespace DRWallet
             navSettingsButton.BackColor = Color.FromArgb(255, 255, 164, 76);
             switch (uPage)
             {
-                case 1: navDashboardButton.BackColor = Color.FromArgb(0, 252, 138, 27); break;
-                case 2: navMovementsButton.BackColor = Color.FromArgb(0, 252, 138, 27); break;
-                case 3: navAddressesButton.BackColor = Color.FromArgb(0, 252, 138, 27); break;
-                case 4: navAccountButton.BackColor = Color.FromArgb(0, 252, 138, 27); break;
-                case 5: navSettingsButton.BackColor = Color.FromArgb(0, 252, 138, 27); break;
+                case 1:
+                    navDashboardButton.BackColor = Color.FromArgb(0, 252, 138, 27);
+                    break;
+                case 2:
+                    navMovementsButton.BackColor = Color.FromArgb(0, 252, 138, 27);
+                    break;
+                case 3:
+                    navAddressesButton.BackColor = Color.FromArgb(0, 252, 138, 27);
+                    break;
+                case 4:
+                    navAccountButton.BackColor = Color.FromArgb(0, 252, 138, 27);
+                    break;
+                case 5:
+                    navSettingsButton.BackColor = Color.FromArgb(0, 252, 138, 27);
+                    break;
+            }
+
+            //Theme Options
+            if (User.uTheme == 1)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 125, 0);
+
+                navDashboardButton.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                navDashboardButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                navDashboardButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                navDashboardButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                navMovementsButton.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                navMovementsButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                navMovementsButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                navMovementsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                navAddressesButton.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                navAddressesButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                navAddressesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                navAddressesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                navAccountButton.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                navAccountButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                navAccountButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                navAccountButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                navSettingsButton.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                navSettingsButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                navSettingsButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                navSettingsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+            }
+            else if (User.uTheme == 2)
+            {
+                this.BackColor = Color.FromArgb(255, 35, 35, 35);
+
+                navDashboardButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                navDashboardButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                navDashboardButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                navMovementsButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                navMovementsButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                navMovementsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                navAddressesButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                navAddressesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                navAddressesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                navAccountButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                navAccountButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                navAccountButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                navSettingsButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                navSettingsButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                navSettingsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+            }
+            else if (User.uTheme == 3)
+            {
+                this.BackColor = Color.FromArgb(255, 188, 188, 188);
+
+                navDashboardButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                navDashboardButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                navDashboardButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                navMovementsButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                navMovementsButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                navMovementsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                navAddressesButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                navAddressesButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                navAddressesButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                navAccountButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                navAccountButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                navAccountButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                navSettingsButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                navSettingsButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                navSettingsButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
             }
         }
 

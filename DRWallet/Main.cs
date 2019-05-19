@@ -25,15 +25,28 @@ namespace DRWallet
             NavBar.GotoNavAdd += this.showAddressesPage;
             NavBar.GotoNavAcc += this.showAccountPage;
             NavBar.GotoNavSet += this.showSettingsPage;
+            accountPage.GotoLog += this.showLoginPageLogout;
         }
 
         public void showRegisterPage(object source, EventArgs e)
         {
+            loginPage.Hide();
             registerPage.Show();
         }
 
         public void showLoginPage(object source, EventArgs e)
         {
+            registerPage.Hide();
+            loginPage.Show();
+        }
+
+        public void showLoginPageLogout(object source, EventArgs e)
+        {
+            dashboardPage.Hide();
+            movementsPage.Hide();
+            addressesPage.Hide();
+            accountPage.Hide();
+            settingsPage.Hide();
             loginPage.Show();
         }
 

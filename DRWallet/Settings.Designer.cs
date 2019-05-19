@@ -109,7 +109,7 @@
             this.setSaveBox.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.setSaveBox.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.setSaveBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.setSaveBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Bold);
+            this.setSaveBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setSaveBox.Location = new System.Drawing.Point(387, 486);
             this.setSaveBox.Name = "setSaveBox";
             this.setSaveBox.Size = new System.Drawing.Size(150, 50);

@@ -78,7 +78,6 @@ namespace DRWallet
                                         Logs.AddRegisterLog(regUserBox.Text);
 
                                         OnButtonClicked();
-
                                     }
                                     else
                                     {

@@ -117,6 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EN_Acc_FName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="EN_Acc_Header" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="EN_Acc_LName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
   <data name="EN_Nav_Account" xml:space="preserve">
     <value>Account</value>
   </data>
@@ -147,6 +156,15 @@
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="Icon PNG_Prancheta 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon PNG_Prancheta 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PT_Acc_FName" xml:space="preserve">
+    <value>Primeiro Nome</value>
+  </data>
+  <data name="PT_Acc_Header" xml:space="preserve">
+    <value>Conta</value>
+  </data>
+  <data name="PT_Acc_LName" xml:space="preserve">
+    <value>Último Nome</value>
   </data>
   <data name="PT_Nav_Account" xml:space="preserve">
     <value>Conta</value>

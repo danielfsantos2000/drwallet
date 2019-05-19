@@ -119,5 +119,16 @@ namespace DRWallet
 
             }
         }
+
+        public static void logout()
+        {
+            puID = 0;
+            puUser = "";
+            puEmail = "";
+            puFName = "";
+            puLName = "";
+            puLanguage = 1;
+            puTheme = 1;
+        }
     }
 }

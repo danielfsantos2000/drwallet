@@ -61,6 +61,33 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First Name.
+        /// </summary>
+        internal static string EN_Acc_FName {
+            get {
+                return ResourceManager.GetString("EN_Acc_FName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account.
+        /// </summary>
+        internal static string EN_Acc_Header {
+            get {
+                return ResourceManager.GetString("EN_Acc_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last Name.
+        /// </summary>
+        internal static string EN_Acc_LName {
+            get {
+                return ResourceManager.GetString("EN_Acc_LName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account.
         /// </summary>
         internal static string EN_Nav_Account {
@@ -148,6 +175,33 @@ namespace DRWallet.Properties {
             get {
                 object obj = ResourceManager.GetObject("Icon PNG_Prancheta 1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Primeiro Nome.
+        /// </summary>
+        internal static string PT_Acc_FName {
+            get {
+                return ResourceManager.GetString("PT_Acc_FName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conta.
+        /// </summary>
+        internal static string PT_Acc_Header {
+            get {
+                return ResourceManager.GetString("PT_Acc_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Último Nome.
+        /// </summary>
+        internal static string PT_Acc_LName {
+            get {
+                return ResourceManager.GetString("PT_Acc_LName", resourceCulture);
             }
         }
         

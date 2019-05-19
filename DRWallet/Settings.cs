@@ -122,7 +122,7 @@ namespace DRWallet
                 }
                 catch (Exception ex)
                 {
-
+                    MessageBox.Show("Something went wrong.\nError code: 0x000701");
                 }
                 finally
                 {

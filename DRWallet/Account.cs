@@ -26,6 +26,28 @@ namespace DRWallet
             accFNameBox.Text = User.uFName;
             accLNameBox.Text = User.uLName;
             accEmailBox.Text = User.uEmail;
+
+            // Language Options
+            if (User.uLanguage == 1)
+            {
+                accAccLab.Text = DRWallet.Properties.Resources.EN_Acc_Header;
+
+                accFNameLab.Location = new Point(218, 117);
+                accFNameLab.Text = $"{DRWallet.Properties.Resources.EN_Acc_FName}:";
+                
+                accLNameLab.Location = new Point(221, 178);
+                accLNameLab.Text = $"{DRWallet.Properties.Resources.EN_Acc_LName}:";
+            }
+            else if (User.uLanguage == 2)
+            {
+                accAccLab.Text = DRWallet.Properties.Resources.PT_Set_Header;
+
+                accFNameLab.Location = new Point(156, 117);
+                accFNameLab.Text = $"{DRWallet.Properties.Resources.PT_Acc_FName}:";
+
+                accLNameLab.Location = new Point(187, 178);
+                accLNameLab.Text = $"{DRWallet.Properties.Resources.PT_Acc_LName}:";
+            }
         }
 
         private void AccSaveBox_Click(object sender, EventArgs e)
@@ -36,26 +58,51 @@ namespace DRWallet
                 try
                 {
                     db.Open();
-                    MySqlCommand cmdChange = new MySqlCommand();
-                    cmdChange.Connection = db;
-                    cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname, useremail=@email WHERE userid=@id";
-                    cmdChange.Parameters.Add("@fname", MySqlDbType.String).Value = accFNameBox.Text;
-                    cmdChange.Parameters.Add("@lname", MySqlDbType.String).Value = accLNameBox.Text;
-                    cmdChange.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
-                    cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
-                    cmdChange.ExecuteNonQuery();
 
-                    User.uFName = accFNameBox.Text;
-                    User.uLName = accLNameBox.Text;
-                    User.uEmail = accEmailBox.Text;
-
-                    accErrorLab.Text = "Successfully Changed!";
-                    accErrorLab.Location = new Point(328, 450);
-                    accErrorLab.Visible = true;
+                    if (accEmailBox.Text == User.uEmail)
+                    {
+                        MySqlCommand cmdChange = new MySqlCommand();
+                        cmdChange.Connection = db;
+                        cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname WHERE userid=@id";
+                        cmdChange.Parameters.Add("@fname", MySqlDbType.String).Value = accFNameBox.Text;
+                        cmdChange.Parameters.Add("@lname", MySqlDbType.String).Value = accLNameBox.Text;
+                        cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
+                        cmdChange.ExecuteNonQuery();
+                        User.uFName = accFNameBox.Text;
+                        User.uLName = accLNameBox.Text;
+                        User.uEmail = accEmailBox.Text;
+                    }
+                    else
+                    {
+                        MySqlCommand cmds1 = new MySqlCommand();
+                        cmds1.Connection = db;
+                        cmds1.CommandText = "SELECT * FROM users WHERE useremail=@email";
+                        cmds1.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
+                        MySqlDataReader drs1 = cmds1.ExecuteReader();
+                        if (!drs1.HasRows)
+                        {
+                            drs1.Close();
+                            MySqlCommand cmdChange = new MySqlCommand();
+                            cmdChange.Connection = db;
+                            cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname, useremail=@email WHERE userid=@id";
+                            cmdChange.Parameters.Add("@fname", MySqlDbType.String).Value = accFNameBox.Text;
+                            cmdChange.Parameters.Add("@lname", MySqlDbType.String).Value = accLNameBox.Text;
+                            cmdChange.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
+                            cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
+                            cmdChange.ExecuteNonQuery();
+                            User.uFName = accFNameBox.Text;
+                            User.uLName = accLNameBox.Text;
+                            User.uEmail = accEmailBox.Text;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Email already in use.");
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-
+                    MessageBox.Show("Something went wrong.");
                 }
                 finally
                 {
@@ -64,9 +111,7 @@ namespace DRWallet
             }
             else
             {
-                accErrorLab.Text = "You need to fill all fields!";
-                accErrorLab.Location = new Point(312, 450);
-                accErrorLab.Visible = true;
+                MessageBox.Show("You need to fill all fields.");
             }
         }
 
@@ -75,10 +120,28 @@ namespace DRWallet
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
 
-        private void AssPasswordButton_Click(object sender, EventArgs e)
+        private void accPasswordButton_Click(object sender, EventArgs e)
         {
             ChangePassword npass = new ChangePassword();
             npass.Show();
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            User.logout();
+            OnLogButtonClicked();
+        }
+
+        //Goto Login
+        public delegate void GotoLogEventHandler(object source, EventArgs args);
+        public event GotoLogEventHandler GotoLog;
+
+        protected virtual void OnLogButtonClicked()
+        {
+            if (GotoLog != null)
+            {
+                GotoLog(this, EventArgs.Empty);
+            }
         }
     }
 }

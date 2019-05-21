@@ -109,12 +109,17 @@
             // 
             // cpwdSubmitButton
             // 
-            this.cpwdSubmitButton.Location = new System.Drawing.Point(185, 241);
+            this.cpwdSubmitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
+            this.cpwdSubmitButton.FlatAppearance.BorderSize = 0;
+            this.cpwdSubmitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
+            this.cpwdSubmitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
+            this.cpwdSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cpwdSubmitButton.Location = new System.Drawing.Point(185, 248);
             this.cpwdSubmitButton.Name = "cpwdSubmitButton";
             this.cpwdSubmitButton.Size = new System.Drawing.Size(117, 35);
             this.cpwdSubmitButton.TabIndex = 7;
             this.cpwdSubmitButton.Text = "Change Password";
-            this.cpwdSubmitButton.UseVisualStyleBackColor = true;
+            this.cpwdSubmitButton.UseVisualStyleBackColor = false;
             this.cpwdSubmitButton.Click += new System.EventHandler(this.CpwdSubmitButton_Click);
             // 
             // cpwdErrorLab
@@ -133,7 +138,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(487, 286);
+            this.ClientSize = new System.Drawing.Size(487, 293);
             this.Controls.Add(this.cpwdErrorLab);
             this.Controls.Add(this.cpwdSubmitButton);
             this.Controls.Add(this.cpwdCNPassBox);

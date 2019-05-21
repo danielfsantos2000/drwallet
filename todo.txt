@@ -7,7 +7,6 @@
 //Dashboard
 - Send
 - Receive
-- History
 - Design
 
 //Movements
@@ -16,19 +15,19 @@
 
 //Addresses
 - List Addresses
-- Create Adresses
+- Create Addresses
 - Remove Addresses
 - Design
-
-//Account
-- Design
-
-//Settings !!!DONE!!!
-
-//NavBar !!!DONE!!!
 
 //Database
 - Fix tables
 
 //User
 - UpdateInfo
+
+
+//Account !!!DONE!!!
+
+//Settings !!!DONE!!!
+
+//NavBar !!!DONE!!!

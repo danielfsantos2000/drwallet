@@ -61,6 +61,15 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        internal static string EN_Acc_ChangePwd {
+            get {
+                return ResourceManager.GetString("EN_Acc_ChangePwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to First Name.
         /// </summary>
         internal static string EN_Acc_FName {
@@ -84,6 +93,96 @@ namespace DRWallet.Properties {
         internal static string EN_Acc_LName {
             get {
                 return ResourceManager.GetString("EN_Acc_LName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Logout.
+        /// </summary>
+        internal static string EN_Acc_Logout {
+            get {
+                return ResourceManager.GetString("EN_Acc_Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save Changes.
+        /// </summary>
+        internal static string EN_Acc_SaveChanges {
+            get {
+                return ResourceManager.GetString("EN_Acc_SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        internal static string EN_CPwd_CurrPassword {
+            get {
+                return ResourceManager.GetString("EN_CPwd_CurrPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        internal static string EN_CPwd_Header {
+            get {
+                return ResourceManager.GetString("EN_CPwd_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm Password.
+        /// </summary>
+        internal static string EN_CPwd_NewCPassword {
+            get {
+                return ResourceManager.GetString("EN_CPwd_NewCPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Password.
+        /// </summary>
+        internal static string EN_CPwd_NewPassword {
+            get {
+                return ResourceManager.GetString("EN_CPwd_NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change Password.
+        /// </summary>
+        internal static string EN_CPwd_SaveButton {
+            get {
+                return ResourceManager.GetString("EN_CPwd_SaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email already in use.
+        /// </summary>
+        internal static string EN_Error_Emailinuse {
+            get {
+                return ResourceManager.GetString("EN_Error_Emailinuse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You need to fill all fields.
+        /// </summary>
+        internal static string EN_Error_Fields {
+            get {
+                return ResourceManager.GetString("EN_Error_Fields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Something went wrong.
+        /// </summary>
+        internal static string EN_Error_Unknown {
+            get {
+                return ResourceManager.GetString("EN_Error_Unknown", resourceCulture);
             }
         }
         
@@ -179,6 +278,15 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Mudar Palavra-Passe.
+        /// </summary>
+        internal static string PT_Acc_ChangePwd {
+            get {
+                return ResourceManager.GetString("PT_Acc_ChangePwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Primeiro Nome.
         /// </summary>
         internal static string PT_Acc_FName {
@@ -202,6 +310,96 @@ namespace DRWallet.Properties {
         internal static string PT_Acc_LName {
             get {
                 return ResourceManager.GetString("PT_Acc_LName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Terminar sessão.
+        /// </summary>
+        internal static string PT_Acc_Logout {
+            get {
+                return ResourceManager.GetString("PT_Acc_Logout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Guardar.
+        /// </summary>
+        internal static string PT_Acc_SaveChanges {
+            get {
+                return ResourceManager.GetString("PT_Acc_SaveChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Palavra-Passe Atual.
+        /// </summary>
+        internal static string PT_CPwd_CurrPassword {
+            get {
+                return ResourceManager.GetString("PT_CPwd_CurrPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mudar Palavra-Passe.
+        /// </summary>
+        internal static string PT_CPwd_Header {
+            get {
+                return ResourceManager.GetString("PT_CPwd_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirmar Palavra-Passe.
+        /// </summary>
+        internal static string PT_CPwd_NewCPassword {
+            get {
+                return ResourceManager.GetString("PT_CPwd_NewCPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Nova Palavra-Passe.
+        /// </summary>
+        internal static string PT_CPwd_NewPassword {
+            get {
+                return ResourceManager.GetString("PT_CPwd_NewPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mudar Palavra-Passe.
+        /// </summary>
+        internal static string PT_CPwd_SaveButton {
+            get {
+                return ResourceManager.GetString("PT_CPwd_SaveButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Email em uso.
+        /// </summary>
+        internal static string PT_Error_Emailinuse {
+            get {
+                return ResourceManager.GetString("PT_Error_Emailinuse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tem de preencher todos os campos.
+        /// </summary>
+        internal static string PT_Error_Fields {
+            get {
+                return ResourceManager.GetString("PT_Error_Fields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Falhou algo na execução.
+        /// </summary>
+        internal static string PT_Error_Unknown {
+            get {
+                return ResourceManager.GetString("PT_Error_Unknown", resourceCulture);
             }
         }
         

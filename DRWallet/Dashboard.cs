@@ -44,11 +44,31 @@ namespace DRWallet
                 }
                 drs1.Close();
 
+                //Prepare addresses history
+                string whereparam = "";
+
+                foreach (string adds in User.addresses)
+                {
+                    whereparam += $" || movements.sender_addid={adds} || movements.dest_addid={adds}";
+                }
+
                 // Get History
                 MySqlCommand cmds2 = new MySqlCommand();
                 cmds2.Connection = db;
-                cmds2.CommandText = "SELECT movaddsender,movqtd,movaddreceiver,movdate FROM movements WHERE movaddsender=@id || movaddreceiver=@id ORDER BY movdate DESC LIMIT 10";
-                cmds2.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
+                cmds2.CommandText = $@"
+                                        SELECT 
+	                                        sender.userid as senderid
+                                        ,   sender.addnum
+                                        ,   movements.movqtd
+                                        , 	dest.addnum as destaddnum
+                                        , 	movements.movdate 
+                                        FROM movements 
+	                                        JOIN address AS sender ON sender.addid = movements.sender_addid 
+                                            JOIN address AS dest ON movements.dest_addid = dest.addid 
+                                        WHERE movements.movid = -1 
+                                        {whereparam}
+                                        ORDER BY movements.movdate DESC LIMIT 10".Trim();
+
                 MySqlDataReader drs2 = cmds2.ExecuteReader();
                 if (drs2.HasRows)
                 {
@@ -74,20 +94,20 @@ namespace DRWallet
                     while (drs2.Read())
                     {
                         DataRow dr = dt.NewRow();
-                        if (drs2["movaddsender"].ToString() == User.uID.ToString())
+                        if (drs2["senderid"].ToString() == User.uID.ToString())
                         {
                             dr["Image"] = send;
-                            dr["MyAddress"] = drs2["movaddsender"].ToString();
+                            dr["MyAddress"] = drs2["addnum"].ToString();
                             dr["Details"] = $"Sent {drs2["movqtd"].ToString()} DR to";
-                            dr["OtherAddress"] = drs2["movaddreceiver"].ToString();
+                            dr["OtherAddress"] = drs2["destaddnum"].ToString();
                             dr["Date"] = drs2["movdate"].ToString();
                         }
                         else
                         {
                             dr["Image"] = receive;
-                            dr["MyAddress"] = drs2["movaddreceiver"].ToString();
+                            dr["MyAddress"] = drs2["addnum"].ToString();
                             dr["Details"] = $"Received {drs2["movqtd"].ToString()} DR from";
-                            dr["OtherAddress"] = drs2["movaddsender"].ToString();
+                            dr["OtherAddress"] = drs2["destaddnum"].ToString();
                             dr["Date"] = drs2["movdate"].ToString();
                         }
                         dt.Rows.Add(dr);
@@ -100,7 +120,7 @@ namespace DRWallet
             }
             catch (Exception ex)
             {
-                dashValueLab.Text = ex.Message;
+                MessageBox.Show(ex.Message);
             }
             finally
             {

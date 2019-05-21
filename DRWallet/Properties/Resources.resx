@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="EN_Acc_ChangePwd" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
   <data name="EN_Acc_FName" xml:space="preserve">
     <value>First Name</value>
   </data>
@@ -125,6 +128,36 @@
   </data>
   <data name="EN_Acc_LName" xml:space="preserve">
     <value>Last Name</value>
+  </data>
+  <data name="EN_Acc_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="EN_Acc_SaveChanges" xml:space="preserve">
+    <value>Save Changes</value>
+  </data>
+  <data name="EN_CPwd_CurrPassword" xml:space="preserve">
+    <value>Current Password</value>
+  </data>
+  <data name="EN_CPwd_Header" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="EN_CPwd_NewCPassword" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="EN_CPwd_NewPassword" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="EN_CPwd_SaveButton" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="EN_Error_Emailinuse" xml:space="preserve">
+    <value>Email already in use</value>
+  </data>
+  <data name="EN_Error_Fields" xml:space="preserve">
+    <value>You need to fill all fields</value>
+  </data>
+  <data name="EN_Error_Unknown" xml:space="preserve">
+    <value>Something went wrong</value>
   </data>
   <data name="EN_Nav_Account" xml:space="preserve">
     <value>Account</value>
@@ -157,6 +190,9 @@
   <data name="Icon PNG_Prancheta 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icon PNG_Prancheta 1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PT_Acc_ChangePwd" xml:space="preserve">
+    <value>Mudar Palavra-Passe</value>
+  </data>
   <data name="PT_Acc_FName" xml:space="preserve">
     <value>Primeiro Nome</value>
   </data>
@@ -165,6 +201,36 @@
   </data>
   <data name="PT_Acc_LName" xml:space="preserve">
     <value>Último Nome</value>
+  </data>
+  <data name="PT_Acc_Logout" xml:space="preserve">
+    <value>Terminar sessão</value>
+  </data>
+  <data name="PT_Acc_SaveChanges" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="PT_CPwd_CurrPassword" xml:space="preserve">
+    <value>Palavra-Passe Atual</value>
+  </data>
+  <data name="PT_CPwd_Header" xml:space="preserve">
+    <value>Mudar Palavra-Passe</value>
+  </data>
+  <data name="PT_CPwd_NewCPassword" xml:space="preserve">
+    <value>Confirmar Palavra-Passe</value>
+  </data>
+  <data name="PT_CPwd_NewPassword" xml:space="preserve">
+    <value>Nova Palavra-Passe</value>
+  </data>
+  <data name="PT_CPwd_SaveButton" xml:space="preserve">
+    <value>Mudar Palavra-Passe</value>
+  </data>
+  <data name="PT_Error_Emailinuse" xml:space="preserve">
+    <value>Email em uso</value>
+  </data>
+  <data name="PT_Error_Fields" xml:space="preserve">
+    <value>Tem de preencher todos os campos</value>
+  </data>
+  <data name="PT_Error_Unknown" xml:space="preserve">
+    <value>Falhou algo na execução</value>
   </data>
   <data name="PT_Nav_Account" xml:space="preserve">
     <value>Conta</value>

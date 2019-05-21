@@ -53,13 +53,14 @@ namespace DRWallet
                             User.uEmail = drs1["useremail"].ToString();
                             User.uFName = drs1["userfname"].ToString();
                             User.uLName = drs1["userlname"].ToString();
+                            User.updateInfo();
                         }
 
                         drs1.Close();
 
                         MySqlCommand cmds2 = new MySqlCommand();
                         cmds2.Connection = db;
-                        cmds2.CommandText = "SELECT * FROM settings WHERE setowner=@sowner";
+                        cmds2.CommandText = "SELECT * FROM settings WHERE userid=@sowner";
                         cmds2.Parameters.Add("@sowner", MySqlDbType.String).Value = User.uID;
                         MySqlDataReader drs2 = cmds2.ExecuteReader();
                         if (drs2.HasRows)
@@ -78,7 +79,7 @@ namespace DRWallet
                             drs2.Close();
                             MySqlCommand cmdInsert = new MySqlCommand();
                             cmdInsert.Connection = db;
-                            cmdInsert.CommandText = "INSERT INTO settings (setowner,setlanguage,settheme) VALUES (@uid,1,1)";
+                            cmdInsert.CommandText = "INSERT INTO settings (userid,setlanguage,settheme) VALUES (@uid,1,1)";
                             cmdInsert.Parameters.Add("@uid", MySqlDbType.String).Value = User.uID;
                             int numbers = cmdInsert.ExecuteNonQuery();
                             User.uLanguage = 1;
@@ -86,6 +87,7 @@ namespace DRWallet
                         }
 
                         OnLogButtonClicked();
+
                     drs1.Close();
                     }
                     else

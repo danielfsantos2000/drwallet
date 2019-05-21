@@ -35,10 +35,10 @@
             this.accLNameBox = new System.Windows.Forms.TextBox();
             this.accEmailLab = new System.Windows.Forms.Label();
             this.accEmailBox = new System.Windows.Forms.TextBox();
-            this.assPasswordButton = new System.Windows.Forms.Button();
+            this.accPasswordButton = new System.Windows.Forms.Button();
             this.accSaveBox = new System.Windows.Forms.Button();
+            this.accLogoutBut = new System.Windows.Forms.Button();
             this.accNavBar = new DRWallet.NavBar();
-            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // accAccLab
@@ -115,21 +115,21 @@
             this.accEmailBox.TabIndex = 19;
             this.accEmailBox.Text = "your@email.com";
             // 
-            // assPasswordButton
+            // accPasswordButton
             // 
-            this.assPasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
-            this.assPasswordButton.FlatAppearance.BorderSize = 0;
-            this.assPasswordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
-            this.assPasswordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
-            this.assPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.assPasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.assPasswordButton.Location = new System.Drawing.Point(387, 315);
-            this.assPasswordButton.Name = "assPasswordButton";
-            this.assPasswordButton.Size = new System.Drawing.Size(150, 32);
-            this.assPasswordButton.TabIndex = 20;
-            this.assPasswordButton.Text = "Change Password";
-            this.assPasswordButton.UseVisualStyleBackColor = false;
-            this.assPasswordButton.Click += new System.EventHandler(this.accPasswordButton_Click);
+            this.accPasswordButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
+            this.accPasswordButton.FlatAppearance.BorderSize = 0;
+            this.accPasswordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
+            this.accPasswordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
+            this.accPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accPasswordButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accPasswordButton.Location = new System.Drawing.Point(387, 315);
+            this.accPasswordButton.Name = "accPasswordButton";
+            this.accPasswordButton.Size = new System.Drawing.Size(150, 32);
+            this.accPasswordButton.TabIndex = 20;
+            this.accPasswordButton.Text = "Change Password";
+            this.accPasswordButton.UseVisualStyleBackColor = false;
+            this.accPasswordButton.Click += new System.EventHandler(this.accPasswordButton_Click);
             // 
             // accSaveBox
             // 
@@ -147,6 +147,22 @@
             this.accSaveBox.UseVisualStyleBackColor = false;
             this.accSaveBox.Click += new System.EventHandler(this.AccSaveBox_Click);
             // 
+            // accLogoutBut
+            // 
+            this.accLogoutBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
+            this.accLogoutBut.FlatAppearance.BorderSize = 0;
+            this.accLogoutBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
+            this.accLogoutBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
+            this.accLogoutBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.accLogoutBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accLogoutBut.Location = new System.Drawing.Point(581, 504);
+            this.accLogoutBut.Name = "accLogoutBut";
+            this.accLogoutBut.Size = new System.Drawing.Size(150, 32);
+            this.accLogoutBut.TabIndex = 22;
+            this.accLogoutBut.Text = "Logout";
+            this.accLogoutBut.UseVisualStyleBackColor = false;
+            this.accLogoutBut.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // accNavBar
             // 
             this.accNavBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
@@ -156,30 +172,14 @@
             this.accNavBar.Size = new System.Drawing.Size(150, 600);
             this.accNavBar.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(581, 504);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(150, 32);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Logout";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
-            // 
             // Account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.accLogoutBut);
             this.Controls.Add(this.accSaveBox);
-            this.Controls.Add(this.assPasswordButton);
+            this.Controls.Add(this.accPasswordButton);
             this.Controls.Add(this.accEmailBox);
             this.Controls.Add(this.accEmailLab);
             this.Controls.Add(this.accLNameBox);
@@ -205,8 +205,8 @@
         private System.Windows.Forms.TextBox accLNameBox;
         private System.Windows.Forms.Label accEmailLab;
         private System.Windows.Forms.TextBox accEmailBox;
-        private System.Windows.Forms.Button assPasswordButton;
+        private System.Windows.Forms.Button accPasswordButton;
         private System.Windows.Forms.Button accSaveBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button accLogoutBut;
     }
 }

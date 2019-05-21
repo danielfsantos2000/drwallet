@@ -44,6 +44,7 @@ namespace DRWallet
                 setThemeLab.Location = new Point(323, 224);
                 setThemeLab.Text = $"{DRWallet.Properties.Resources.EN_Set_Theme}:";
                 setSaveBox.Text = DRWallet.Properties.Resources.EN_Set_SaveButton;
+                
             }
             else if (User.uLanguage == 2)
             {
@@ -100,7 +101,7 @@ namespace DRWallet
                     db.Open();
                     MySqlCommand cmdChange = new MySqlCommand();
                     cmdChange.Connection = db;
-                    cmdChange.CommandText = "UPDATE settings SET setlanguage=@lang, settheme=@theme WHERE setowner=@id";
+                    cmdChange.CommandText = "UPDATE settings SET setlanguage=@lang, settheme=@theme WHERE userid=@id";
 
                     switch (setLangBox.Text)
                     {
@@ -122,7 +123,14 @@ namespace DRWallet
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Something went wrong.\nError code: 0x000701");
+                    if (User.uLanguage == 1)
+                    {
+                        MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Unknown);
+                    }
+                    else if (User.uLanguage == 2)
+                    {
+                        MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Unknown);
+                    }
                 }
                 finally
                 {

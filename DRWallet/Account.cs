@@ -31,22 +31,89 @@ namespace DRWallet
             if (User.uLanguage == 1)
             {
                 accAccLab.Text = DRWallet.Properties.Resources.EN_Acc_Header;
-
                 accFNameLab.Location = new Point(218, 117);
                 accFNameLab.Text = $"{DRWallet.Properties.Resources.EN_Acc_FName}:";
-                
                 accLNameLab.Location = new Point(221, 178);
                 accLNameLab.Text = $"{DRWallet.Properties.Resources.EN_Acc_LName}:";
+                accPasswordButton.Text = DRWallet.Properties.Resources.EN_Acc_ChangePwd;
+                accSaveBox.Text = DRWallet.Properties.Resources.EN_Acc_SaveChanges;
+                accLogoutBut.Text = DRWallet.Properties.Resources.EN_Acc_Logout;
             }
             else if (User.uLanguage == 2)
             {
                 accAccLab.Text = DRWallet.Properties.Resources.PT_Set_Header;
-
                 accFNameLab.Location = new Point(156, 117);
                 accFNameLab.Text = $"{DRWallet.Properties.Resources.PT_Acc_FName}:";
-
                 accLNameLab.Location = new Point(187, 178);
                 accLNameLab.Text = $"{DRWallet.Properties.Resources.PT_Acc_LName}:";
+                accPasswordButton.Text = DRWallet.Properties.Resources.PT_Acc_ChangePwd;
+                accSaveBox.Text = DRWallet.Properties.Resources.PT_Acc_SaveChanges;
+                accLogoutBut.Text = DRWallet.Properties.Resources.PT_Acc_Logout;
+            }
+
+            if (User.uTheme == 1)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 178, 102);
+                accAccLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                accFNameLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                accLNameLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                accEmailLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+
+
+                accPasswordButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                accPasswordButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                accPasswordButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                accSaveBox.BackColor = Color.FromArgb(255, 255, 160, 66);
+                accSaveBox.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                accSaveBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                accLogoutBut.BackColor = Color.FromArgb(255, 255, 160, 66);
+                accLogoutBut.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                accLogoutBut.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+            }
+            else if (User.uTheme == 2)
+            {
+                this.BackColor = Color.FromArgb(255, 43, 43, 43);
+                accAccLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                accFNameLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                accLNameLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                accEmailLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+
+
+
+                accPasswordButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                accPasswordButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                accPasswordButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                accSaveBox.BackColor = Color.FromArgb(255, 145, 145, 145);
+                accSaveBox.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                accSaveBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                accLogoutBut.BackColor = Color.FromArgb(255, 145, 145, 145);
+                accLogoutBut.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                accLogoutBut.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+            }
+            else if (User.uTheme == 3)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 255, 255);
+                accAccLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                accFNameLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                accLNameLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                accEmailLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                accPasswordButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                accPasswordButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                accPasswordButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                accSaveBox.BackColor = Color.FromArgb(255, 220, 220, 220);
+                accSaveBox.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                accSaveBox.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                accLogoutBut.BackColor = Color.FromArgb(255, 220, 220, 220);
+                accLogoutBut.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                accLogoutBut.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
             }
         }
 
@@ -96,13 +163,27 @@ namespace DRWallet
                         }
                         else
                         {
-                            MessageBox.Show("Email already in use.");
+                            if (User.uLanguage == 1)
+                            {
+                                MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Emailinuse);
+                            }
+                            else if (User.uLanguage == 2)
+                            {
+                                MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Emailinuse);
+                            }
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Something went wrong.");
+                    if (User.uLanguage == 1)
+                    {
+                        MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Unknown);
+                    }
+                    else if (User.uLanguage == 2)
+                    {
+                        MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Unknown);
+                    }
                 }
                 finally
                 {
@@ -111,7 +192,14 @@ namespace DRWallet
             }
             else
             {
-                MessageBox.Show("You need to fill all fields.");
+                if (User.uLanguage == 1)
+                {
+                    MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Fields);
+                }
+                else if (User.uLanguage == 2)
+                {
+                    MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Fields);
+                }
             }
         }
 
@@ -123,6 +211,7 @@ namespace DRWallet
         private void accPasswordButton_Click(object sender, EventArgs e)
         {
             ChangePassword npass = new ChangePassword();
+            npass.changePasswordUpdate();
             npass.Show();
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace DRWallet
 {
@@ -21,6 +22,106 @@ namespace DRWallet
         {
             NavBar.nmPage = 2;
             movNavBar.NavbarUpdate();
+
+            if (User.uLanguage == 1)
+            {
+                movMovLab.Text = DRWallet.Properties.Resources.EN_Mov_Header;
+            }
+            else if (User.uLanguage == 2)
+            {
+                movMovLab.Text = DRWallet.Properties.Resources.PT_Mov_Header;
+            }
+
+            try
+            {
+                db.Open();
+
+                //Prepare addresses history
+                string whereparam = "";
+
+                foreach (string adds in User.addresses)
+                {
+                    whereparam += $" || movements.sender_addid={adds} || movements.dest_addid={adds}";
+                }
+
+                // Get History
+                MySqlCommand cmds2 = new MySqlCommand();
+                cmds2.Connection = db;
+                cmds2.CommandText = $@"
+                                        SELECT 
+	                                        sender.userid as senderid
+                                        ,   sender.addnum
+                                        ,   movements.movqtd
+                                        , 	dest.addnum as destaddnum
+                                        , 	movements.movdate 
+                                        FROM movements 
+	                                        JOIN address AS sender ON sender.addid = movements.sender_addid 
+                                            JOIN address AS dest ON movements.dest_addid = dest.addid 
+                                        WHERE movements.movid = -1 
+                                        {whereparam}
+                                        ORDER BY movements.movdate DESC".Trim();
+
+                MySqlDataReader drs2 = cmds2.ExecuteReader();
+                if (drs2.HasRows)
+                {
+                    Image send;
+                    send = DRWallet.Properties.Resources.send;
+                    Image receive;
+                    receive = DRWallet.Properties.Resources.receive;
+                    DataTable dt = new DataTable("History");
+                    dt.Columns.Add("Image", typeof(Image));
+                    dt.Columns.Add("MyAddress");
+                    dt.Columns.Add("Details");
+                    dt.Columns.Add("OtherAddress");
+                    dt.Columns.Add("Date");
+
+                    movHistoryGrid.Columns[0].Width = 32;
+                    movHistoryGrid.Columns[1].Width = 170;
+                    movHistoryGrid.Columns[2].Width = 122;
+                    movHistoryGrid.Columns[3].Width = 170;
+                    movHistoryGrid.Columns[4].Width = 120;
+
+
+
+                    while (drs2.Read())
+                    {
+                        DataRow dr = dt.NewRow();
+                        if (drs2["senderid"].ToString() == User.uID.ToString())
+                        {
+                            dr["Image"] = send;
+                            dr["MyAddress"] = drs2["addnum"].ToString();
+                            dr["Details"] = $"Sent {drs2["movqtd"].ToString()} DR to";
+                            dr["OtherAddress"] = drs2["destaddnum"].ToString();
+                            dr["Date"] = drs2["movdate"].ToString();
+                        }
+                        else
+                        {
+                            dr["Image"] = receive;
+                            dr["MyAddress"] = drs2["addnum"].ToString();
+                            dr["Details"] = $"Received {drs2["movqtd"].ToString()} DR from";
+                            dr["OtherAddress"] = drs2["destaddnum"].ToString();
+                            dr["Date"] = drs2["movdate"].ToString();
+                        }
+                        dt.Rows.Add(dr);
+                    }
+
+                    movHistoryGrid.DataSource = dt;
+                    movHistoryGrid.Update();
+                }
+                drs2.Close();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                db.Close();
+            }
         }
+
+        //Database conections and functions
+        private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
+        private static MySqlConnection db = new MySqlConnection(_connectionString);
     }
 }

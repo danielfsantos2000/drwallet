@@ -187,6 +187,15 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Movements.
+        /// </summary>
+        internal static string EN_Mov_Header {
+            get {
+                return ResourceManager.GetString("EN_Mov_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Account.
         /// </summary>
         internal static string EN_Nav_Account {
@@ -400,6 +409,15 @@ namespace DRWallet.Properties {
         internal static string PT_Error_Unknown {
             get {
                 return ResourceManager.GetString("PT_Error_Unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Movimentos.
+        /// </summary>
+        internal static string PT_Mov_Header {
+            get {
+                return ResourceManager.GetString("PT_Mov_Header", resourceCulture);
             }
         }
         

@@ -159,6 +159,9 @@
   <data name="EN_Error_Unknown" xml:space="preserve">
     <value>Something went wrong</value>
   </data>
+  <data name="EN_Mov_Header" xml:space="preserve">
+    <value>Movements</value>
+  </data>
   <data name="EN_Nav_Account" xml:space="preserve">
     <value>Account</value>
   </data>
@@ -231,6 +234,9 @@
   </data>
   <data name="PT_Error_Unknown" xml:space="preserve">
     <value>Falhou algo na execução</value>
+  </data>
+  <data name="PT_Mov_Header" xml:space="preserve">
+    <value>Movimentos</value>
   </data>
   <data name="PT_Nav_Account" xml:space="preserve">
     <value>Conta</value>

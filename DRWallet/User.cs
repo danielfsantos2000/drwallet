@@ -75,7 +75,7 @@ namespace DRWallet
             }
         }
 
-        public static ArrayList addresses = new ArrayList();
+        public static List<string> addresses = new List<string>();
 
         //Settings
         private static int puLanguage;
@@ -114,7 +114,7 @@ namespace DRWallet
                 db.Open();
                 MySqlCommand cmds1 = new MySqlCommand();
                 cmds1.Connection = db;
-                cmds1.CommandText = "SELECT * FROM address WHERE userid=@userid";
+                cmds1.CommandText = "SELECT addid FROM address WHERE userid=@userid";
                 cmds1.Parameters.Add("@userid", MySqlDbType.String).Value = puID;
                 MySqlDataReader drs1 = cmds1.ExecuteReader();
                 if (drs1.HasRows)
@@ -124,10 +124,28 @@ namespace DRWallet
                         addresses.Add(drs1["addid"].ToString());
                     }
                 }
+                drs1.Close();
+
+                MySqlCommand cmds2 = new MySqlCommand();
+                cmds2.Connection = db;
+                cmds2.CommandText = "SELECT userusername,userfname,userlname,useremail FROM users WHERE userid=@userid";
+                cmds1.Parameters.Add("@userid", MySqlDbType.String).Value = puID;
+                MySqlDataReader drs2 = cmds2.ExecuteReader();
+
+                if (drs2.HasRows)
+                {
+                    while (drs2.Read())
+                    {
+                        puUser = drs2["userusername"].ToString();
+                        puFName = drs2["userfname"].ToString();
+                        puLName = drs2["userlname"].ToString();
+                        puEmail = drs2["useremail"].ToString();
+                    }
+                }
             }
             catch
             {
-                
+
             }
             finally
             {

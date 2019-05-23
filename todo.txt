@@ -8,25 +8,29 @@
 - Send
 - Receive
 - Design
+- Language
 
 //Movements
 - List Movements
 - Design
+- Language
 
 //Addresses
 - List Addresses
 - Create Addresses
 - Remove Addresses
 - Design
+- Language
 
-//Database
-- Fix tables
+//Database !!!DONE!!!
 
 //User
-- UpdateInfo
+- UpdateInfo(Routine)
 
+//Account
+- Email Check in DB
 
-//Account !!!DONE!!!
+//Change Password !!!DONE!!!
 
 //Settings !!!DONE!!!
 

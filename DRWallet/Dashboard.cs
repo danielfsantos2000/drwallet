@@ -83,11 +83,11 @@ namespace DRWallet
                     dt.Columns.Add("OtherAddress");
                     dt.Columns.Add("Date");
 
-                    dashHistoryGrid.Columns[0].Width = 32;
-                    dashHistoryGrid.Columns[1].Width = 170;
-                    dashHistoryGrid.Columns[2].Width = 122;
-                    dashHistoryGrid.Columns[3].Width = 170;
-                    dashHistoryGrid.Columns[4].Width = 120;
+                    movHistoryGrid.Columns[0].Width = 32;
+                    movHistoryGrid.Columns[1].Width = 170;
+                    movHistoryGrid.Columns[2].Width = 122;
+                    movHistoryGrid.Columns[3].Width = 170;
+                    movHistoryGrid.Columns[4].Width = 120;
 
 
 
@@ -113,8 +113,8 @@ namespace DRWallet
                         dt.Rows.Add(dr);
                     }
 
-                    dashHistoryGrid.DataSource = dt;
-                    dashHistoryGrid.Update();
+                    movHistoryGrid.DataSource = dt;
+                    movHistoryGrid.Update();
                 }
                 drs2.Close();
             }

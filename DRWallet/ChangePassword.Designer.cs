@@ -150,7 +150,7 @@
             this.Controls.Add(this.cpwdTitleLab);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangePassword";
-            this.Text = "ChangePassword - DRWallet";
+            this.Text = "Change password - DRWallet";
             this.ResumeLayout(false);
             this.PerformLayout();
 

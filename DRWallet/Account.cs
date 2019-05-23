@@ -41,7 +41,7 @@ namespace DRWallet
             }
             else if (User.uLanguage == 2)
             {
-                accAccLab.Text = DRWallet.Properties.Resources.PT_Set_Header;
+                accAccLab.Text = DRWallet.Properties.Resources.PT_Acc_Header;
                 accFNameLab.Location = new Point(156, 117);
                 accFNameLab.Text = $"{DRWallet.Properties.Resources.PT_Acc_FName}:";
                 accLNameLab.Location = new Point(187, 178);

@@ -141,12 +141,17 @@
             // 
             // addCreateButton
             // 
+            this.addCreateButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
+            this.addCreateButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.addCreateButton.FlatAppearance.BorderSize = 0;
+            this.addCreateButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
+            this.addCreateButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addCreateButton.Location = new System.Drawing.Point(611, 524);
             this.addCreateButton.Name = "addCreateButton";
             this.addCreateButton.Size = new System.Drawing.Size(160, 23);
             this.addCreateButton.TabIndex = 14;
             this.addCreateButton.Text = "Create Address";
-            this.addCreateButton.UseVisualStyleBackColor = true;
+            this.addCreateButton.UseVisualStyleBackColor = false;
             // 
             // Addresses
             // 

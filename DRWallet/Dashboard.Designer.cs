@@ -37,7 +37,7 @@
             this.dashHistoryLab = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dashHistoryInfoLab = new System.Windows.Forms.Label();
-            this.dashHistoryGrid = new System.Windows.Forms.DataGridView();
+            this.movHistoryGrid = new System.Windows.Forms.DataGridView();
             this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.accountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.details = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,7 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dashNavBar = new DRWallet.NavBar();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dashHistoryGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movHistoryGrid)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -138,36 +138,36 @@
             this.dashHistoryInfoLab.TabIndex = 9;
             this.dashHistoryInfoLab.Text = "Your Account ID          Details               Account ID                Date";
             // 
-            // dashHistoryGrid
+            // movHistoryGrid
             // 
-            this.dashHistoryGrid.AllowUserToAddRows = false;
-            this.dashHistoryGrid.AllowUserToDeleteRows = false;
-            this.dashHistoryGrid.AllowUserToResizeColumns = false;
-            this.dashHistoryGrid.AllowUserToResizeRows = false;
-            this.dashHistoryGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
-            this.dashHistoryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dashHistoryGrid.ColumnHeadersHeight = 37;
-            this.dashHistoryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.movHistoryGrid.AllowUserToAddRows = false;
+            this.movHistoryGrid.AllowUserToDeleteRows = false;
+            this.movHistoryGrid.AllowUserToResizeColumns = false;
+            this.movHistoryGrid.AllowUserToResizeRows = false;
+            this.movHistoryGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
+            this.movHistoryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.movHistoryGrid.ColumnHeadersHeight = 37;
+            this.movHistoryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Icon,
             this.accountID,
             this.details,
             this.oAccountID,
             this.date});
-            this.dashHistoryGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dashHistoryGrid.Location = new System.Drawing.Point(0, 0);
-            this.dashHistoryGrid.MultiSelect = false;
-            this.dashHistoryGrid.Name = "dashHistoryGrid";
-            this.dashHistoryGrid.ReadOnly = true;
-            this.dashHistoryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dashHistoryGrid.RowHeadersVisible = false;
-            this.dashHistoryGrid.RowTemplate.Height = 32;
-            this.dashHistoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dashHistoryGrid.ShowCellErrors = false;
-            this.dashHistoryGrid.ShowCellToolTips = false;
-            this.dashHistoryGrid.ShowEditingIcon = false;
-            this.dashHistoryGrid.ShowRowErrors = false;
-            this.dashHistoryGrid.Size = new System.Drawing.Size(615, 229);
-            this.dashHistoryGrid.TabIndex = 9;
+            this.movHistoryGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.movHistoryGrid.Location = new System.Drawing.Point(0, 0);
+            this.movHistoryGrid.MultiSelect = false;
+            this.movHistoryGrid.Name = "movHistoryGrid";
+            this.movHistoryGrid.ReadOnly = true;
+            this.movHistoryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.movHistoryGrid.RowHeadersVisible = false;
+            this.movHistoryGrid.RowTemplate.Height = 32;
+            this.movHistoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.movHistoryGrid.ShowCellErrors = false;
+            this.movHistoryGrid.ShowCellToolTips = false;
+            this.movHistoryGrid.ShowEditingIcon = false;
+            this.movHistoryGrid.ShowRowErrors = false;
+            this.movHistoryGrid.Size = new System.Drawing.Size(615, 229);
+            this.movHistoryGrid.TabIndex = 9;
             // 
             // Icon
             // 
@@ -213,7 +213,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.panel1);
-            this.panel2.Controls.Add(this.dashHistoryGrid);
+            this.panel2.Controls.Add(this.movHistoryGrid);
             this.panel2.Location = new System.Drawing.Point(156, 325);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(615, 229);
@@ -246,7 +246,7 @@
             this.Size = new System.Drawing.Size(800, 600);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dashHistoryGrid)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.movHistoryGrid)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -265,7 +265,7 @@
         private System.Windows.Forms.Label dashHistoryLab;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label dashHistoryInfoLab;
-        private System.Windows.Forms.DataGridView dashHistoryGrid;
+        private System.Windows.Forms.DataGridView movHistoryGrid;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewImageColumn Icon;
         private System.Windows.Forms.DataGridViewTextBoxColumn accountID;

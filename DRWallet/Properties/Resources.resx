@@ -153,14 +153,29 @@
   <data name="EN_Error_Emailinuse" xml:space="preserve">
     <value>Email already in use</value>
   </data>
+  <data name="EN_Error_Emailinvalid" xml:space="preserve">
+    <value>Invalid Email</value>
+  </data>
   <data name="EN_Error_Fields" xml:space="preserve">
     <value>You need to fill all fields</value>
   </data>
   <data name="EN_Error_Unknown" xml:space="preserve">
     <value>Something went wrong</value>
   </data>
+  <data name="EN_Mov_AID" xml:space="preserve">
+    <value>Account ID</value>
+  </data>
+  <data name="EN_Mov_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="EN_Mov_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
   <data name="EN_Mov_Header" xml:space="preserve">
     <value>Movements</value>
+  </data>
+  <data name="EN_Mov_YAID" xml:space="preserve">
+    <value>Your Account ID</value>
   </data>
   <data name="EN_Nav_Account" xml:space="preserve">
     <value>Account</value>
@@ -229,14 +244,29 @@
   <data name="PT_Error_Emailinuse" xml:space="preserve">
     <value>Email em uso</value>
   </data>
+  <data name="PT_Error_Emailinvalid" xml:space="preserve">
+    <value>Email Inválido</value>
+  </data>
   <data name="PT_Error_Fields" xml:space="preserve">
     <value>Tem de preencher todos os campos</value>
   </data>
   <data name="PT_Error_Unknown" xml:space="preserve">
     <value>Falhou algo na execução</value>
   </data>
+  <data name="PT_Mov_AID" xml:space="preserve">
+    <value>Conta</value>
+  </data>
+  <data name="PT_Mov_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="PT_Mov_Details" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
   <data name="PT_Mov_Header" xml:space="preserve">
     <value>Movimentos</value>
+  </data>
+  <data name="PT_Mov_YAID" xml:space="preserve">
+    <value>Minha Conta</value>
   </data>
   <data name="PT_Nav_Account" xml:space="preserve">
     <value>Conta</value>

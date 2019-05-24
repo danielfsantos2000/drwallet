@@ -169,6 +169,15 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Invalid Email.
+        /// </summary>
+        internal static string EN_Error_Emailinvalid {
+            get {
+                return ResourceManager.GetString("EN_Error_Emailinvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to You need to fill all fields.
         /// </summary>
         internal static string EN_Error_Fields {
@@ -187,11 +196,47 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Account ID.
+        /// </summary>
+        internal static string EN_Mov_AID {
+            get {
+                return ResourceManager.GetString("EN_Mov_AID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        internal static string EN_Mov_Date {
+            get {
+                return ResourceManager.GetString("EN_Mov_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        internal static string EN_Mov_Details {
+            get {
+                return ResourceManager.GetString("EN_Mov_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Movements.
         /// </summary>
         internal static string EN_Mov_Header {
             get {
                 return ResourceManager.GetString("EN_Mov_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Account ID.
+        /// </summary>
+        internal static string EN_Mov_YAID {
+            get {
+                return ResourceManager.GetString("EN_Mov_YAID", resourceCulture);
             }
         }
         
@@ -395,6 +440,15 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Email Inválido.
+        /// </summary>
+        internal static string PT_Error_Emailinvalid {
+            get {
+                return ResourceManager.GetString("PT_Error_Emailinvalid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tem de preencher todos os campos.
         /// </summary>
         internal static string PT_Error_Fields {
@@ -413,11 +467,47 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Conta.
+        /// </summary>
+        internal static string PT_Mov_AID {
+            get {
+                return ResourceManager.GetString("PT_Mov_AID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data.
+        /// </summary>
+        internal static string PT_Mov_Date {
+            get {
+                return ResourceManager.GetString("PT_Mov_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes.
+        /// </summary>
+        internal static string PT_Mov_Details {
+            get {
+                return ResourceManager.GetString("PT_Mov_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Movimentos.
         /// </summary>
         internal static string PT_Mov_Header {
             get {
                 return ResourceManager.GetString("PT_Mov_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minha Conta.
+        /// </summary>
+        internal static string PT_Mov_YAID {
+            get {
+                return ResourceManager.GetString("PT_Mov_YAID", resourceCulture);
             }
         }
         

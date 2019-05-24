@@ -35,8 +35,6 @@
             this.dashDRCoinLab = new System.Windows.Forms.Label();
             this.dashValueLab = new System.Windows.Forms.Label();
             this.dashHistoryLab = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dashHistoryInfoLab = new System.Windows.Forms.Label();
             this.movHistoryGrid = new System.Windows.Forms.DataGridView();
             this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
             this.accountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,19 +42,24 @@
             this.oAccountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.dashHistoryInfoLab_Date = new System.Windows.Forms.Label();
+            this.dashHistoryInfoLab_AID = new System.Windows.Forms.Label();
+            this.dashHistoryInfoLab_Details = new System.Windows.Forms.Label();
+            this.dashHistoryInfoLab_YAID = new System.Windows.Forms.Label();
             this.dashNavBar = new DRWallet.NavBar();
-            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movHistoryGrid)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dashUsernameLab
             // 
             this.dashUsernameLab.AutoSize = true;
-            this.dashUsernameLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 58F);
+            this.dashUsernameLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F);
             this.dashUsernameLab.Location = new System.Drawing.Point(156, 7);
             this.dashUsernameLab.Name = "dashUsernameLab";
-            this.dashUsernameLab.Size = new System.Drawing.Size(383, 89);
+            this.dashUsernameLab.Size = new System.Drawing.Size(277, 64);
             this.dashUsernameLab.TabIndex = 1;
             this.dashUsernameLab.Text = "username";
             // 
@@ -64,7 +67,7 @@
             // 
             this.dashBalanceLab.AutoSize = true;
             this.dashBalanceLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashBalanceLab.Location = new System.Drawing.Point(166, 156);
+            this.dashBalanceLab.Location = new System.Drawing.Point(166, 109);
             this.dashBalanceLab.Name = "dashBalanceLab";
             this.dashBalanceLab.Size = new System.Drawing.Size(287, 39);
             this.dashBalanceLab.TabIndex = 2;
@@ -72,7 +75,7 @@
             // 
             // dashSendButton
             // 
-            this.dashSendButton.Location = new System.Drawing.Point(178, 223);
+            this.dashSendButton.Location = new System.Drawing.Point(178, 176);
             this.dashSendButton.Name = "dashSendButton";
             this.dashSendButton.Size = new System.Drawing.Size(114, 38);
             this.dashSendButton.TabIndex = 3;
@@ -81,7 +84,7 @@
             // 
             // dashReceiveButton
             // 
-            this.dashReceiveButton.Location = new System.Drawing.Point(313, 223);
+            this.dashReceiveButton.Location = new System.Drawing.Point(313, 176);
             this.dashReceiveButton.Name = "dashReceiveButton";
             this.dashReceiveButton.Size = new System.Drawing.Size(114, 38);
             this.dashReceiveButton.TabIndex = 4;
@@ -92,7 +95,7 @@
             // 
             this.dashDRCoinLab.AutoSize = true;
             this.dashDRCoinLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashDRCoinLab.Location = new System.Drawing.Point(498, 156);
+            this.dashDRCoinLab.Location = new System.Drawing.Point(498, 109);
             this.dashDRCoinLab.Name = "dashDRCoinLab";
             this.dashDRCoinLab.Size = new System.Drawing.Size(254, 39);
             this.dashDRCoinLab.TabIndex = 5;
@@ -102,7 +105,7 @@
             // 
             this.dashValueLab.AutoSize = true;
             this.dashValueLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.dashValueLab.Location = new System.Drawing.Point(554, 214);
+            this.dashValueLab.Location = new System.Drawing.Point(544, 169);
             this.dashValueLab.Name = "dashValueLab";
             this.dashValueLab.Size = new System.Drawing.Size(103, 39);
             this.dashValueLab.TabIndex = 6;
@@ -112,31 +115,12 @@
             // dashHistoryLab
             // 
             this.dashHistoryLab.AutoSize = true;
-            this.dashHistoryLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashHistoryLab.Location = new System.Drawing.Point(168, 288);
+            this.dashHistoryLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
+            this.dashHistoryLab.Location = new System.Drawing.Point(160, 239);
             this.dashHistoryLab.Name = "dashHistoryLab";
-            this.dashHistoryLab.Size = new System.Drawing.Size(93, 29);
+            this.dashHistoryLab.Size = new System.Drawing.Size(137, 39);
             this.dashHistoryLab.TabIndex = 7;
             this.dashHistoryLab.Text = "History:";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(17)))));
-            this.panel1.Controls.Add(this.dashHistoryInfoLab);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(615, 37);
-            this.panel1.TabIndex = 8;
-            // 
-            // dashHistoryInfoLab
-            // 
-            this.dashHistoryInfoLab.AutoSize = true;
-            this.dashHistoryInfoLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dashHistoryInfoLab.Location = new System.Drawing.Point(39, 5);
-            this.dashHistoryInfoLab.Name = "dashHistoryInfoLab";
-            this.dashHistoryInfoLab.Size = new System.Drawing.Size(537, 24);
-            this.dashHistoryInfoLab.TabIndex = 9;
-            this.dashHistoryInfoLab.Text = "Your Account ID          Details               Account ID                Date";
             // 
             // movHistoryGrid
             // 
@@ -147,6 +131,7 @@
             this.movHistoryGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
             this.movHistoryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.movHistoryGrid.ColumnHeadersHeight = 37;
+            this.movHistoryGrid.ColumnHeadersVisible = false;
             this.movHistoryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Icon,
             this.accountID,
@@ -166,7 +151,7 @@
             this.movHistoryGrid.ShowCellToolTips = false;
             this.movHistoryGrid.ShowEditingIcon = false;
             this.movHistoryGrid.ShowRowErrors = false;
-            this.movHistoryGrid.Size = new System.Drawing.Size(615, 229);
+            this.movHistoryGrid.Size = new System.Drawing.Size(615, 234);
             this.movHistoryGrid.TabIndex = 9;
             // 
             // Icon
@@ -212,12 +197,67 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.movHistoryGrid);
-            this.panel2.Location = new System.Drawing.Point(156, 325);
+            this.panel2.Location = new System.Drawing.Point(156, 320);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 229);
+            this.panel2.Size = new System.Drawing.Size(615, 234);
             this.panel2.TabIndex = 10;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(17)))));
+            this.panel1.Controls.Add(this.dashHistoryInfoLab_Date);
+            this.panel1.Controls.Add(this.dashHistoryInfoLab_AID);
+            this.panel1.Controls.Add(this.dashHistoryInfoLab_Details);
+            this.panel1.Controls.Add(this.dashHistoryInfoLab_YAID);
+            this.panel1.Location = new System.Drawing.Point(156, 284);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(615, 37);
+            this.panel1.TabIndex = 11;
+            // 
+            // dashHistoryInfoLab_Date
+            // 
+            this.dashHistoryInfoLab_Date.AutoSize = true;
+            this.dashHistoryInfoLab_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashHistoryInfoLab_Date.Location = new System.Drawing.Point(530, 5);
+            this.dashHistoryInfoLab_Date.Name = "dashHistoryInfoLab_Date";
+            this.dashHistoryInfoLab_Date.Size = new System.Drawing.Size(48, 24);
+            this.dashHistoryInfoLab_Date.TabIndex = 12;
+            this.dashHistoryInfoLab_Date.Text = "Date";
+            this.dashHistoryInfoLab_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dashHistoryInfoLab_AID
+            // 
+            this.dashHistoryInfoLab_AID.AutoSize = true;
+            this.dashHistoryInfoLab_AID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashHistoryInfoLab_AID.Location = new System.Drawing.Point(359, 5);
+            this.dashHistoryInfoLab_AID.Name = "dashHistoryInfoLab_AID";
+            this.dashHistoryInfoLab_AID.Size = new System.Drawing.Size(102, 24);
+            this.dashHistoryInfoLab_AID.TabIndex = 11;
+            this.dashHistoryInfoLab_AID.Text = "Account ID";
+            this.dashHistoryInfoLab_AID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dashHistoryInfoLab_Details
+            // 
+            this.dashHistoryInfoLab_Details.AutoSize = true;
+            this.dashHistoryInfoLab_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashHistoryInfoLab_Details.Location = new System.Drawing.Point(232, 5);
+            this.dashHistoryInfoLab_Details.Name = "dashHistoryInfoLab_Details";
+            this.dashHistoryInfoLab_Details.Size = new System.Drawing.Size(65, 24);
+            this.dashHistoryInfoLab_Details.TabIndex = 10;
+            this.dashHistoryInfoLab_Details.Text = "Details";
+            this.dashHistoryInfoLab_Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dashHistoryInfoLab_YAID
+            // 
+            this.dashHistoryInfoLab_YAID.AutoSize = true;
+            this.dashHistoryInfoLab_YAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dashHistoryInfoLab_YAID.Location = new System.Drawing.Point(39, 5);
+            this.dashHistoryInfoLab_YAID.Name = "dashHistoryInfoLab_YAID";
+            this.dashHistoryInfoLab_YAID.Size = new System.Drawing.Size(147, 24);
+            this.dashHistoryInfoLab_YAID.TabIndex = 9;
+            this.dashHistoryInfoLab_YAID.Text = "Your Account ID";
+            this.dashHistoryInfoLab_YAID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // dashNavBar
             // 
@@ -233,6 +273,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.dashHistoryLab);
             this.Controls.Add(this.dashValueLab);
             this.Controls.Add(this.dashDRCoinLab);
@@ -244,10 +285,10 @@
             this.Controls.Add(this.panel2);
             this.Name = "Dashboard";
             this.Size = new System.Drawing.Size(800, 600);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.movHistoryGrid)).EndInit();
             this.panel2.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,8 +304,6 @@
         private System.Windows.Forms.Label dashDRCoinLab;
         private System.Windows.Forms.Label dashValueLab;
         private System.Windows.Forms.Label dashHistoryLab;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label dashHistoryInfoLab;
         private System.Windows.Forms.DataGridView movHistoryGrid;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridViewImageColumn Icon;
@@ -272,5 +311,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn details;
         private System.Windows.Forms.DataGridViewTextBoxColumn oAccountID;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label dashHistoryInfoLab_Date;
+        private System.Windows.Forms.Label dashHistoryInfoLab_AID;
+        private System.Windows.Forms.Label dashHistoryInfoLab_Details;
+        private System.Windows.Forms.Label dashHistoryInfoLab_YAID;
     }
 }

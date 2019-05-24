@@ -26,10 +26,64 @@ namespace DRWallet
             if (User.uLanguage == 1)
             {
                 movMovLab.Text = DRWallet.Properties.Resources.EN_Mov_Header;
+                movHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.EN_Mov_YAID;
+                movHistoryInfoLab_YAID.Location = new Point(39, 5);
+                movHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.EN_Mov_Details;
+                movHistoryInfoLab_Details.Location = new Point(232, 5);
+                movHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.EN_Mov_AID;
+                movHistoryInfoLab_AID.Location = new Point(359, 5);
+                movHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.EN_Mov_Date;
+                movHistoryInfoLab_Date.Location = new Point(530, 5);
             }
             else if (User.uLanguage == 2)
             {
                 movMovLab.Text = DRWallet.Properties.Resources.PT_Mov_Header;
+                movHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.PT_Mov_YAID;
+                movHistoryInfoLab_YAID.Location = new Point(54, 5);
+                movHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.PT_Mov_Details;
+                movHistoryInfoLab_Details.Location = new Point(227, 5);
+                movHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.PT_Mov_AID;
+                movHistoryInfoLab_AID.Location = new Point(377, 5);
+                movHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.PT_Mov_Date;
+                movHistoryInfoLab_Date.Location = new Point(530, 5);
+            }
+
+            //Theme Options
+            if (User.uTheme == 1)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 178, 102);
+                movMovLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_YAID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_Details.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_AID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_Date.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                panel1.BackColor = Color.FromArgb(255, 255, 125, 0);
+                movHistoryGrid.BackgroundColor = Color.FromArgb(255, 255, 164, 76);
+            }
+            else if (User.uTheme == 2)
+            {
+                this.BackColor = Color.FromArgb(255, 43, 43, 43);
+                movMovLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                movHistoryInfoLab_YAID.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                movHistoryInfoLab_Details.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                movHistoryInfoLab_AID.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                movHistoryInfoLab_Date.ForeColor = Color.FromArgb(255, 255, 255, 255);
+
+                panel1.BackColor = Color.FromArgb(255, 35, 35, 35);
+                movHistoryGrid.BackgroundColor = Color.FromArgb(255, 145, 145, 145);
+            }
+            else if (User.uTheme == 3)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 255, 255);
+                movMovLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_YAID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_Details.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_AID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                movHistoryInfoLab_Date.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                panel1.BackColor = Color.FromArgb(255, 188, 188, 188);
+                movHistoryGrid.BackgroundColor = Color.FromArgb(255, 220, 220, 220);
             }
 
             try
@@ -90,7 +144,14 @@ namespace DRWallet
                         {
                             dr["Image"] = send;
                             dr["MyAddress"] = drs2["addnum"].ToString();
-                            dr["Details"] = $"Sent {drs2["movqtd"].ToString()} DR to";
+                            if (User.uLanguage == 1)
+                            {
+                                dr["Details"] = $"Sent {drs2["movqtd"].ToString()} DR to";
+                            }
+                            else if (User.uLanguage == 2)
+                            {
+                                dr["Details"] = $"Enviou {drs2["movqtd"].ToString()} DR para";
+                            }
                             dr["OtherAddress"] = drs2["destaddnum"].ToString();
                             dr["Date"] = drs2["movdate"].ToString();
                         }
@@ -98,7 +159,14 @@ namespace DRWallet
                         {
                             dr["Image"] = receive;
                             dr["MyAddress"] = drs2["addnum"].ToString();
-                            dr["Details"] = $"Received {drs2["movqtd"].ToString()} DR from";
+                            if (User.uLanguage == 1)
+                            {
+                                dr["Details"] = $"Received {drs2["movqtd"].ToString()} DR from";
+                            }
+                            else if (User.uLanguage == 2)
+                            {
+                                dr["Details"] = $"Recebeu {drs2["movqtd"].ToString()} DR de";
+                            }
                             dr["OtherAddress"] = drs2["destaddnum"].ToString();
                             dr["Date"] = drs2["movdate"].ToString();
                         }

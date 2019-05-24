@@ -29,7 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.movHistoryInfoLab = new System.Windows.Forms.Label();
+            this.movHistoryInfoLab_Date = new System.Windows.Forms.Label();
+            this.movHistoryInfoLab_AID = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.movHistoryGrid = new System.Windows.Forms.DataGridView();
             this.Icon = new System.Windows.Forms.DataGridViewImageColumn();
@@ -37,6 +38,8 @@
             this.details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oAccountID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.movHistoryInfoLab_Details = new System.Windows.Forms.Label();
+            this.movHistoryInfoLab_YAID = new System.Windows.Forms.Label();
             this.movMovLab = new System.Windows.Forms.Label();
             this.movNavBar = new DRWallet.NavBar();
             this.panel1.SuspendLayout();
@@ -47,29 +50,43 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(17)))));
-            this.panel1.Controls.Add(this.movHistoryInfoLab);
-            this.panel1.Location = new System.Drawing.Point(156, 89);
+            this.panel1.Controls.Add(this.movHistoryInfoLab_Date);
+            this.panel1.Controls.Add(this.movHistoryInfoLab_AID);
+            this.panel1.Controls.Add(this.movHistoryInfoLab_Details);
+            this.panel1.Controls.Add(this.movHistoryInfoLab_YAID);
+            this.panel1.Location = new System.Drawing.Point(156, 76);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 37);
             this.panel1.TabIndex = 9;
             // 
-            // movHistoryInfoLab
+            // movHistoryInfoLab_Date
             // 
-            this.movHistoryInfoLab.AutoSize = true;
-            this.movHistoryInfoLab.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.movHistoryInfoLab.Location = new System.Drawing.Point(38, 5);
-            this.movHistoryInfoLab.Name = "movHistoryInfoLab";
-            this.movHistoryInfoLab.Size = new System.Drawing.Size(558, 27);
-            this.movHistoryInfoLab.TabIndex = 9;
-            this.movHistoryInfoLab.Text = "Your Account ID                Details               Account ID                Da" +
-    "te";
+            this.movHistoryInfoLab_Date.AutoSize = true;
+            this.movHistoryInfoLab_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movHistoryInfoLab_Date.Location = new System.Drawing.Point(530, 5);
+            this.movHistoryInfoLab_Date.Name = "movHistoryInfoLab_Date";
+            this.movHistoryInfoLab_Date.Size = new System.Drawing.Size(48, 24);
+            this.movHistoryInfoLab_Date.TabIndex = 12;
+            this.movHistoryInfoLab_Date.Text = "Date";
+            this.movHistoryInfoLab_Date.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // movHistoryInfoLab_AID
+            // 
+            this.movHistoryInfoLab_AID.AutoSize = true;
+            this.movHistoryInfoLab_AID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movHistoryInfoLab_AID.Location = new System.Drawing.Point(359, 5);
+            this.movHistoryInfoLab_AID.Name = "movHistoryInfoLab_AID";
+            this.movHistoryInfoLab_AID.Size = new System.Drawing.Size(102, 24);
+            this.movHistoryInfoLab_AID.TabIndex = 11;
+            this.movHistoryInfoLab_AID.Text = "Account ID";
+            this.movHistoryInfoLab_AID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.movHistoryGrid);
-            this.panel2.Location = new System.Drawing.Point(156, 89);
+            this.panel2.Location = new System.Drawing.Point(156, 113);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(615, 452);
+            this.panel2.Size = new System.Drawing.Size(615, 440);
             this.panel2.TabIndex = 10;
             // 
             // movHistoryGrid
@@ -78,9 +95,10 @@
             this.movHistoryGrid.AllowUserToDeleteRows = false;
             this.movHistoryGrid.AllowUserToResizeColumns = false;
             this.movHistoryGrid.AllowUserToResizeRows = false;
-            this.movHistoryGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(166)))), ((int)(((byte)(79)))));
+            this.movHistoryGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(164)))), ((int)(((byte)(76)))));
             this.movHistoryGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.movHistoryGrid.ColumnHeadersHeight = 37;
+            this.movHistoryGrid.ColumnHeadersVisible = false;
             this.movHistoryGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Icon,
             this.accountID,
@@ -95,12 +113,14 @@
             this.movHistoryGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.movHistoryGrid.RowHeadersVisible = false;
             this.movHistoryGrid.RowTemplate.Height = 32;
+            this.movHistoryGrid.RowTemplate.ReadOnly = true;
+            this.movHistoryGrid.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.movHistoryGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.movHistoryGrid.ShowCellErrors = false;
             this.movHistoryGrid.ShowCellToolTips = false;
             this.movHistoryGrid.ShowEditingIcon = false;
             this.movHistoryGrid.ShowRowErrors = false;
-            this.movHistoryGrid.Size = new System.Drawing.Size(615, 452);
+            this.movHistoryGrid.Size = new System.Drawing.Size(615, 440);
             this.movHistoryGrid.TabIndex = 10;
             // 
             // Icon
@@ -143,6 +163,28 @@
             this.date.Name = "date";
             this.date.ReadOnly = true;
             this.date.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // movHistoryInfoLab_Details
+            // 
+            this.movHistoryInfoLab_Details.AutoSize = true;
+            this.movHistoryInfoLab_Details.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movHistoryInfoLab_Details.Location = new System.Drawing.Point(232, 5);
+            this.movHistoryInfoLab_Details.Name = "movHistoryInfoLab_Details";
+            this.movHistoryInfoLab_Details.Size = new System.Drawing.Size(65, 24);
+            this.movHistoryInfoLab_Details.TabIndex = 10;
+            this.movHistoryInfoLab_Details.Text = "Details";
+            this.movHistoryInfoLab_Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // movHistoryInfoLab_YAID
+            // 
+            this.movHistoryInfoLab_YAID.AutoSize = true;
+            this.movHistoryInfoLab_YAID.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.movHistoryInfoLab_YAID.Location = new System.Drawing.Point(39, 5);
+            this.movHistoryInfoLab_YAID.Name = "movHistoryInfoLab_YAID";
+            this.movHistoryInfoLab_YAID.Size = new System.Drawing.Size(147, 24);
+            this.movHistoryInfoLab_YAID.TabIndex = 9;
+            this.movHistoryInfoLab_YAID.Text = "Your Account ID";
+            this.movHistoryInfoLab_YAID.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // movMovLab
             // 
@@ -188,7 +230,7 @@
 
         private NavBar movNavBar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label movHistoryInfoLab;
+        private System.Windows.Forms.Label movHistoryInfoLab_YAID;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label movMovLab;
         private System.Windows.Forms.DataGridView movHistoryGrid;
@@ -197,5 +239,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn details;
         private System.Windows.Forms.DataGridViewTextBoxColumn oAccountID;
         private System.Windows.Forms.DataGridViewTextBoxColumn date;
+        private System.Windows.Forms.Label movHistoryInfoLab_Details;
+        private System.Windows.Forms.Label movHistoryInfoLab_AID;
+        private System.Windows.Forms.Label movHistoryInfoLab_Date;
     }
 }

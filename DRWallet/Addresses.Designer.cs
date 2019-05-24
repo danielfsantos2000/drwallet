@@ -57,10 +57,10 @@
             // 
             this.addAddLab.AutoSize = true;
             this.addAddLab.BackColor = System.Drawing.Color.Transparent;
-            this.addAddLab.Font = new System.Drawing.Font("Gill Sans MT", 58F);
-            this.addAddLab.Location = new System.Drawing.Point(152, -8);
+            this.addAddLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 42F);
+            this.addAddLab.Location = new System.Drawing.Point(155, 5);
             this.addAddLab.Name = "addAddLab";
-            this.addAddLab.Size = new System.Drawing.Size(372, 107);
+            this.addAddLab.Size = new System.Drawing.Size(292, 64);
             this.addAddLab.TabIndex = 12;
             this.addAddLab.Text = "Addresses";
             // 
@@ -68,7 +68,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(135)))), ((int)(((byte)(17)))));
             this.panel1.Controls.Add(this.addListInfoLab);
-            this.panel1.Location = new System.Drawing.Point(156, 89);
+            this.panel1.Location = new System.Drawing.Point(563, 46);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 37);
             this.panel1.TabIndex = 13;
@@ -76,10 +76,10 @@
             // addListInfoLab
             // 
             this.addListInfoLab.AutoSize = true;
-            this.addListInfoLab.Font = new System.Drawing.Font("Gill Sans MT", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addListInfoLab.Location = new System.Drawing.Point(25, 5);
+            this.addListInfoLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addListInfoLab.Location = new System.Drawing.Point(16, 0);
             this.addListInfoLab.Name = "addListInfoLab";
-            this.addListInfoLab.Size = new System.Drawing.Size(579, 27);
+            this.addListInfoLab.Size = new System.Drawing.Size(599, 24);
             this.addListInfoLab.TabIndex = 9;
             this.addListInfoLab.Text = "Your Account ID                  Balance                   Date                  " +
     " Settings";

@@ -43,46 +43,46 @@
             // cpwdTitleLab
             // 
             this.cpwdTitleLab.AutoSize = true;
-            this.cpwdTitleLab.Font = new System.Drawing.Font("Gill Sans MT", 32.25F);
+            this.cpwdTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
             this.cpwdTitleLab.Location = new System.Drawing.Point(68, 9);
             this.cpwdTitleLab.Name = "cpwdTitleLab";
-            this.cpwdTitleLab.Size = new System.Drawing.Size(336, 60);
+            this.cpwdTitleLab.Size = new System.Drawing.Size(369, 51);
             this.cpwdTitleLab.TabIndex = 0;
             this.cpwdTitleLab.Text = "Change password";
             // 
             // cpwdCurrLab
             // 
             this.cpwdCurrLab.AutoSize = true;
-            this.cpwdCurrLab.Font = new System.Drawing.Font("Gill Sans MT", 16.25F);
+            this.cpwdCurrLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.cpwdCurrLab.Location = new System.Drawing.Point(54, 113);
             this.cpwdCurrLab.Name = "cpwdCurrLab";
-            this.cpwdCurrLab.Size = new System.Drawing.Size(183, 31);
+            this.cpwdCurrLab.Size = new System.Drawing.Size(192, 26);
             this.cpwdCurrLab.TabIndex = 1;
             this.cpwdCurrLab.Text = "Current Password:";
             // 
             // cpwdNPassLab
             // 
             this.cpwdNPassLab.AutoSize = true;
-            this.cpwdNPassLab.Font = new System.Drawing.Font("Gill Sans MT", 16.25F);
+            this.cpwdNPassLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.cpwdNPassLab.Location = new System.Drawing.Point(84, 158);
             this.cpwdNPassLab.Name = "cpwdNPassLab";
-            this.cpwdNPassLab.Size = new System.Drawing.Size(153, 31);
+            this.cpwdNPassLab.Size = new System.Drawing.Size(164, 26);
             this.cpwdNPassLab.TabIndex = 2;
             this.cpwdNPassLab.Text = "New Password:";
             // 
             // cpwdCNPassLab
             // 
             this.cpwdCNPassLab.AutoSize = true;
-            this.cpwdCNPassLab.Font = new System.Drawing.Font("Gill Sans MT", 16.25F);
+            this.cpwdCNPassLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.cpwdCNPassLab.Location = new System.Drawing.Point(52, 202);
             this.cpwdCNPassLab.Name = "cpwdCNPassLab";
-            this.cpwdCNPassLab.Size = new System.Drawing.Size(185, 31);
+            this.cpwdCNPassLab.Size = new System.Drawing.Size(197, 26);
             this.cpwdCNPassLab.TabIndex = 3;
             this.cpwdCNPassLab.Text = "Confirm Password:";
             // 
             // cpwdCPassBox
             // 
-            this.cpwdCPassBox.Font = new System.Drawing.Font("Gill Sans MT", 14F);
+            this.cpwdCPassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cpwdCPassBox.Location = new System.Drawing.Point(243, 115);
             this.cpwdCPassBox.Name = "cpwdCPassBox";
             this.cpwdCPassBox.PasswordChar = '*';
@@ -91,7 +91,7 @@
             // 
             // cpwdNPassBox
             // 
-            this.cpwdNPassBox.Font = new System.Drawing.Font("Gill Sans MT", 14F);
+            this.cpwdNPassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cpwdNPassBox.Location = new System.Drawing.Point(243, 160);
             this.cpwdNPassBox.Name = "cpwdNPassBox";
             this.cpwdNPassBox.PasswordChar = '*';
@@ -100,7 +100,7 @@
             // 
             // cpwdCNPassBox
             // 
-            this.cpwdCNPassBox.Font = new System.Drawing.Font("Gill Sans MT", 14F);
+            this.cpwdCNPassBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.cpwdCNPassBox.Location = new System.Drawing.Point(243, 204);
             this.cpwdCNPassBox.Name = "cpwdCNPassBox";
             this.cpwdCNPassBox.PasswordChar = '*';
@@ -125,18 +125,17 @@
             // cpwdErrorLab
             // 
             this.cpwdErrorLab.AutoSize = true;
-            this.cpwdErrorLab.Font = new System.Drawing.Font("Gill Sans MT", 16.25F);
+            this.cpwdErrorLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.25F);
             this.cpwdErrorLab.Location = new System.Drawing.Point(214, 77);
             this.cpwdErrorLab.Name = "cpwdErrorLab";
-            this.cpwdErrorLab.Size = new System.Drawing.Size(64, 31);
+            this.cpwdErrorLab.Size = new System.Drawing.Size(60, 26);
             this.cpwdErrorLab.TabIndex = 8;
             this.cpwdErrorLab.Text = "Error";
             this.cpwdErrorLab.Visible = false;
             // 
             // ChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(178)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(487, 293);
             this.Controls.Add(this.cpwdErrorLab);
@@ -149,6 +148,8 @@
             this.Controls.Add(this.cpwdCurrLab);
             this.Controls.Add(this.cpwdTitleLab);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ChangePassword";
             this.Text = "Change password - DRWallet";
             this.ResumeLayout(false);

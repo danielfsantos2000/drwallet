@@ -1,37 +1,47 @@
 //Login
 - Design
+- LOGS
 
 //Register
 - Design
+- LOGS
 
 //Dashboard
 - Send
+	- LOGS
 - Receive
+	- LOGS
 - Design
 - Language
 
-//Movements
-- List Movements
-- Design
-- Language
+//Movements !!!DONE!!!
 
 //Addresses
 - List Addresses
 - Create Addresses
+	- LOGS
 - Remove Addresses
+	- LOGS
 - Design
 - Language
+
+//Account !!!DONE!!!
+- LOGS
+
+//Change Password !!!DONE!!!
+- LOGS
+
+//Settings !!!DONE!!!
+- LOGS
+
+//NavBar !!!DONE!!!
 
 //Database !!!DONE!!!
 
 //User
 - UpdateInfo(Routine)
 
-//Account
-- Email Check in DB
-
-//Change Password !!!DONE!!!
-
-//Settings !!!DONE!!!
-
-//NavBar !!!DONE!!!
+//MORE
+- Encription
+- BlockChain
+- Auto Change Value

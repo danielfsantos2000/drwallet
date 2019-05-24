@@ -16,6 +16,7 @@ namespace DRWallet
         public ChangePassword()
         {
             InitializeComponent();
+            FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         public void changePasswordUpdate()

@@ -122,39 +122,19 @@ namespace DRWallet
 
             if (accFNameBox.Text != "" && accLNameBox.Text != "" && accEmailBox.Text != "")
             {
-                try
+                if (isEmailValid(accEmailBox.Text))
                 {
-                    db.Open();
+                    try
+                    {
+                        db.Open();
 
-                    if (accEmailBox.Text == User.uEmail)
-                    {
-                        MySqlCommand cmdChange = new MySqlCommand();
-                        cmdChange.Connection = db;
-                        cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname WHERE userid=@id";
-                        cmdChange.Parameters.Add("@fname", MySqlDbType.String).Value = accFNameBox.Text;
-                        cmdChange.Parameters.Add("@lname", MySqlDbType.String).Value = accLNameBox.Text;
-                        cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
-                        cmdChange.ExecuteNonQuery();
-                        User.uFName = accFNameBox.Text;
-                        User.uLName = accLNameBox.Text;
-                        User.uEmail = accEmailBox.Text;
-                    }
-                    else
-                    {
-                        MySqlCommand cmds1 = new MySqlCommand();
-                        cmds1.Connection = db;
-                        cmds1.CommandText = "SELECT * FROM users WHERE useremail=@email";
-                        cmds1.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
-                        MySqlDataReader drs1 = cmds1.ExecuteReader();
-                        if (!drs1.HasRows)
+                        if (accEmailBox.Text == User.uEmail)
                         {
-                            drs1.Close();
                             MySqlCommand cmdChange = new MySqlCommand();
                             cmdChange.Connection = db;
-                            cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname, useremail=@email WHERE userid=@id";
+                            cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname WHERE userid=@id";
                             cmdChange.Parameters.Add("@fname", MySqlDbType.String).Value = accFNameBox.Text;
                             cmdChange.Parameters.Add("@lname", MySqlDbType.String).Value = accLNameBox.Text;
-                            cmdChange.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
                             cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                             cmdChange.ExecuteNonQuery();
                             User.uFName = accFNameBox.Text;
@@ -163,31 +143,65 @@ namespace DRWallet
                         }
                         else
                         {
-                            if (User.uLanguage == 1)
+                            MySqlCommand cmds1 = new MySqlCommand();
+                            cmds1.Connection = db;
+                            cmds1.CommandText = "SELECT * FROM users WHERE useremail=@email";
+                            cmds1.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
+                            MySqlDataReader drs1 = cmds1.ExecuteReader();
+                            if (!drs1.HasRows)
                             {
-                                MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Emailinuse);
+                                drs1.Close();
+                                MySqlCommand cmdChange = new MySqlCommand();
+                                cmdChange.Connection = db;
+                                cmdChange.CommandText = "UPDATE users SET userfname=@fname, userlname=@lname, useremail=@email WHERE userid=@id";
+                                cmdChange.Parameters.Add("@fname", MySqlDbType.String).Value = accFNameBox.Text;
+                                cmdChange.Parameters.Add("@lname", MySqlDbType.String).Value = accLNameBox.Text;
+                                cmdChange.Parameters.Add("@email", MySqlDbType.String).Value = accEmailBox.Text;
+                                cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
+                                cmdChange.ExecuteNonQuery();
+                                User.uFName = accFNameBox.Text;
+                                User.uLName = accLNameBox.Text;
+                                User.uEmail = accEmailBox.Text;
                             }
-                            else if (User.uLanguage == 2)
+                            else
                             {
-                                MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Emailinuse);
+                                if (User.uLanguage == 1)
+                                {
+                                    MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Emailinuse);
+                                }
+                                else if (User.uLanguage == 2)
+                                {
+                                    MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Emailinuse);
+                                }
                             }
                         }
                     }
+                    catch (Exception ex)
+                    {
+                        if (User.uLanguage == 1)
+                        {
+                            MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Unknown);
+                        }
+                        else if (User.uLanguage == 2)
+                        {
+                            MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Unknown);
+                        }
+                    }
+                    finally
+                    {
+                        db.Close();
+                    }
                 }
-                catch (Exception ex)
+                else
                 {
                     if (User.uLanguage == 1)
                     {
-                        MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Unknown);
+                        MessageBox.Show(DRWallet.Properties.Resources.EN_Error_Emailinvalid);
                     }
                     else if (User.uLanguage == 2)
                     {
-                        MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Unknown);
+                        MessageBox.Show(DRWallet.Properties.Resources.PT_Error_Emailinvalid);
                     }
-                }
-                finally
-                {
-                    db.Close();
                 }
             }
             else
@@ -230,6 +244,19 @@ namespace DRWallet
             if (GotoLog != null)
             {
                 GotoLog(this, EventArgs.Empty);
+            }
+        }
+
+        public bool isEmailValid(string emailaddress)
+        {
+            try
+            {
+                System.Net.Mail.MailAddress m = new System.Net.Mail.MailAddress(emailaddress);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
             }
         }
     }

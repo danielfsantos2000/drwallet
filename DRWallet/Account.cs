@@ -140,6 +140,8 @@ namespace DRWallet
                             User.uFName = accFNameBox.Text;
                             User.uLName = accLNameBox.Text;
                             User.uEmail = accEmailBox.Text;
+
+                            Logs.ChangeAccountLog(User.uID, accFNameBox.Text, accLNameBox.Text, accEmailBox.Text);
                         }
                         else
                         {
@@ -162,6 +164,8 @@ namespace DRWallet
                                 User.uFName = accFNameBox.Text;
                                 User.uLName = accLNameBox.Text;
                                 User.uEmail = accEmailBox.Text;
+
+                                Logs.ChangeAccountLog(User.uID, accFNameBox.Text, accLNameBox.Text, accEmailBox.Text);
                             }
                             else
                             {
@@ -176,7 +180,7 @@ namespace DRWallet
                             }
                         }
                     }
-                    catch (Exception ex)
+                    catch
                     {
                         if (User.uLanguage == 1)
                         {

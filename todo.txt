@@ -1,47 +1,38 @@
-//Login
-- Design
-- LOGS
+//Login !!!DONE!!!
 
-//Register
-- Design
-- LOGS
+//Register !!!DONE!!!
 
 //Dashboard
-- Send
-	- LOGS
-- Receive
-	- LOGS
-- Design
-- Language
+- Send                                            !
+	- LOGS                                        !
+- Receive                                         !
+- Design                                          !
+- Language                                        !
 
 //Movements !!!DONE!!!
 
 //Addresses
-- List Addresses
-- Create Addresses
-	- LOGS
-- Remove Addresses
-	- LOGS
-- Design
-- Language
+- Remove Addresses                                !
+	- LOGS                                        !
+	- Design                                      !
+	- Language                                    !
+- Design                                          !
+- Language                                        !
 
 //Account !!!DONE!!!
-- LOGS
 
 //Change Password !!!DONE!!!
-- LOGS
 
 //Settings !!!DONE!!!
-- LOGS
 
 //NavBar !!!DONE!!!
 
 //Database !!!DONE!!!
 
 //User
-- UpdateInfo(Routine)
+- UpdateInfo(Routine)                             !
 
 //MORE
-- Encription
-- BlockChain
-- Auto Change Value
+- Encription                                      !
+- BlockChain                                      !
+- Auto Change Value                               !

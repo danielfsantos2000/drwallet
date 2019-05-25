@@ -114,6 +114,8 @@ namespace DRWallet
                             cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                             cmdChange.ExecuteNonQuery();
 
+                            Logs.ChangePasswordLog(User.uID);
+
                             cpwdErrorLab.Text = "Successfully Changed!";
                             cpwdErrorLab.Location = new Point(138, 75);
                             cpwdErrorLab.Visible = true;

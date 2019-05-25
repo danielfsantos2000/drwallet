@@ -56,6 +56,8 @@ namespace DRWallet
                             User.updateInfo();
                         }
 
+                        Logs.AddLoginLog(User.uID);
+
                         drs1.Close();
 
                         MySqlCommand cmds2 = new MySqlCommand();
@@ -84,6 +86,7 @@ namespace DRWallet
                             int numbers = cmdInsert.ExecuteNonQuery();
                             User.uLanguage = 1;
                             User.uTheme = 1;
+                            Logs.AddSettingsLog(User.uID);
                         }
 
                         OnLogButtonClicked();

@@ -119,9 +119,11 @@ namespace DRWallet
                     cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                     cmdChange.ExecuteNonQuery();
 
+                    Logs.ChangeSettingsLog(User.uID, setLangBox.Text, setThemeBox.Text);
+
                     settingsUpdate();
                 }
-                catch (Exception ex)
+                catch
                 {
                     if (User.uLanguage == 1)
                     {

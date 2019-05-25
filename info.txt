@@ -1,0 +1,10 @@
+LOGS
+1 - Register
+2 - Login
+3 - Send              !
+4 - Add Address
+5 - Remove Address    !
+6 - Change Account
+7 - Change Password
+8 - Create Settings
+9 - Change Settings

@@ -120,5 +120,11 @@ namespace DRWallet
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
+
+        private void AddRemoveButton_Click(object sender, EventArgs e)
+        {
+            RemoveAddress rem = new RemoveAddress();
+            rem.Show();
+        }
     }
 }

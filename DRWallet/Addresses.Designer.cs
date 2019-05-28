@@ -31,6 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.addAddLab = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addListInfoLab_Date = new System.Windows.Forms.Label();
+            this.addListInfoLab_Bal = new System.Windows.Forms.Label();
             this.addListInfoLab_YAID = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.addListGrid = new System.Windows.Forms.DataGridView();
@@ -40,8 +42,6 @@
             this.addCreateButton = new System.Windows.Forms.Button();
             this.addRemoveButton = new System.Windows.Forms.Button();
             this.addNavBar = new DRWallet.NavBar();
-            this.addListInfoLab_Bal = new System.Windows.Forms.Label();
-            this.addListInfoLab_Date = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.addListGrid)).BeginInit();
@@ -68,6 +68,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(615, 37);
             this.panel1.TabIndex = 13;
+            // 
+            // addListInfoLab_Date
+            // 
+            this.addListInfoLab_Date.AutoSize = true;
+            this.addListInfoLab_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addListInfoLab_Date.Location = new System.Drawing.Point(497, 6);
+            this.addListInfoLab_Date.Name = "addListInfoLab_Date";
+            this.addListInfoLab_Date.Size = new System.Drawing.Size(48, 24);
+            this.addListInfoLab_Date.TabIndex = 11;
+            this.addListInfoLab_Date.Text = "Date";
+            // 
+            // addListInfoLab_Bal
+            // 
+            this.addListInfoLab_Bal.AutoSize = true;
+            this.addListInfoLab_Bal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addListInfoLab_Bal.Location = new System.Drawing.Point(278, 6);
+            this.addListInfoLab_Bal.Name = "addListInfoLab_Bal";
+            this.addListInfoLab_Bal.Size = new System.Drawing.Size(78, 24);
+            this.addListInfoLab_Bal.TabIndex = 10;
+            this.addListInfoLab_Bal.Text = "Balance";
             // 
             // addListInfoLab_YAID
             // 
@@ -180,6 +200,7 @@
             this.addRemoveButton.TabIndex = 15;
             this.addRemoveButton.Text = "Remove Address";
             this.addRemoveButton.UseVisualStyleBackColor = false;
+            this.addRemoveButton.Click += new System.EventHandler(this.AddRemoveButton_Click);
             // 
             // addNavBar
             // 
@@ -189,26 +210,6 @@
             this.addNavBar.Name = "addNavBar";
             this.addNavBar.Size = new System.Drawing.Size(150, 600);
             this.addNavBar.TabIndex = 0;
-            // 
-            // addListInfoLab_Bal
-            // 
-            this.addListInfoLab_Bal.AutoSize = true;
-            this.addListInfoLab_Bal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addListInfoLab_Bal.Location = new System.Drawing.Point(278, 6);
-            this.addListInfoLab_Bal.Name = "addListInfoLab_Bal";
-            this.addListInfoLab_Bal.Size = new System.Drawing.Size(78, 24);
-            this.addListInfoLab_Bal.TabIndex = 10;
-            this.addListInfoLab_Bal.Text = "Balance";
-            // 
-            // addListInfoLab_Date
-            // 
-            this.addListInfoLab_Date.AutoSize = true;
-            this.addListInfoLab_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addListInfoLab_Date.Location = new System.Drawing.Point(497, 6);
-            this.addListInfoLab_Date.Name = "addListInfoLab_Date";
-            this.addListInfoLab_Date.Size = new System.Drawing.Size(48, 24);
-            this.addListInfoLab_Date.TabIndex = 11;
-            this.addListInfoLab_Date.Text = "Date";
             // 
             // Addresses
             // 

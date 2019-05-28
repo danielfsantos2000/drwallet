@@ -23,6 +23,7 @@ namespace DRWallet
         {
             if (User.uLanguage == 1)
             {
+                this.Text = "Change Password - DR Wallet";
                 cpwdTitleLab.Location = new Point(68, 9);
                 cpwdTitleLab.Text = DRWallet.Properties.Resources.EN_CPwd_Header;
                 cpwdCurrLab.Location = new Point(54, 113);
@@ -36,6 +37,7 @@ namespace DRWallet
             }
             else if (User.uLanguage == 2)
             {
+                this.Text = "Mudar Palavra-Passe - DR Wallet";
                 cpwdTitleLab.Location = new Point(48, 17);
                 cpwdTitleLab.Text = DRWallet.Properties.Resources.PT_CPwd_Header;
                 cpwdCurrLab.Location = new Point(49, 113);

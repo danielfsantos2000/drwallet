@@ -31,7 +31,6 @@
             this.dashUsernameLab = new System.Windows.Forms.Label();
             this.dashBalanceLab = new System.Windows.Forms.Label();
             this.dashSendButton = new System.Windows.Forms.Button();
-            this.dashReceiveButton = new System.Windows.Forms.Button();
             this.dashDRCoinLab = new System.Windows.Forms.Label();
             this.dashValueLab = new System.Windows.Forms.Label();
             this.dashHistoryLab = new System.Windows.Forms.Label();
@@ -75,21 +74,12 @@
             // 
             // dashSendButton
             // 
-            this.dashSendButton.Location = new System.Drawing.Point(178, 176);
+            this.dashSendButton.Location = new System.Drawing.Point(249, 177);
             this.dashSendButton.Name = "dashSendButton";
             this.dashSendButton.Size = new System.Drawing.Size(114, 38);
             this.dashSendButton.TabIndex = 3;
             this.dashSendButton.Text = "Send";
             this.dashSendButton.UseVisualStyleBackColor = true;
-            // 
-            // dashReceiveButton
-            // 
-            this.dashReceiveButton.Location = new System.Drawing.Point(313, 176);
-            this.dashReceiveButton.Name = "dashReceiveButton";
-            this.dashReceiveButton.Size = new System.Drawing.Size(114, 38);
-            this.dashReceiveButton.TabIndex = 4;
-            this.dashReceiveButton.Text = "Receive";
-            this.dashReceiveButton.UseVisualStyleBackColor = true;
             // 
             // dashDRCoinLab
             // 
@@ -277,7 +267,6 @@
             this.Controls.Add(this.dashHistoryLab);
             this.Controls.Add(this.dashValueLab);
             this.Controls.Add(this.dashDRCoinLab);
-            this.Controls.Add(this.dashReceiveButton);
             this.Controls.Add(this.dashSendButton);
             this.Controls.Add(this.dashBalanceLab);
             this.Controls.Add(this.dashUsernameLab);
@@ -300,7 +289,6 @@
         private System.Windows.Forms.Label dashUsernameLab;
         private System.Windows.Forms.Label dashBalanceLab;
         private System.Windows.Forms.Button dashSendButton;
-        private System.Windows.Forms.Button dashReceiveButton;
         private System.Windows.Forms.Label dashDRCoinLab;
         private System.Windows.Forms.Label dashValueLab;
         private System.Windows.Forms.Label dashHistoryLab;

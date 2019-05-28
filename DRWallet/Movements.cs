@@ -26,25 +26,25 @@ namespace DRWallet
             if (User.uLanguage == 1)
             {
                 movMovLab.Text = DRWallet.Properties.Resources.EN_Mov_Header;
-                movHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.EN_Mov_YAID;
+                movHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.EN_ALL_YAID;
                 movHistoryInfoLab_YAID.Location = new Point(39, 5);
-                movHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.EN_Mov_Details;
+                movHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.EN_ALL_Details;
                 movHistoryInfoLab_Details.Location = new Point(232, 5);
-                movHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.EN_Mov_AID;
+                movHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.EN_ALL_AID;
                 movHistoryInfoLab_AID.Location = new Point(359, 5);
-                movHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.EN_Mov_Date;
+                movHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.EN_ALL_Date;
                 movHistoryInfoLab_Date.Location = new Point(530, 5);
             }
             else if (User.uLanguage == 2)
             {
                 movMovLab.Text = DRWallet.Properties.Resources.PT_Mov_Header;
-                movHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.PT_Mov_YAID;
+                movHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.PT_ALL_YAID;
                 movHistoryInfoLab_YAID.Location = new Point(54, 5);
-                movHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.PT_Mov_Details;
+                movHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.PT_ALL_Details;
                 movHistoryInfoLab_Details.Location = new Point(227, 5);
-                movHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.PT_Mov_AID;
+                movHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.PT_ALL_AID;
                 movHistoryInfoLab_AID.Location = new Point(377, 5);
-                movHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.PT_Mov_Date;
+                movHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.PT_ALL_Date;
                 movHistoryInfoLab_Date.Location = new Point(530, 5);
             }
 

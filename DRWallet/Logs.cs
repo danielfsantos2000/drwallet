@@ -37,6 +37,29 @@ namespace DRWallet
             }
         }
 
+        public static void AddLoginLog(int username)
+        {
+            try
+            {
+                string info = $"Logged in: {username}";
+
+                db.Open();
+                MySqlCommand cmdLogInsert = new MySqlCommand();
+                cmdLogInsert.Connection = db;
+                cmdLogInsert.CommandText = "INSERT INTO logs (logtype,loginfo) VALUES (2,@info)";
+                cmdLogInsert.Parameters.Add("@info", MySqlDbType.String).Value = info;
+                int numbers = cmdLogInsert.ExecuteNonQuery();
+            }
+            catch
+            {
+
+            }
+            finally
+            {
+                db.Close();
+            }
+        }
+
         public static void AddAddressLog(int username, int address)
         {
             try
@@ -60,16 +83,16 @@ namespace DRWallet
             }
         }
 
-        public static void AddLoginLog(int username)
+        public static void RemAddressLog(int username, string address)
         {
             try
             {
-                string info = $"Logged in: {username}";
+                string info = $"Removed Address: {username}, Number: {address}";
 
                 db.Open();
                 MySqlCommand cmdLogInsert = new MySqlCommand();
                 cmdLogInsert.Connection = db;
-                cmdLogInsert.CommandText = "INSERT INTO logs (logtype,loginfo) VALUES (2,@info)";
+                cmdLogInsert.CommandText = "INSERT INTO logs (logtype,loginfo) VALUES (5,@info)";
                 cmdLogInsert.Parameters.Add("@info", MySqlDbType.String).Value = info;
                 int numbers = cmdLogInsert.ExecuteNonQuery();
             }

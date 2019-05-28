@@ -135,6 +135,30 @@
   <data name="EN_Acc_SaveChanges" xml:space="preserve">
     <value>Save Changes</value>
   </data>
+  <data name="EN_Add_Create" xml:space="preserve">
+    <value>Create Address</value>
+  </data>
+  <data name="EN_Add_Header" xml:space="preserve">
+    <value>Addresses</value>
+  </data>
+  <data name="EN_Add_Remove" xml:space="preserve">
+    <value>Remove Address</value>
+  </data>
+  <data name="EN_ALL_AID" xml:space="preserve">
+    <value>Account ID</value>
+  </data>
+  <data name="EN_ALL_Balance" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="EN_ALL_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="EN_ALL_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="EN_ALL_YAID" xml:space="preserve">
+    <value>Your Account ID</value>
+  </data>
   <data name="EN_CPwd_CurrPassword" xml:space="preserve">
     <value>Current Password</value>
   </data>
@@ -162,20 +186,8 @@
   <data name="EN_Error_Unknown" xml:space="preserve">
     <value>Something went wrong</value>
   </data>
-  <data name="EN_Mov_AID" xml:space="preserve">
-    <value>Account ID</value>
-  </data>
-  <data name="EN_Mov_Date" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="EN_Mov_Details" xml:space="preserve">
-    <value>Details</value>
-  </data>
   <data name="EN_Mov_Header" xml:space="preserve">
     <value>Movements</value>
-  </data>
-  <data name="EN_Mov_YAID" xml:space="preserve">
-    <value>Your Account ID</value>
   </data>
   <data name="EN_Nav_Account" xml:space="preserve">
     <value>Account</value>
@@ -191,6 +203,12 @@
   </data>
   <data name="EN_Nav_Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="EN_Rm_Header" xml:space="preserve">
+    <value>Remove Address</value>
+  </data>
+  <data name="EN_Rm_Text" xml:space="preserve">
+    <value>Choose your address</value>
   </data>
   <data name="EN_Set_Header" xml:space="preserve">
     <value>Settings</value>
@@ -226,6 +244,30 @@
   <data name="PT_Acc_SaveChanges" xml:space="preserve">
     <value>Guardar</value>
   </data>
+  <data name="PT_Add_Create" xml:space="preserve">
+    <value>Adicionar Endereço</value>
+  </data>
+  <data name="PT_Add_Header" xml:space="preserve">
+    <value>Endereços</value>
+  </data>
+  <data name="PT_Add_Remove" xml:space="preserve">
+    <value>Remover Endereço</value>
+  </data>
+  <data name="PT_ALL_AID" xml:space="preserve">
+    <value>Conta</value>
+  </data>
+  <data name="PT_ALL_Balance" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="PT_ALL_Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="PT_ALL_Details" xml:space="preserve">
+    <value>Detalhes</value>
+  </data>
+  <data name="PT_ALL_YAID" xml:space="preserve">
+    <value>Minha Conta</value>
+  </data>
   <data name="PT_CPwd_CurrPassword" xml:space="preserve">
     <value>Palavra-Passe Atual</value>
   </data>
@@ -253,20 +295,8 @@
   <data name="PT_Error_Unknown" xml:space="preserve">
     <value>Falhou algo na execução</value>
   </data>
-  <data name="PT_Mov_AID" xml:space="preserve">
-    <value>Conta</value>
-  </data>
-  <data name="PT_Mov_Date" xml:space="preserve">
-    <value>Data</value>
-  </data>
-  <data name="PT_Mov_Details" xml:space="preserve">
-    <value>Detalhes</value>
-  </data>
   <data name="PT_Mov_Header" xml:space="preserve">
     <value>Movimentos</value>
-  </data>
-  <data name="PT_Mov_YAID" xml:space="preserve">
-    <value>Minha Conta</value>
   </data>
   <data name="PT_Nav_Account" xml:space="preserve">
     <value>Conta</value>
@@ -282,6 +312,12 @@
   </data>
   <data name="PT_Nav_Settings" xml:space="preserve">
     <value>Configurações</value>
+  </data>
+  <data name="PT_Rm_Header" xml:space="preserve">
+    <value>Remover Endereço</value>
+  </data>
+  <data name="PT_Rm_Text" xml:space="preserve">
+    <value>Escolha o seu endereço</value>
   </data>
   <data name="PT_Set_Header" xml:space="preserve">
     <value>Configurações</value>

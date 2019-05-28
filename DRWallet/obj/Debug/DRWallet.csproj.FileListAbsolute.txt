@@ -73,3 +73,4 @@ D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.csproj.CopyComplete
 D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.exe
 D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.pdb
 D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.RemoveAddress.resources
+C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.RemoveAddress.resources

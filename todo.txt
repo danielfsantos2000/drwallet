@@ -11,14 +11,8 @@
 
 //Movements !!!DONE!!!
 
-//Addresses
-- Remove Addresses                                !
-	- LOGS                                        !
-	- Design                                      !
-	- Language                                    !
-- Design                                          !
-- Language                                        !
-
+//Addresses !!!DONE!!!
+	
 //Account !!!DONE!!!
 
 //Change Password !!!DONE!!!

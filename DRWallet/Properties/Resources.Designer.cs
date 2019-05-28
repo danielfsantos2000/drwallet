@@ -115,6 +115,78 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Create Address.
+        /// </summary>
+        internal static string EN_Add_Create {
+            get {
+                return ResourceManager.GetString("EN_Add_Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Addresses.
+        /// </summary>
+        internal static string EN_Add_Header {
+            get {
+                return ResourceManager.GetString("EN_Add_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Address.
+        /// </summary>
+        internal static string EN_Add_Remove {
+            get {
+                return ResourceManager.GetString("EN_Add_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Account ID.
+        /// </summary>
+        internal static string EN_ALL_AID {
+            get {
+                return ResourceManager.GetString("EN_ALL_AID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Balance.
+        /// </summary>
+        internal static string EN_ALL_Balance {
+            get {
+                return ResourceManager.GetString("EN_ALL_Balance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        internal static string EN_ALL_Date {
+            get {
+                return ResourceManager.GetString("EN_ALL_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        internal static string EN_ALL_Details {
+            get {
+                return ResourceManager.GetString("EN_ALL_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Account ID.
+        /// </summary>
+        internal static string EN_ALL_YAID {
+            get {
+                return ResourceManager.GetString("EN_ALL_YAID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Current Password.
         /// </summary>
         internal static string EN_CPwd_CurrPassword {
@@ -196,47 +268,11 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Account ID.
-        /// </summary>
-        internal static string EN_Mov_AID {
-            get {
-                return ResourceManager.GetString("EN_Mov_AID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Date.
-        /// </summary>
-        internal static string EN_Mov_Date {
-            get {
-                return ResourceManager.GetString("EN_Mov_Date", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Details.
-        /// </summary>
-        internal static string EN_Mov_Details {
-            get {
-                return ResourceManager.GetString("EN_Mov_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Movements.
         /// </summary>
         internal static string EN_Mov_Header {
             get {
                 return ResourceManager.GetString("EN_Mov_Header", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Your Account ID.
-        /// </summary>
-        internal static string EN_Mov_YAID {
-            get {
-                return ResourceManager.GetString("EN_Mov_YAID", resourceCulture);
             }
         }
         
@@ -282,6 +318,24 @@ namespace DRWallet.Properties {
         internal static string EN_Nav_Settings {
             get {
                 return ResourceManager.GetString("EN_Nav_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remove Address.
+        /// </summary>
+        internal static string EN_Rm_Header {
+            get {
+                return ResourceManager.GetString("EN_Rm_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose your address.
+        /// </summary>
+        internal static string EN_Rm_Text {
+            get {
+                return ResourceManager.GetString("EN_Rm_Text", resourceCulture);
             }
         }
         
@@ -386,6 +440,78 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Adicionar Endereço.
+        /// </summary>
+        internal static string PT_Add_Create {
+            get {
+                return ResourceManager.GetString("PT_Add_Create", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereços.
+        /// </summary>
+        internal static string PT_Add_Header {
+            get {
+                return ResourceManager.GetString("PT_Add_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover Endereço.
+        /// </summary>
+        internal static string PT_Add_Remove {
+            get {
+                return ResourceManager.GetString("PT_Add_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Conta.
+        /// </summary>
+        internal static string PT_ALL_AID {
+            get {
+                return ResourceManager.GetString("PT_ALL_AID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Saldo.
+        /// </summary>
+        internal static string PT_ALL_Balance {
+            get {
+                return ResourceManager.GetString("PT_ALL_Balance", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Data.
+        /// </summary>
+        internal static string PT_ALL_Date {
+            get {
+                return ResourceManager.GetString("PT_ALL_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detalhes.
+        /// </summary>
+        internal static string PT_ALL_Details {
+            get {
+                return ResourceManager.GetString("PT_ALL_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Minha Conta.
+        /// </summary>
+        internal static string PT_ALL_YAID {
+            get {
+                return ResourceManager.GetString("PT_ALL_YAID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Palavra-Passe Atual.
         /// </summary>
         internal static string PT_CPwd_CurrPassword {
@@ -467,47 +593,11 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Conta.
-        /// </summary>
-        internal static string PT_Mov_AID {
-            get {
-                return ResourceManager.GetString("PT_Mov_AID", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Data.
-        /// </summary>
-        internal static string PT_Mov_Date {
-            get {
-                return ResourceManager.GetString("PT_Mov_Date", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Detalhes.
-        /// </summary>
-        internal static string PT_Mov_Details {
-            get {
-                return ResourceManager.GetString("PT_Mov_Details", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Movimentos.
         /// </summary>
         internal static string PT_Mov_Header {
             get {
                 return ResourceManager.GetString("PT_Mov_Header", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Minha Conta.
-        /// </summary>
-        internal static string PT_Mov_YAID {
-            get {
-                return ResourceManager.GetString("PT_Mov_YAID", resourceCulture);
             }
         }
         
@@ -553,6 +643,24 @@ namespace DRWallet.Properties {
         internal static string PT_Nav_Settings {
             get {
                 return ResourceManager.GetString("PT_Nav_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Remover Endereço.
+        /// </summary>
+        internal static string PT_Rm_Header {
+            get {
+                return ResourceManager.GetString("PT_Rm_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Escolha o seu endereço.
+        /// </summary>
+        internal static string PT_Rm_Text {
+            get {
+                return ResourceManager.GetString("PT_Rm_Text", resourceCulture);
             }
         }
         

@@ -28,31 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cpwdTitleLab = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RemoveAddress));
+            this.remTitleLab = new System.Windows.Forms.Label();
+            this.remTextLab = new System.Windows.Forms.Label();
             this.remAddBox = new System.Windows.Forms.ComboBox();
             this.remAddButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // cpwdTitleLab
+            // remTitleLab
             // 
-            this.cpwdTitleLab.AutoSize = true;
-            this.cpwdTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
-            this.cpwdTitleLab.Location = new System.Drawing.Point(68, 9);
-            this.cpwdTitleLab.Name = "cpwdTitleLab";
-            this.cpwdTitleLab.Size = new System.Drawing.Size(353, 51);
-            this.cpwdTitleLab.TabIndex = 1;
-            this.cpwdTitleLab.Text = "Remove Address";
+            this.remTitleLab.AutoSize = true;
+            this.remTitleLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 32.25F);
+            this.remTitleLab.Location = new System.Drawing.Point(68, 9);
+            this.remTitleLab.Name = "remTitleLab";
+            this.remTitleLab.Size = new System.Drawing.Size(353, 51);
+            this.remTitleLab.TabIndex = 1;
+            this.remTitleLab.Text = "Remove Address";
             // 
-            // label1
+            // remTextLab
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 105);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(280, 31);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Choose your address:";
+            this.remTextLab.AutoSize = true;
+            this.remTextLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remTextLab.Location = new System.Drawing.Point(103, 105);
+            this.remTextLab.Name = "remTextLab";
+            this.remTextLab.Size = new System.Drawing.Size(280, 31);
+            this.remTextLab.TabIndex = 2;
+            this.remTextLab.Text = "Choose your address:";
             // 
             // remAddBox
             // 
@@ -87,10 +88,11 @@
             this.ClientSize = new System.Drawing.Size(487, 293);
             this.Controls.Add(this.remAddButton);
             this.Controls.Add(this.remAddBox);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.cpwdTitleLab);
+            this.Controls.Add(this.remTextLab);
+            this.Controls.Add(this.remTitleLab);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RemoveAddress";
-            this.Text = "RemoveAddress";
+            this.Text = "Remove Address - DRWallet";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -98,8 +100,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label cpwdTitleLab;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label remTitleLab;
+        private System.Windows.Forms.Label remTextLab;
         private System.Windows.Forms.ComboBox remAddBox;
         private System.Windows.Forms.Button remAddButton;
     }

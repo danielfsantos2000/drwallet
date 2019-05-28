@@ -26,6 +26,7 @@ namespace DRWallet
             NavBar.GotoNavAcc += this.showAccountPage;
             NavBar.GotoNavSet += this.showSettingsPage;
             accountPage.GotoLog += this.showLoginPageLogout;
+            RemoveAddress.sendUpdateAddresses2 += this.updateAddresses;
         }
 
         public void showRegisterPage(object source, EventArgs e)
@@ -98,6 +99,11 @@ namespace DRWallet
             addressesPage.Hide();
             accountPage.Hide();
             settingsPage.Show();
+        }
+
+        public void updateAddresses(object source, EventArgs e)
+        {
+            addressesPage.addressesUpdate();
         }
     }
 }

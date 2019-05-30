@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
+using System.Timers;
 
 namespace DRWallet
 {
@@ -167,5 +168,8 @@ namespace DRWallet
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
+
+        public static Timer timer;
+
     }
 }

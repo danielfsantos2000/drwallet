@@ -80,6 +80,7 @@
             this.dashSendButton.TabIndex = 3;
             this.dashSendButton.Text = "Send";
             this.dashSendButton.UseVisualStyleBackColor = true;
+            this.dashSendButton.Click += new System.EventHandler(this.DashSendButton_Click);
             // 
             // dashDRCoinLab
             // 

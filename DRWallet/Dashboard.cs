@@ -29,6 +29,23 @@ namespace DRWallet
             {
                 db.Open();
 
+                //Balance
+                MySqlCommand cmds3 = new MySqlCommand();
+                cmds3.Connection = db;
+                cmds3.CommandText = "SELECT SUM(addbal) AS balance FROM address WHERE userid=@userid";
+                cmds3.Parameters.Add("@userid", MySqlDbType.String).Value = User.uID;
+                MySqlDataReader getBal = cmds3.ExecuteReader();
+                if (getBal.HasRows)
+                {
+                    while (getBal.Read())
+                    {
+                        dashBalanceLab.Text = getBal["balance"].ToString();
+                        dashBalanceLab.Text = $"Balance: {dashBalanceLab.Text} DR";
+                    }
+                }
+
+                getBal.Close();
+
                 //Get Value
                 MySqlCommand cmds1 = new MySqlCommand();
                 cmds1.Connection = db;
@@ -131,5 +148,11 @@ namespace DRWallet
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";
         private static MySqlConnection db = new MySqlConnection(_connectionString);
+
+        private void DashSendButton_Click(object sender, EventArgs e)
+        {
+            Send send = new Send();
+            send.Show();
+        }
     }
 }

@@ -87,6 +87,7 @@ namespace DRWallet
                             User.uLanguage = 1;
                             User.uTheme = 1;
                             Logs.AddSettingsLog(User.uID);
+                            User.timer.Start();
                         }
 
                         OnLogButtonClicked();

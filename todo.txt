@@ -4,8 +4,6 @@
 
 //Dashboard
 - Send                                            !
-	- LOGS                                        !
-- Receive                                         !
 - Design                                          !
 - Language                                        !
 

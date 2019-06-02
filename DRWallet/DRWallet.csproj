@@ -102,6 +102,7 @@
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Encryption.cs" />
     <Compile Include="Login.cs">
       <SubType>UserControl</SubType>
     </Compile>

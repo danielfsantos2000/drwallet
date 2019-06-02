@@ -64,7 +64,7 @@ namespace DRWallet
                                     cmdInsert.Connection = db;
                                     cmdInsert.CommandText = "INSERT INTO users (userusername,userpassword,userfname,userlname,useremail) VALUES (@user,@pass,@fname,@lname,@email)";
                                     cmdInsert.Parameters.Add("@user", MySqlDbType.String).Value = regUserBox.Text;
-                                    cmdInsert.Parameters.Add("@pass", MySqlDbType.String).Value = regPassBox.Text;
+                                    cmdInsert.Parameters.Add("@pass", MySqlDbType.String).Value = Encryption.encrypt(regPassBox.Text);
                                     cmdInsert.Parameters.Add("@fname", MySqlDbType.String).Value = regFNameBox.Text;
                                     cmdInsert.Parameters.Add("@lname", MySqlDbType.String).Value = regLNameBox.Text;
                                     cmdInsert.Parameters.Add("@email", MySqlDbType.String).Value = regEmailBox.Text;

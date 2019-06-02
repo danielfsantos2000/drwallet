@@ -16,7 +16,6 @@ namespace DRWallet
         public Dashboard()
         {
             InitializeComponent();
-            
         }
 
         public void dashboardUpdate()
@@ -24,6 +23,8 @@ namespace DRWallet
             NavBar.nmPage = 1;
             dashNavBar.NavbarUpdate();
             dashUsernameLab.Text = $"{User.uFName} {User.uLName}";
+
+            double value = 0;
 
             try
             {
@@ -39,8 +40,7 @@ namespace DRWallet
                 {
                     while (getBal.Read())
                     {
-                        dashBalanceLab.Text = getBal["balance"].ToString();
-                        dashBalanceLab.Text = $"Balance: {dashBalanceLab.Text} DR";
+                        double.TryParse(getBal["balance"].ToString(), out value);
                     }
                 }
 
@@ -56,7 +56,7 @@ namespace DRWallet
                     while (drs1.Read())
                     {
                         dashValueLab.Text = drs1["valcurrent"].ToString();
-                        dashValueLab.Text = $"{dashValueLab.Text}€";
+                        dashValueLab.Text = $"{dashValueLab.Text} €";
                     }
                 }
                 drs1.Close();
@@ -84,7 +84,7 @@ namespace DRWallet
                                             JOIN address AS dest ON movements.dest_addid = dest.addid 
                                         WHERE movements.movid = -1 
                                         {whereparam}
-                                        ORDER BY movements.movdate DESC LIMIT 10".Trim();
+                                        ORDER BY movements.movdate DESC LIMIT 7".Trim();
 
                 MySqlDataReader drs2 = cmds2.ExecuteReader();
                 if (drs2.HasRows)
@@ -143,6 +143,118 @@ namespace DRWallet
             {
                 db.Close();
             }
+
+            //Theme
+            if (User.uTheme == 1)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 178, 102);
+
+                dashUsernameLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashBalanceLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashDRCoinLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashValueLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_YAID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_Details.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_AID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_Date.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                dashSendButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                dashSendButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                dashSendButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+
+                panel1.BackColor = Color.FromArgb(255, 255, 125, 0);
+                movHistoryGrid.BackgroundColor = Color.FromArgb(255, 255, 164, 76);
+            }
+            else if (User.uTheme == 2)
+            {
+                this.BackColor = Color.FromArgb(255, 43, 43, 43);
+
+                dashUsernameLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashBalanceLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashDRCoinLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashValueLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashHistoryLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashHistoryInfoLab_YAID.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashHistoryInfoLab_Details.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashHistoryInfoLab_AID.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                dashHistoryInfoLab_Date.ForeColor = Color.FromArgb(255, 255, 255, 255);
+
+                dashSendButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                dashSendButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                dashSendButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+
+                panel1.BackColor = Color.FromArgb(255, 35, 35, 35);
+                movHistoryGrid.BackgroundColor = Color.FromArgb(255, 145, 145, 145);
+            }
+            else if (User.uTheme == 3)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 255, 255);
+
+                dashUsernameLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashBalanceLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashDRCoinLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashValueLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_YAID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_Details.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_AID.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                dashHistoryInfoLab_Date.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                dashSendButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                dashSendButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                dashSendButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+
+                panel1.BackColor = Color.FromArgb(255, 188, 188, 188);
+                movHistoryGrid.BackgroundColor = Color.FromArgb(255, 220, 220, 220);
+            }
+
+            //Language
+            if (User.uLanguage == 1)
+            {
+                dashBalanceLab.Text = $"{DRWallet.Properties.Resources.EN_Dash_Bal}: {value} DR";
+                dashBalanceLab.Location = new Point(166, 109);
+
+                dashDRCoinLab.Text = $"{DRWallet.Properties.Resources.EN_Dash_Val}:";
+                dashDRCoinLab.Location = new Point(498, 109);
+
+                dashHistoryLab.Text = $"{DRWallet.Properties.Resources.EN_Dash_History}:";
+                dashHistoryLab.Location = new Point(160, 239);
+
+                dashHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.EN_ALL_YAID;
+                dashHistoryInfoLab_YAID.Location = new Point(39, 5);
+                dashHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.EN_ALL_Details;
+                dashHistoryInfoLab_Details.Location = new Point(232, 5);
+                dashHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.EN_ALL_AID;
+                dashHistoryInfoLab_AID.Location = new Point(359, 5);
+                dashHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.EN_ALL_Date;
+                dashHistoryInfoLab_Date.Location = new Point(530, 5);
+
+                dashSendButton.Text = DRWallet.Properties.Resources.EN_Send_Header;
+            }
+            else if (User.uLanguage == 2)
+            {
+                dashBalanceLab.Text = $"{DRWallet.Properties.Resources.PT_Dash_Bal}: {value} DR";
+                dashBalanceLab.Location = new Point(166, 109);
+
+                dashDRCoinLab.Text = $"{DRWallet.Properties.Resources.PT_Dash_Val}:";
+                dashDRCoinLab.Location = new Point(498, 109);
+
+                dashHistoryLab.Text = $"{DRWallet.Properties.Resources.PT_Dash_History}:";
+                dashHistoryLab.Location = new Point(160, 239);
+
+                dashHistoryInfoLab_YAID.Text = DRWallet.Properties.Resources.PT_ALL_YAID;
+                dashHistoryInfoLab_YAID.Location = new Point(54, 5);
+                dashHistoryInfoLab_Details.Text = DRWallet.Properties.Resources.PT_ALL_Details;
+                dashHistoryInfoLab_Details.Location = new Point(227, 5);
+                dashHistoryInfoLab_AID.Text = DRWallet.Properties.Resources.PT_ALL_AID;
+                dashHistoryInfoLab_AID.Location = new Point(377, 5);
+                dashHistoryInfoLab_Date.Text = DRWallet.Properties.Resources.PT_ALL_Date;
+                dashHistoryInfoLab_Date.Location = new Point(530, 5);
+
+                dashSendButton.Text = DRWallet.Properties.Resources.PT_Send_Header;
+            }
+
         }
 
         //Database conections and functions

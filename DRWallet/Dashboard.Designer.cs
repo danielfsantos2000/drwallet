@@ -74,12 +74,18 @@
             // 
             // dashSendButton
             // 
+            this.dashSendButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(66)))));
+            this.dashSendButton.FlatAppearance.BorderSize = 0;
+            this.dashSendButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
+            this.dashSendButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
+            this.dashSendButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dashSendButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
             this.dashSendButton.Location = new System.Drawing.Point(249, 177);
             this.dashSendButton.Name = "dashSendButton";
             this.dashSendButton.Size = new System.Drawing.Size(114, 38);
             this.dashSendButton.TabIndex = 3;
             this.dashSendButton.Text = "Send";
-            this.dashSendButton.UseVisualStyleBackColor = true;
+            this.dashSendButton.UseVisualStyleBackColor = false;
             this.dashSendButton.Click += new System.EventHandler(this.DashSendButton_Click);
             // 
             // dashDRCoinLab
@@ -96,7 +102,7 @@
             // 
             this.dashValueLab.AutoSize = true;
             this.dashValueLab.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.dashValueLab.Location = new System.Drawing.Point(544, 169);
+            this.dashValueLab.Location = new System.Drawing.Point(547, 169);
             this.dashValueLab.Name = "dashValueLab";
             this.dashValueLab.Size = new System.Drawing.Size(103, 39);
             this.dashValueLab.TabIndex = 6;

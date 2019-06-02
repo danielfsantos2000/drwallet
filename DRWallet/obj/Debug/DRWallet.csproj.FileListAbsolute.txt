@@ -75,3 +75,4 @@ D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.pdb
 D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.RemoveAddress.resources
 C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.RemoveAddress.resources
 C:\Users\psi17e06\Desktop\Projeto\DRWallet\obj\Debug\DRWallet.Send.resources
+D:\GITHUB\DRWallet\DRWallet\obj\Debug\DRWallet.Send.resources

@@ -103,7 +103,7 @@ namespace DRWallet
                         MySqlCommand cmds1 = new MySqlCommand();
                         cmds1.Connection = db;
                         cmds1.CommandText = "SELECT * FROM users WHERE userpassword=@password AND userid=@id";
-                        cmds1.Parameters.Add("@password", MySqlDbType.String).Value = cpwdCPassBox.Text;
+                        cmds1.Parameters.Add("@password", MySqlDbType.String).Value = Encryption.encrypt(cpwdCPassBox.Text);
                         cmds1.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                         MySqlDataReader drs1 = cmds1.ExecuteReader();
                         if (drs1.HasRows)
@@ -112,7 +112,7 @@ namespace DRWallet
                             MySqlCommand cmdChange = new MySqlCommand();
                             cmdChange.Connection = db;
                             cmdChange.CommandText = "UPDATE users SET userpassword=@pass WHERE userid=@id";
-                            cmdChange.Parameters.Add("@pass", MySqlDbType.String).Value = cpwdNPassBox.Text;
+                            cmdChange.Parameters.Add("@pass", MySqlDbType.String).Value = Encryption.encrypt(cpwdNPassBox.Text);
                             cmdChange.Parameters.Add("@id", MySqlDbType.String).Value = User.uID;
                             cmdChange.ExecuteNonQuery();
 

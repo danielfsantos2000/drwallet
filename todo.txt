@@ -2,10 +2,7 @@
 
 //Register !!!DONE!!!
 
-//Dashboard
-- Send                                            !
-- Design                                          !
-- Language                                        !
+//Dashboard !!!DONE!!!
 
 //Movements !!!DONE!!!
 
@@ -21,10 +18,9 @@
 
 //Database !!!DONE!!!
 
-//User
-- UpdateInfo(Routine)                             !
+//User !!!DONE!!!
 
-//MORE
-- Encription                                      !
-- BlockChain                                      !
-- Auto Change Value                               !
+
+Value Update Not Getting Decimal Values			  !
+Database Encryption (Teachers Way)				  !
+Hash Encryption is getting longer (Ask Teacher)   !

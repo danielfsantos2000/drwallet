@@ -337,4 +337,52 @@
   <data name="send" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\font-awesome_4-7-0_send_24_0_787878_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="EN_Dash_Bal" xml:space="preserve">
+    <value>Balance</value>
+  </data>
+  <data name="EN_Dash_History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="EN_Dash_Val" xml:space="preserve">
+    <value>DR Coin Value</value>
+  </data>
+  <data name="EN_Send_Button" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="EN_Send_Header" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="EN_Send_TA" xml:space="preserve">
+    <value>Target Address</value>
+  </data>
+  <data name="EN_Send_Value" xml:space="preserve">
+    <value>Value</value>
+  </data>
+  <data name="EN_Send_YA" xml:space="preserve">
+    <value>Your Address</value>
+  </data>
+  <data name="PT_Dash_Bal" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="PT_Dash_History" xml:space="preserve">
+    <value>Histórico</value>
+  </data>
+  <data name="PT_Dash_Val" xml:space="preserve">
+    <value>Valor DR Coin</value>
+  </data>
+  <data name="PT_Send_Button" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="PT_Send_Header" xml:space="preserve">
+    <value>Enviar</value>
+  </data>
+  <data name="PT_Send_TA" xml:space="preserve">
+    <value>Endereço de envio</value>
+  </data>
+  <data name="PT_Send_Value" xml:space="preserve">
+    <value>Montante</value>
+  </data>
+  <data name="PT_Send_YA" xml:space="preserve">
+    <value>Endereço</value>
+  </data>
 </root>

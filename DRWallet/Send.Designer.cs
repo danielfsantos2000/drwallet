@@ -117,6 +117,7 @@
             this.sendSubmitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(137)))), ((int)(((byte)(25)))));
             this.sendSubmitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(149)))), ((int)(((byte)(48)))));
             this.sendSubmitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sendSubmitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F);
             this.sendSubmitButton.Location = new System.Drawing.Point(185, 248);
             this.sendSubmitButton.Name = "sendSubmitButton";
             this.sendSubmitButton.Size = new System.Drawing.Size(117, 35);

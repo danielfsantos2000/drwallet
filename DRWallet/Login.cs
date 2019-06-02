@@ -41,7 +41,7 @@ namespace DRWallet
                     cmds1.Connection = db;
                     cmds1.CommandText = "SELECT * FROM users WHERE userusername=@username AND userpassword=@password";
                     cmds1.Parameters.Add("@username", MySqlDbType.String).Value = logUserBox.Text;
-                    cmds1.Parameters.Add("@password", MySqlDbType.String).Value = logPassBox.Text;
+                    cmds1.Parameters.Add("@password", MySqlDbType.String).Value = Encryption.encrypt(logPassBox.Text);
                     MySqlDataReader drs1 = cmds1.ExecuteReader();
                     if (drs1.HasRows)
                     {
@@ -87,9 +87,8 @@ namespace DRWallet
                             User.uLanguage = 1;
                             User.uTheme = 1;
                             Logs.AddSettingsLog(User.uID);
-                            User.timer.Start();
                         }
-
+                        StartTimerFunc();
                         OnLogButtonClicked();
 
                     drs1.Close();
@@ -135,6 +134,17 @@ namespace DRWallet
             }
         }
 
+        public delegate void StartTimerEventHandler(object source, EventArgs args);
+        public event StartTimerEventHandler StartTimer;
+
+        protected virtual void StartTimerFunc()
+        {
+            if (StartTimer != null)
+            {
+                StartTimer(this, EventArgs.Empty);
+            }
+        }
+
         public delegate void GotoPage2EventHandler(object source, EventArgs args);
         public event GotoPage2EventHandler GotoPage2;
 
@@ -149,7 +159,6 @@ namespace DRWallet
                 GotoPage2(this, EventArgs.Empty);
             }
         }
-
 
         //Database conections and functions
         private static string _connectionString = "Server=127.0.0.1;Database=drwallet;Uid=root;Pwd=;";

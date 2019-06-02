@@ -232,6 +232,33 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Balance.
+        /// </summary>
+        internal static string EN_Dash_Bal {
+            get {
+                return ResourceManager.GetString("EN_Dash_Bal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to History.
+        /// </summary>
+        internal static string EN_Dash_History {
+            get {
+                return ResourceManager.GetString("EN_Dash_History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DR Coin Value.
+        /// </summary>
+        internal static string EN_Dash_Val {
+            get {
+                return ResourceManager.GetString("EN_Dash_Val", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email already in use.
         /// </summary>
         internal static string EN_Error_Emailinuse {
@@ -336,6 +363,51 @@ namespace DRWallet.Properties {
         internal static string EN_Rm_Text {
             get {
                 return ResourceManager.GetString("EN_Rm_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send.
+        /// </summary>
+        internal static string EN_Send_Button {
+            get {
+                return ResourceManager.GetString("EN_Send_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Send.
+        /// </summary>
+        internal static string EN_Send_Header {
+            get {
+                return ResourceManager.GetString("EN_Send_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Target Address.
+        /// </summary>
+        internal static string EN_Send_TA {
+            get {
+                return ResourceManager.GetString("EN_Send_TA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Value.
+        /// </summary>
+        internal static string EN_Send_Value {
+            get {
+                return ResourceManager.GetString("EN_Send_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your Address.
+        /// </summary>
+        internal static string EN_Send_YA {
+            get {
+                return ResourceManager.GetString("EN_Send_YA", resourceCulture);
             }
         }
         
@@ -557,6 +629,33 @@ namespace DRWallet.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Saldo.
+        /// </summary>
+        internal static string PT_Dash_Bal {
+            get {
+                return ResourceManager.GetString("PT_Dash_Bal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Histórico.
+        /// </summary>
+        internal static string PT_Dash_History {
+            get {
+                return ResourceManager.GetString("PT_Dash_History", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Valor DR Coin.
+        /// </summary>
+        internal static string PT_Dash_Val {
+            get {
+                return ResourceManager.GetString("PT_Dash_Val", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email em uso.
         /// </summary>
         internal static string PT_Error_Emailinuse {
@@ -661,6 +760,51 @@ namespace DRWallet.Properties {
         internal static string PT_Rm_Text {
             get {
                 return ResourceManager.GetString("PT_Rm_Text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string PT_Send_Button {
+            get {
+                return ResourceManager.GetString("PT_Send_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enviar.
+        /// </summary>
+        internal static string PT_Send_Header {
+            get {
+                return ResourceManager.GetString("PT_Send_Header", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço de envio.
+        /// </summary>
+        internal static string PT_Send_TA {
+            get {
+                return ResourceManager.GetString("PT_Send_TA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Montante.
+        /// </summary>
+        internal static string PT_Send_Value {
+            get {
+                return ResourceManager.GetString("PT_Send_Value", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Endereço.
+        /// </summary>
+        internal static string PT_Send_YA {
+            get {
+                return ResourceManager.GetString("PT_Send_YA", resourceCulture);
             }
         }
         

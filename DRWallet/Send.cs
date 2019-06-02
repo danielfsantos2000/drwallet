@@ -17,6 +17,84 @@ namespace DRWallet
         {
             InitializeComponent();
 
+            //Theme
+            if (User.uTheme == 1)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 178, 102);
+
+                sendHeaderLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                sendYALab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                sendTALab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                SendValLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                sendSubmitButton.BackColor = Color.FromArgb(255, 255, 160, 66);
+                sendSubmitButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 255, 137, 25);
+                sendSubmitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 255, 149, 48);
+            }
+            else if (User.uTheme == 2)
+            {
+                this.BackColor = Color.FromArgb(255, 43, 43, 43);
+
+                sendHeaderLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                sendYALab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                sendTALab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+                SendValLab.ForeColor = Color.FromArgb(255, 255, 255, 255);
+
+                sendSubmitButton.BackColor = Color.FromArgb(255, 145, 145, 145);
+                sendSubmitButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 81, 81, 81);
+                sendSubmitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 114, 114, 114);
+            }
+            else if (User.uTheme == 3)
+            {
+                this.BackColor = Color.FromArgb(255, 255, 255, 255);
+
+                sendHeaderLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                sendYALab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                sendTALab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+                SendValLab.ForeColor = Color.FromArgb(255, 0, 0, 0);
+
+                sendSubmitButton.BackColor = Color.FromArgb(255, 220, 220, 220);
+                sendSubmitButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(255, 168, 168, 168);
+                sendSubmitButton.FlatAppearance.MouseOverBackColor = Color.FromArgb(255, 193, 193, 193);
+            }
+
+            if (User.uLanguage == 1)
+            {
+                sendHeaderLab.Text = DRWallet.Properties.Resources.EN_Send_Header;
+                sendHeaderLab.Location = new Point(183, 9);
+
+                sendYALab.Text = $"{DRWallet.Properties.Resources.EN_Send_YA}:";
+                sendYALab.Location = new Point(97, 94);
+
+                sendTALab.Text = $"{DRWallet.Properties.Resources.EN_Send_TA}:";
+                sendTALab.Location = new Point(83, 142);
+
+                SendValLab.Text = $"{DRWallet.Properties.Resources.EN_Send_Value}:";
+                SendValLab.Location = new Point(172, 187);
+
+                sendSubmitButton.Text = DRWallet.Properties.Resources.EN_Send_Button;
+
+                this.Text = $"{sendHeaderLab.Text} - DRWallet";
+            }
+            else if (User.uLanguage == 2)
+            {
+                sendHeaderLab.Text = DRWallet.Properties.Resources.PT_Send_Header;
+                sendHeaderLab.Location = new Point(176, 9);
+
+                sendYALab.Text = $"{DRWallet.Properties.Resources.PT_Send_YA}:";
+                sendYALab.Location = new Point(135, 94);
+
+                sendTALab.Text = $"{DRWallet.Properties.Resources.PT_Send_TA}:";
+                sendTALab.Location = new Point(49, 142);
+
+                SendValLab.Text = $"{DRWallet.Properties.Resources.PT_Send_Value}:";
+                SendValLab.Location = new Point(138, 187);
+
+                sendSubmitButton.Text = DRWallet.Properties.Resources.PT_Send_Button;
+
+                this.Text = $"{sendHeaderLab.Text} - DRWallet";
+            }
+
             try
             {
                 db.Open();
@@ -63,7 +141,7 @@ namespace DRWallet
 
         private void SendSubmitButton_Click(object sender, EventArgs e)
         {
-            if (sendTABox.Text != "" || sendValBox.Text != "" || sendYACombo.Text != "")
+            if (sendTABox.Text != "" && sendValBox.Text != "" && sendYACombo.Text != "")
             {
                 double balance = 0;
                 double myID = 0;
@@ -109,37 +187,57 @@ namespace DRWallet
                                 double.TryParse(drs3["addbal"].ToString(), out targetBalance);
                                 double.TryParse(drs3["addid"].ToString(), out targetID);
                             }
+
+                            drs3.Close();
+
+                            MySqlCommand cmds4 = new MySqlCommand();
+                            cmds4.Connection = db;
+                            cmds4.CommandText = "UPDATE address SET addbal=@balance WHERE addnum=@addnum";
+                            cmds4.Parameters.Add("@balance", MySqlDbType.String).Value = targetBalance + sendValue;
+                            cmds4.Parameters.Add("@addnum", MySqlDbType.String).Value = sendTABox.Text;
+                            cmds4.ExecuteNonQuery();
+
+                            MySqlCommand cmds2 = new MySqlCommand();
+                            cmds2.Connection = db;
+                            cmds2.CommandText = "UPDATE address SET addbal=@balance WHERE addnum=@addnum";
+                            cmds2.Parameters.Add("@balance", MySqlDbType.String).Value = balance - sendValue;
+                            cmds2.Parameters.Add("@addnum", MySqlDbType.String).Value = sendYACombo.Text;
+                            cmds2.ExecuteNonQuery();
+
+                            MySqlCommand cmds5 = new MySqlCommand();
+                            cmds5.Connection = db;
+                            cmds5.CommandText = "INSERT INTO movements (sender_addid, dest_addid, movqtd, movhash) VALUES (@sender, @dest, @qtd, @hash)";
+                            cmds5.Parameters.Add("@sender", MySqlDbType.Int32).Value = myID;
+                            cmds5.Parameters.Add("@dest", MySqlDbType.Int32).Value = targetID;
+                            cmds5.Parameters.Add("@qtd", MySqlDbType.Double).Value = sendValue;
+                            cmds5.Parameters.Add("@hash", MySqlDbType.String).Value = Encryption.hash(myID, targetID,sendValue);
+                            cmds5.ExecuteNonQuery();
                         }
-
-                        drs3.Close();
-
-                        MySqlCommand cmds4 = new MySqlCommand();
-                        cmds4.Connection = db;
-                        cmds4.CommandText = "UPDATE address SET addbal=@balance WHERE addnum=@addnum";
-                        cmds4.Parameters.Add("@balance", MySqlDbType.String).Value = targetBalance + sendValue;
-                        cmds4.Parameters.Add("@addnum", MySqlDbType.String).Value = sendTABox.Text;
-                        cmds4.ExecuteNonQuery();
-
-                        MySqlCommand cmds2 = new MySqlCommand();
-                        cmds2.Connection = db;
-                        cmds2.CommandText = "UPDATE address SET addbal=@balance WHERE addnum=@addnum";
-                        cmds2.Parameters.Add("@balance", MySqlDbType.String).Value = balance - sendValue;
-                        cmds2.Parameters.Add("@addnum", MySqlDbType.String).Value = sendYACombo.Text;
-                        cmds2.ExecuteNonQuery();
-
-                        MySqlCommand cmds5 = new MySqlCommand();
-                        cmds5.Connection = db;
-                        cmds5.CommandText = "INSERT INTO movements (sender_addid, dest_addid, movqtd) VALUES (@sender, @dest, @qtd)";
-                        cmds5.Parameters.Add("@sender", MySqlDbType.Int32).Value = myID;
-                        cmds5.Parameters.Add("@dest", MySqlDbType.Int32).Value = targetID;
-                        cmds5.Parameters.Add("@qtd", MySqlDbType.Double).Value = sendValue;
-                        cmds5.ExecuteNonQuery();
                     }
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
+                finally
+                {
+                    db.Close();
+                    UpdateDashFunc();
+                    this.Close();
+                }
+            }
+        }
+
+
+        //Movements
+        public delegate void UpdateDashEventHandler(object source, EventArgs args);
+        public static event UpdateDashEventHandler UpdateDash;
+
+        protected virtual void UpdateDashFunc()
+        {
+            if (UpdateDash != null)
+            {
+                UpdateDash(this, EventArgs.Empty);
             }
         }
     }

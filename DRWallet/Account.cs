@@ -236,6 +236,7 @@ namespace DRWallet
         private void Button1_Click(object sender, EventArgs e)
         {
             User.logout();
+            StopTimerFunc();
             OnLogButtonClicked();
         }
 
@@ -248,6 +249,18 @@ namespace DRWallet
             if (GotoLog != null)
             {
                 GotoLog(this, EventArgs.Empty);
+            }
+        }
+
+        //Stop Timer
+        public delegate void StopTimergEventHandler(object source, EventArgs args);
+        public event StopTimergEventHandler StopTimer;
+
+        protected virtual void StopTimerFunc()
+        {
+            if (StopTimer != null)
+            {
+                StopTimer(this, EventArgs.Empty);
             }
         }
 

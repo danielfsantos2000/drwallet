@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.loginPage = new DRWallet.Login();
             this.registerPage = new DRWallet.Register();
@@ -36,6 +37,7 @@
             this.accountPage = new DRWallet.Account();
             this.addressesPage = new DRWallet.Addresses();
             this.settingsPage = new DRWallet.Settings();
+            this.timerUserUpdate = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // loginPage
@@ -107,6 +109,11 @@
             this.settingsPage.TabIndex = 12;
             this.settingsPage.Visible = false;
             // 
+            // timerUserUpdate
+            // 
+            this.timerUserUpdate.Interval = 10000;
+            this.timerUserUpdate.Tick += new System.EventHandler(this.TimerUserUpdate_Tick);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,7 +130,7 @@
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.Name = "Main";
-            this.Text = "DR Wallet";
+            this.Text = "DRWallet";
             this.ResumeLayout(false);
 
         }
@@ -137,5 +144,6 @@
         private Account accountPage;
         private Addresses addressesPage;
         private Settings settingsPage;
+        public System.Windows.Forms.Timer timerUserUpdate;
     }
 }

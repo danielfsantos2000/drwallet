@@ -19,8 +19,3 @@
 //Database !!!DONE!!!
 
 //User !!!DONE!!!
-
-
-Value Update Not Getting Decimal Values			  !
-Database Encryption (Teachers Way)				  !
-Hash Encryption is getting longer (Ask Teacher)   !

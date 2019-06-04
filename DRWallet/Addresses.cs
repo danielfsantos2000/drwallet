@@ -217,5 +217,10 @@ namespace DRWallet
             RemoveAddress rem = new RemoveAddress();
             rem.Show();
         }
+
+        public void addressesDelete()
+        {
+            addListGrid.Rows.Clear();
+        }
     }
 }

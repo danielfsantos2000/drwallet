@@ -78,6 +78,7 @@ namespace DRWallet
 
         public static List<string> addresses = new List<string>();
 
+
         //Settings
         private static int puLanguage;
         private static int puTheme;

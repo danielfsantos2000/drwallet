@@ -54,6 +54,10 @@ namespace DRWallet
             accountPage.Hide();
             settingsPage.Hide();
             loginPage.Show();
+
+            dashboardPage.dashboardDelete();
+            movementsPage.movementsDelete();
+            addressesPage.addressesDelete();
         }
 
         public void showDashboardPage(object source, EventArgs e)
@@ -140,7 +144,8 @@ namespace DRWallet
                     drs1.Close();
 
                     Random rnd = new Random();
-                    double newval = RandomNumberBetween(200.00, 8000.00);
+                    double newval = RandomNumberBetween(20000.00, 800000.00);
+                    newval = newval/100;
                     newval = Math.Round(newval, 2);
 
                     MySqlCommand cmds2 = new MySqlCommand();

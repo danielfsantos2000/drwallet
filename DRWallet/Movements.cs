@@ -190,7 +190,7 @@ namespace DRWallet
 
         public void movementsDelete()
         {
-            movHistoryGrid.Rows.Clear();
+            (movHistoryGrid.DataSource as DataTable).Clear();
         }
 
         //Database conections and functions

@@ -220,7 +220,7 @@ namespace DRWallet
 
         public void addressesDelete()
         {
-            addListGrid.Rows.Clear();
+            (addListGrid.DataSource as DataTable).Clear();
         }
     }
 }
